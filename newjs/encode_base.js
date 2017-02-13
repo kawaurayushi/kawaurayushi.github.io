@@ -13,10 +13,10 @@ $( ".TypeA"       ).change(function() { check_default(); });
 $( ".TypeE"       ).change(function() { check_default(); });
 
 $(document).ready(function() {
-  $.getJSON( "https://yushi2k.github.io/tools/js/color.json", function( json ) {
+  $.getJSON( "https://kawaurayushi.github.io/newjs/color.json", function( json ) {
     colors = json;
   });
-  $.getJSON( "https://yushi2k.github.io/tools/js/webcolor.json", function( json ) {
+  $.getJSON( "https://kawaurayushi.github.io/newjs/webcolor.json", function( json ) {
     webcolors = json;
   });
 });
