@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+  <head>
+     <meta charset="UTF-8">
+     <title>auto decode</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<style type="text/css">
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td  {
+    font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+    font-size: 14px;
+    line-height: 1.2;
+}
+</style>
+     <script language="javascript">
+
+     </script>
+  </head>
+  <body class=''>
+     <header>
+     </header>
+     <form>
+        <input type="text" class="inputvalue" size="50"> <br />
+        <input type="checkbox" class="RomanNumber">Change RomanNumber <br />
+        <input type="checkbox" class="TypeO" >old pattern (#xxx#keywordx#x#x)<br />
+        <input type="checkbox" class="TypeN" checked="checked">new pattern (xxx##keyword###xx)<br />
+        <input type="checkbox" class="TypeJ" >JoJo pattern (x#x#keywordx#xx)<br />
+        <input type="checkbox" class="TypeA" >Anomary pattern (xxxxxxxx#keyword#) <br />
+        <input type="checkbox" class="TypeE" >Not FR pattern (keyword#xx##xx#) <br />
+     </form>
+     <div>--Passcode---</div>
+     <div class="result"> </div>
+     <div>--Candidate--</div>
+     <div class="result2"> </div>
+     <div>--Log--------</div>
+     <div class="step1"> </div>
+     <ul id="demo"></ul>
+     <div>--Log-Detail-</div>
+     <div class="step2"> </div>
+     <footer>
+    </footer>
+  </body>
+  <script src="js/lib.js"></script>
+  <script src="js/encode_base.js"></script>
+
+</html>
