@@ -19,14 +19,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
      </header>
      <form>
         <input type="text" class="inputvalue" size="50"> <br />
-        <input type="checkbox" class="TypeRect" >Check Rectangle => Code Retry(very slow...)<br /><br />
-        <input type="checkbox" class="TypeO" >old pattern (#xxx#keywordx#x#x)<br />
-        <input type="checkbox" class="TypeN" checked="checked">new pattern (xxx##keyword###xx)<br />
-        <input type="checkbox" class="TypeJ" >JoJo pattern (x#x#keywordx#xx)<br />
-        <input type="checkbox" class="TypeA" >Anomary pattern (xxxxxxxx#keyword#) <br />
-        <input type="checkbox" class="TypeE" >Not FR pattern (keyword#xx##xx#) <br />
-        <input type="checkbox" class="TypeSet2" >Set 2 Passcode<br />
-        <input type="checkbox" class="TypeSet3" >Set 3 Passcode<br />
+        <label for="TypeRect"><input type="checkbox" id="TypeRect" class="TypeRect" >Check Rectangle => Code Retry(very slow...)</label><br /><br />
+        <label for="TypeRot"><input type="checkbox" id="TypeRot" class="TypeRot" >Check Rot => Code Retry(very slow...)</label><br /><br />
+        <label for="TypeO"><input type="checkbox" id="TypeO" class="TypeO" >old pattern (#xxx#keywordx#x#x)</label><br />
+        <label for="TypeN"><input type="checkbox" id="TypeN" class="TypeN" checked="checked">new pattern (xxx##keyword###xx)</label><br />
+        <label for="TypeJ"><input type="checkbox" id="TypeJ" class="TypeJ" >JoJo pattern (x#x#keywordx#xx)</label><br />
+        <label for="TypeA"><input type="checkbox" id="TypeA" class="TypeA" >Anomary pattern (xxxxxxxx#keyword#) </label><br />
+        <label for="TypeE"><input type="checkbox" id="TypeE" class="TypeE" >Not FR pattern (keyword#xx##xx#) </label><br />
+        <label for="TypeSet2"><input type="checkbox" id="TypeSet2" class="TypeSet2" >Set 2 Passcode</label><br />
+        <label for="TypeSet3"><input type="checkbox" id="TypeSet3" class="TypeSet3" >Set 3 Passcode</label><br />
      </form>
      <div>--Passcode---</div>
      <div class="result"> </div>

@@ -677,6 +677,18 @@ function Atbash(text){
 	return str;
 }
 
+function Atbash2(text){
+	var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	var tebahpla = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA0987654321";
+	var str = "";
+	for (k = 0; k < text.length; k++) {
+		var coded_letter = text.charAt(k);
+		var letter_index = alphabet.indexOf(coded_letter);
+			str += tebahpla.charAt(letter_index);
+		}
+	return str;
+}
+
 function atnum2(){
 	var text=$( ".formtext"    ).val().trim();
 	var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

@@ -5,6 +5,7 @@ var colors;
 var webcolors;
 
 $( ".TypeRect"    ).change(function() { check_default(); });
+$( ".TypeRot"     ).change(function() { check_default(); });
 $( ".inputvalue"  ).change(function() { check_default(); });
 $( ".TypeO"       ).change(function() { check_default(); });
 $( ".TypeN"       ).change(function() { check_default(); });
@@ -746,9 +747,21 @@ function basic(mode,text){
 		}
 	}
 	checkprint(mode+"/Rot                "+i+": ", decoded_string);
-	str = decoded_string;
+	checkprint(mode+"/Rot&Atbash         "+i+": ", Atbash(decoded_string));
+	checkprint(mode+"/Rot&Atbash         "+i+": ", Atbash2(decoded_string));
+	checkprint(mode+"/Rot&Reverse        "+i+": ", decoded_string.split("").reverse().join(''));
+	checkprint(mode+"/Rot&Atbash&Reverse "+i+": ", Atbash(decoded_string.split("").reverse().join('')));
+	checkprint(mode+"/Rot&Atbash&Reverse "+i+": ", Atbash2(decoded_string.split("").reverse().join('')));
+
+
+	if($( ".TypeRot").prop( "checked" ) ){
+		code_exchange(decoded_string);
+		code_exchange(Atbash(decoded_string));
+		code_exchange(Atbash2(decoded_string));
+	}
+//	str = decoded_string;
 	if(i==13 && mode =="Normal")         $( '<li> ROT13 -> ' +decoded_string+'</li>' ).appendTo($( ".step1" ));
-	var array   = decoded_string.split("");
+/*	var array   = decoded_string.split("");
 	str = array.reverse().join("");
 	checkprint(mode+"Rot&Reverse        "+i+": ",str);
      decoded_string_at = "";
@@ -766,6 +779,7 @@ function basic(mode,text){
      str     = array.reverse().join("");
      decoded_string_at = str ;
      checkprint(mode+"Rot&Atbash&Reverse "+i+": ",str);
+*/
   }
   for (i = -1 ; i > -26; i--) {
      var decoded_string = "";
@@ -797,10 +811,23 @@ function basic(mode,text){
 	   decoded_string += String.fromCharCode(coded_letter);
 	}
      }
-     checkprint(mode+"Rot(-)             "+i+": ", decoded_string);
+	checkprint(mode+"/Rot(-)                "+i+": ", decoded_string);
+	checkprint(mode+"/Rot(-)&Atbash         "+i+": ", Atbash(decoded_string));
+	checkprint(mode+"/Rot(-)&Atbash         "+i+": ", Atbash2(decoded_string));
+	checkprint(mode+"/Rot(-)&Reverse        "+i+": ", decoded_string.split("").reverse().join(''));
+	checkprint(mode+"/Rot(-)&Atbash&Reverse "+i+": ", Atbash(decoded_string.split("").reverse().join('')));
+	checkprint(mode+"/Rot(-)&Atbash&Reverse "+i+": ", Atbash2(decoded_string.split("").reverse().join('')));
+
+	if($( ".TypeRot").prop( "checked" ) ){
+		code_exchange(decoded_string);
+		code_exchange(Atbash(decoded_string));
+		code_exchange(Atbash2(decoded_string));
+	}
+
+//     checkprint(mode+"Rot(-)             "+i+": ", decoded_string);
 	if(i==-13 && mode =="Normal")         $( '<li> ROT-13 -> ' +decoded_string+'</li>' ).appendTo($( ".step1" ));
 
-     str = decoded_string.split("").reverse().join("");
+/*     str = decoded_string.split("").reverse().join("");
      checkprint(mode+"Rot&Reverse        "+i+": ",str);
 //     var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 //     var tebahpla = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA0123456789";
@@ -815,6 +842,6 @@ function basic(mode,text){
      array   = decoded_string_at.split("");
      str     = array.reverse().join("");
      checkprint(mode+"Rot&Atbash&Reverse "+i+": ",str);
+*/
   }
-
 }
