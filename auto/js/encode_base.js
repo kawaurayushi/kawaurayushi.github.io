@@ -4,13 +4,15 @@ var NUMNUM = ['3','7','8','3','4','5','7','8','9','2','3','4','5','6','7','8','9
 var colors;
 var webcolors;
 
+$( ".TypeRect"    ).change(function() { check_default(); });
 $( ".inputvalue"  ).change(function() { check_default(); });
-$( ".RomanNumber" ).change(function() { check_default();});
 $( ".TypeO"       ).change(function() { check_default(); });
 $( ".TypeN"       ).change(function() { check_default(); });
 $( ".TypeJ"       ).change(function() { check_default(); });
 $( ".TypeA"       ).change(function() { check_default(); });
 $( ".TypeE"       ).change(function() { check_default(); });
+$( ".TypeSet2"    ).change(function() { check_default(); });
+$( ".TypeSet3"    ).change(function() { check_default(); });
 
 $(document).ready(function() {
   $.getJSON( "https://raw.githubusercontent.com/ingresscodes/keywords/master/keywords.json", function( json ) {
@@ -82,7 +84,7 @@ function check_default(){
 
   $( ".step1" ).append('Step 3 : Rectangles  start...<br>');
 
-  var Rectangles = $( ".inputvalue" ).val().toLowerCase().trim();
+  var Rectangles = trimCRLF(trimspace($( ".inputvalue" ).val().toLowerCase().trim()));
   var results = [];
   for(var i=2; i<(Rectangles.length); i++) {
     if( (Rectangles.length%i == 0) ) {
@@ -104,415 +106,145 @@ function check_default(){
         matrix[j][k]=Rectangles.charAt(k+j*w);
       }
     }
-    /* 04 03 02 01 00 14 13 12 11 10 ...*/
-    for(j=0;j<h;j++){
-      for(k=w-1;k>=0;k--){
-        text+=matrix[j][k];
-      }
-    }
-     var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-     var tebahpla = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA0123456789";
-     var decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
+              /*0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 */
+    var rect = ["","","","","","","","","","","","","","","","","","","","","",""];
 
-    /* 40 41 42 43 44 30 31 32 33 34 ... */
-    text="";
-    for(j=h-1;j>=0;j--){
+    for(j=0;j<h;j++){  /* 横読み */
       for(k=0;k<w;k++){
-        text+=matrix[j][k];
+        rect[0] += matrix[j][w-k-1];
+        rect[1] += matrix[h-j-1][w-k-1];
+        if(j%2 ==0){
+           rect[2] += matrix[j][w-k-1];
+           rect[3] += matrix[j][k];
+        }else{
+           rect[2] += matrix[j][k];
+           rect[3] += matrix[j][w-k-1];
+        }
+        if(k%2 ==0){
+           rect[4] += matrix[h-j-1][w-k-1];
+           rect[5] += matrix[j][w-k-1];
+        }else{
+           rect[4] += matrix[j][w-k-1];
+           rect[5] += matrix[h-j-1][w-k-1];
+        }
       }
     }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
 
-    /* 44 43 42 41 40 34 33 32 31 30 ... */
-    text="";
-    for(j=h-1;j>=0;j--){
-      for(k=w-1;k>=0;k--){
-        text+=matrix[j][k];
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-
-    /* 04 03 02 01 00 10 11 12 13 14 ... */
-    text="";
-    for(j=0;j<h;j++){
-      if( (j % 2 )==0 ) {
-         for(k=w-1;k>=0;k--){
-            text+=matrix[j][k];
-         }
-      }else{
-         for(k=0;k<w;k++){
-            text+=matrix[j][k];
-         }
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-    /* 00 01 02 03 04 14 13 12 11 10 ... */
-    text="";
-    for(j=0;j<h;j++){
-      if( (j % 2 )==1 ) {
-         for(k=w-1;k>=0;k--){
-            text+=matrix[j][k];
-         }
-      }else{
-         for(k=0;k<w;k++){
-            text+=matrix[j][k];
-         }
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-
-    /* 44 43 42 41 40 30 31 32 33 34 ... */
-    text="";
-    for(j=h-1;j>=0;j--){
-      if( (j % 2 )==0 ) {
-         for(k=w-1;k>=0;k--){
-            text+=matrix[j][k];
-         }
-      }else{
-         for(k=0;k<w;k++){
-            text+=matrix[j][k];
-         }
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-    /* 40 41 42 43 44 34 33 32 31 30 ... */
-    text="";
-    for(j=h-1;j>=0;j--){
-      if( (j % 2 )==1 ) {
-         for(k=w-1;k>=0;k--){
-            text+=matrix[j][k];
-         }
-      }else{
-         for(k=0;k<w;k++){
-            text+=matrix[j][k];
-         }
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-    /* 40 30 20 10 00 41 31 21 11 01 ... */
-    text="";
-    for(k=w-1;k>=0;k--){
+    for(k=0;k<w;k++){ /* 縦読み */
       for(j=0;j<h;j++){
-        text+=matrix[j][k];
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
+        rect[6] += matrix[j][k];
+        rect[7] += matrix[j][w-k-1];
+        rect[8] += matrix[h-j-1][k];
+        rect[9] += matrix[h-j-1][w-k-1];
 
-    /* 44 34 24 14 04 43 33 23 13 03 ... */
-    text="";
-    for(k=w-1;k>=0;k--){
-      for(j=h-1;j>=0;j--){
-        text+=matrix[j][k];
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-    /* 00 10 20 30 40 01 11 21 31 41 ... */
-    text="";
-    for(k=0;k<w;k++){
-      for(j=0;j<h;j++){
-        text+=matrix[j][k];
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-    /* 04 14 24 34 44 03 13 23 33 43 ... */
-    text="";
-    for(k=0;k<w;k++){
-      for(j=h-1;j>=0;j--){
-        text+=matrix[j][k];
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-    /* 04 14 24 34 44 43 33 23 13 03 ... */
-    text="";
-    for(k=w-1;k>=0;k--){
-      if( (k % 2 )==1 ) {
-         for(j=h-1;j>=0;j--){
-           text+=matrix[j][k];
-         }
-      }else{
-         for(j=0;j<h;j++){
-           text+=matrix[j][k];
-         }
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-
-    /* 44 34 24 14 04 03 13 23 33 43 ... */
-    text="";
-    for(k=w-1;k>=0;k--){
-      if( (k % 2 )==0 ) {
-         for(j=h-1;j>=0;j--){
-           text+=matrix[j][k];
-         }
-      }else{
-         for(j=0;j<h;j++){
-           text+=matrix[j][k];
-         }
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-    /* 00 10 20 30 40 41 31 21 11 01 ... */
-    text="";
-    for(k=0;k<w;k++){
-      if( (k % 2 )==1 ) {
-         for(j=h-1;j>=0;j--){
-           text+=matrix[j][k];
-         }
-      }else{
-         for(j=0;j<h;j++){
-           text+=matrix[j][k];
-         }
-      }
-
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-
-    /* 40 30 20 10 00 01 11 21 31 41 ... */
-    text="";
-    for(k=0;k<w;k++){
-      if( (k % 2 )==0 ) {
-         for(j=h-1;j>=0;j--){
-           text+=matrix[j][k];
-         }
-      }else{
-         for(j=0;j<h;j++){
-           text+=matrix[j][k];
-         }
-      }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-    /* 40 30 20 10 00 41 31 21 11 01 ... */
-    text="";
-    for(k=0;k<w;k++){
-         for(j=h-1;j>=0;j--){
-           text+=matrix[j][k];
-         }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-
-    /* 44 43 42 41 40 30 31 32 33 34 ... */
-    text="";
-    for(j=h-1;j>=0;j--){
-       for(k=w-1;k>0;k--){
-           text+=matrix[j][k];
+        if(j%2 ==0){
+           rect[10] += matrix[j][w-k-1];
+           rect[11] += matrix[j][k];
+        }else{
+           rect[10] += matrix[j][k];
+           rect[11] += matrix[j][w-k-1];
         }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-
-    /* 00 14 20 34 40 01 13 21 33 41 ... */
-    text="";
-    for(k=0;k<w;k++){
-       for(j=0;j<h;j++){
-           if( (j%2)==0){
-               text+=matrix[j][k];
-           }else{
-               text+=matrix[j][w-k-1];
-           }
+        if(k%2 ==0){
+           rect[12] += matrix[h-j-1][w-k-1];
+           rect[13] += matrix[j][w-k-1];
+        }else{
+           rect[12] += matrix[j][w-k-1];
+           rect[13] += matrix[h-j-1][w-k-1];
         }
+      }
     }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
 
-    /*04 10 24 30 44 03 11 23 31 43 ...*/
-    text="";
-    for(k=w-1;k>=0;k--){
-       for(j=0;j<h;j++){
-           if( (j%2)==0){
-               text+=matrix[j][k];
-           }else{
-               text+=matrix[j][w-k-1];
-           }
+    var startw=w-1;
+    var starth=h-1;
+    var spin=0;
+    var maxspin= (((startw<starth)?startw:starth ) /2 ).toFixed(0) ;
+    while(spin <= maxspin && rect[14].length < Rectangles.length){  /* ぐるぐる横から */
+      if(startw >0){
+        for(k=0;k<startw;k++){
+            rect[14] += matrix[spin][k+spin];
+            rect[15] += matrix[spin][w-k-1-spin];
+            rect[16] += matrix[h-spin-1][k+spin];
+            rect[17] += matrix[h-spin-1][w-k-1-spin];
         }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-
-    /*40 34 20 14 00 41 33 21 13 01 ...*/
-    text="";
-    for(k=0;k<w;k++){
-       for(j=h-1;j>=0;j--){
-           if( (j%2)==0){
-               text+=matrix[j][k];
-           }else{
-               text+=matrix[j][w-k-1];
-           }
+      }
+      if(starth >0){
+        for(k=0;k<starth;k++){
+            rect[14] += matrix[spin+starth-k][spin];
+            rect[15] += matrix[spin+starth-k][w-1-spin];
+            rect[16] += matrix[h-spin-starth+k-1][spin];
+            rect[17] += matrix[h-spin-starth+k-1][w-1-spin];
         }
-    }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
-     }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
-
-
-    /*44 30 24 10 04 43 31 23 11 03 ...*/
-    text="";
-    for(k=0;k<w;k++){
-       for(j=h-1;j>=0;j--){
-           if( (j%2)==1){
-               text+=matrix[j][k];
-           }else{
-               text+=matrix[j][w-k-1];
-           }
+      }
+      if(startw >0){
+        for(k=0;k<startw;k++){
+            rect[14] += matrix[spin+starth][startw-k+spin];
+            rect[15] += matrix[spin+starth][w-startw-1-spin+k];
+            rect[16] += matrix[h-spin-1-starth][startw-k+spin];
+            rect[17] += matrix[h-spin-1-starth][w-startw-1-spin+k];
         }
+      }
+      if(starth >0){
+        for(k=0;k<starth;k++){
+            rect[14] += matrix[spin+k][startw+spin];
+            rect[15] += matrix[spin+k][w-startw-1-spin];
+            rect[16] += matrix[h-spin-1-k][startw+spin];
+            rect[17] += matrix[spin+k][w-startw-1-spin];
+        }
+      }
+
+      starth -=2;
+      startw -=2;
+      spin++;
     }
-     decoded_string_at = "";
-     for (k = 0; k < text.length; k++) {
-         var coded_letter = text.charAt(k);
-         var letter_index = alphabet.indexOf(coded_letter);
-         decoded_string_at += tebahpla.charAt(letter_index);
+    startw=w-1;
+    starth=h-1;
+    spin=0;
+    while(spin <= maxspin && rect[18].length < Rectangles.length){  /* ぐるぐる縦から */
+      if(starth >0){
+        for(k=0;k<starth;k++){
+            rect[18] += matrix[spin+k][spin];
+            rect[19] += matrix[spin+k][startw+spin-1];
+            rect[20] += matrix[spin+starth-k][spin];
+            rect[21] += matrix[spin+starth-k][w-spin-1];
+        }
+      }
+      if(startw >0){
+        for(k=0;k<startw;k++){
+            rect[18] += matrix[spin+starth][spin+k];
+            rect[19] += matrix[spin+starth][startw+spin-1-k];
+            rect[20] += matrix[spin][spin+k];
+            rect[21] += matrix[spin][w-spin-1-k];
+        }
+      }
+      if(starth >0){
+        for(k=0;k<starth;k++){
+            rect[18] += matrix[spin+starth-k][startw+spin];
+            rect[19] += matrix[spin+starth-k][spin];
+            rect[20] += matrix[spin+k][startw+spin];
+            rect[21] += matrix[spin+k][w-spin-1-startw];
+        }
+      }
+      if(startw >0){
+        for(k=0;k<startw;k++){
+            rect[18] += matrix[spin][startw+spin-k];
+            rect[19] += matrix[spin][spin+k];
+            rect[20] += matrix[spin+starth][startw+spin-k];
+            rect[21] += matrix[spin+starth][w-spin-1-startw+k];
+        }
+      }
+      starth -=2;
+      startw -=2;
+      spin++;
+    }
+    for (j=0;j<rect.length;j++){
+       checkprint("Rectangle : ", rect[j]);
+       checkprint("Rectangle/Atbash : ",Atbash(rect[j]));
+       checkprint("Rectangle : ", rect[j].split("").reverse().join(""));
+       checkprint("Rectangle/Atbash : ",Atbash(rect[j].split("").reverse().join("")));
+       if($( ".TypeRect").prop( "checked" ) ){
+          code_exchange(rect[j]);
+       }
      }
-    checkprint("Rectangle : ", text);
-    checkprint("Rectangle/Atbash : ", decoded_string_at);
   }
 
 
@@ -521,13 +253,13 @@ function check_default(){
   text = $( ".inputvalue" ).val().trim();
   var original= "";
   if(!text.match(NUM2CHECK)){
-    original = Str2Morse(text);
+    original = Str2Morse(text).split(" ").join("");
   }else{
-    original=text;
+    original=text.split(" ").join();
   }
   str = original;
-  code_exchange(str);
   $( ".step1" ).append('--> ' + str +'<br>' );
+  code_exchange(str);
 
   if( (str.length % 7 ) ==0 ){
      $( ".step1" ).append('sevendigit<br>' );
@@ -538,20 +270,31 @@ function check_default(){
 
   if( (str.length % 5 ) ==0 ){
      $( ".step1" ).append('Baudot<br>' );
-     var baudot = baudot(str);
+     var baudot = baudot1(str);
      checkprint("baudot : ", baudot);
+     baudot = baudot1(str.split("").reverse().join(""));
+     checkprint("baudot : ", baudot);
+
 
      baudot = baudot2(str);
      checkprint("baudot : ", baudot);
+     baudot = baudot2(str.split("").reverse().join(""));
+     checkprint("baudot : ", baudot);
 
+     baudot = baconian(str);
+     checkprint("baconian : ", baudot);
+     baudot = baconian(str.split("").reverse().join(""));
+     checkprint("baconian : ", baudot);
   }else{
-     $( ".step1" ).append('Not baudot <br>' );
+     $( ".step1" ).append('Not baudot / baconian<br>' );
   }
 
 
   if( (str.length % 12 ) ==0 ){
      $( ".step1" ).append('ibm80<br>' );
      var ibm = ibm80(str);
+     checkprint("ibm80 : ", ibm);
+     ibm = ibm80(str.split("").reverse().join(""));
      checkprint("ibm80 : ", ibm);
   }else{
      $( ".step1" ).append('Not ibm80 <br>' );
@@ -561,9 +304,9 @@ function check_default(){
      $( ".step1" ).append('code128<br>' );
      var co28 = code128(str);
      checkprint("code128 : ", co28);
-     var checkstr = co28;
-     $( ".step1" ).append('code128--->'+co28+'<br>' );
-
+     var checkstr = code128(str.split("").reverse().join(""));
+     checkprint("code128 : ", checkstr);
+     $( ".step1" ).append('code128--->'+co28+':'+checkstr+'<br>' );
   }else{
      $( ".step1" ).append('Not code128 <br>' );
   }
@@ -592,6 +335,9 @@ function check_default(){
      braille = code2braille(str);
      checkprint("braille 2xN : ", braille);
      $( ".step1" ).append('--2xN--> ' + braille +'<br>' );
+     braille = code2braille(str.split("").reverse().join(""));
+     checkprint("braille 2xN(R) : ", braille);
+     $( ".step1" ).append('--2xN(R)--> ' + braille +'<br>' );
      str = "";
      for( var k=0 ; k<original.length ; k+=6){
         str+=original.charAt(k+3);
@@ -604,6 +350,9 @@ function check_default(){
      braille = code2braille(str);
      checkprint("braille 3xN : ", braille);
      $( ".step1" ).append('--3xN--> ' + braille +'<br>' );
+     braille = code2braille(str.split("").reverse().join(""));
+     checkprint("braille 3xN(R) : ", braille);
+     $( ".step1" ).append('--3xN(R)--> ' + braille +'<br>' );
      str = "";
      for( var k=0 ; k<original.length ; k+=6){
         str+=original.charAt(k  );
@@ -617,6 +366,9 @@ function check_default(){
      braille = code2braille(str);
      checkprint("braille 3xN : ", braille);
      $( ".step1" ).append('--3xN--> ' + braille +'<br>' );
+     braille = code2braille(str.split("").reverse().join(""));
+     checkprint("braille 3xN(R) : ", braille);
+     $( ".step1" ).append('--3xN(R)--> ' + braille +'<br>' );
 
      str = "";
      maxline=original.length / 3;
@@ -631,6 +383,9 @@ function check_default(){
      braille = code2braille(str);
      checkprint("braille Nx3 : ", braille);
      $( ".step1" ).append('--Nx3--> ' + braille +'<br>' );
+     braille = code2braille(str.split("").reverse().join(""));
+     checkprint("braille Nx3(R) : ", braille);
+     $( ".step1" ).append('--Nx3(R)--> ' + braille +'<br>' );
   }else{
      $( ".step1" ).append('Not Braille <br>' );
   }
@@ -643,14 +398,13 @@ function check_default(){
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
  
-    var array = $( ".inputvalue" ).val().trim().split("");
-    str = array.reverse().join("");
+    str = text.split("").reverse().join("");
     base= Hex2String(GetHexbyBase64(str));
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
  
-    str="";
+    str=""; /* 大文字小文字変換 */
     for(var i=0; i<text.length;i++){
        ch = text.charCodeAt(i);
        if(ch>96 && ch <123) str +=  String.fromCharCode(ch-32);
@@ -661,22 +415,22 @@ function check_default(){
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
-
-    array = str.split("");
-    str = array.reverse().join("");
+    str = str.split("").reverse().join("");
     base=  Hex2String(GetHexbyBase64(str));
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
     checkprint("Base64: ", base);
 
+
+
+    str=text;
     base= Hex2String(GetHexbyBase32(str.toUpperCase()));
     $( '<li> DecodeBase32->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base32: ", base.toLowerCase());
     checkprint("Base32: ", base.split("").reverse().join("").toLowerCase());
 
-    array = str.split("");
-    str = array.reverse().join("");
+    str = text.split("").reverse().join("");
     base= Hex2String(GetHexbyBase32(str.toUpperCase()));
     $( '<li> DecodeBase32->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base32: ", base.toLowerCase());
@@ -755,11 +509,28 @@ function check_default(){
   $( '<li> Bifid ->' +pf+'</li>' ).appendTo($( ".step1" ));
 
   str = $( ".inputvalue" ).val().toLowerCase().trim();
-  for (var i=1; i<str.length;i++){
-      var str2 = Skip_Decode(str, i, 0);
-      checkprint("Skip:", str2);
-      $( '<li> Skip'+i+' ->' +str2+'</li>' ).appendTo($( ".step1" ));
+  if(str.match(StringCHECK)){
+    for (var i=1; i<str.length;i++){
+        var str2 = Skip_Decode(str, i, 0);
+        checkprint("Skip:", str2);
+        $( '<li> Skip'+i+' ->' +str2+'</li>' ).appendTo($( ".step1" ));
+    }
+  }else{
+        $( '<li> Skip not alphabet' ).appendTo($( ".step1" ));
   }
+
+  str = $( ".inputvalue" ).val().toLowerCase().trim();
+  if(str.match(StringCHECK)){
+    for(var j=2;j<str.length;j++){
+      var str2 =  rail_decode(str,j,0);
+        checkprint("rail:", str2);
+        $( '<li> rail'+i+' ->' +str2+'</li>' ).appendTo($( ".step1" ));
+    }
+  }else{
+        $( '<li> rail not alphabet' ).appendTo($( ".step1" ));
+  }
+
+
 
   var key=["a","ab","abc","bz","z","zy","zyx"];
   for (var i=0; i<key.length;i++){
@@ -794,7 +565,30 @@ function check_default(){
   $( '<li> Element->' +an+'</li>' ).appendTo($( ".step1" ));
   str=code_exchange(an);
 
-  $( ".step1" ).append('Step 8 : Color Index  start...');
+  $( ".step1" ).append('Step 8 : telephone  start...');
+  var text =$( ".inputvalue" ).val().toLowerCase().trim();
+  if(!text.match(TELCHECK)){
+     str = tel1(text);
+     checkprint("telephone:", str);
+     $( '<li> telephone->' +str+'</li>' ).appendTo($( ".step1" ));
+     checkprint("telephone:", str.split("").reverse().join(""));
+     str = tel1(text.split("").reverse().join(""));
+     checkprint("telephone:", str);
+     $( '<li> telephone->' +str+'</li>' ).appendTo($( ".step1" ));
+     checkprint("telephone:", str.split("").reverse().join(""));
+     str = tel2(text);
+     checkprint("telephone:", str);
+     $( '<li> telephone->' +str+'</li>' ).appendTo($( ".step1" ));
+     checkprint("telephone:", str.split("").reverse().join(""));
+     str = tel2(text.split("").reverse().join(""));
+     checkprint("telephone:", str);
+     $( '<li> telephone->' +str+'</li>' ).appendTo($( ".step1" ));
+     checkprint("telephone:", str.split("").reverse().join(""));
+  }else{
+     $( ".step1" ).append('Not telephone <br>' );
+  }
+
+  $( ".step1" ).append('Step 10 : Color Index  start...');
   an =colordecode ($( ".inputvalue" ).val().toLowerCase().trim().split("").join(""));
   str=an;
   $( '<li> Colors->' +an+'</li>' ).appendTo($( ".step1" ));
@@ -1004,6 +798,7 @@ function basic(mode,text){
 	}
      }
      checkprint(mode+"Rot(-)             "+i+": ", decoded_string);
+	if(i==-13 && mode =="Normal")         $( '<li> ROT-13 -> ' +decoded_string+'</li>' ).appendTo($( ".step1" ));
 
      str = decoded_string.split("").reverse().join("");
      checkprint(mode+"Rot&Reverse        "+i+": ",str);

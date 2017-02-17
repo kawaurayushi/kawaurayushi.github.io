@@ -1,0 +1,472 @@
+
+    /* 04 03 02 01 00 14 13 12 11 10 ...*/
+/*    for(j=0;j<h;j++){
+      for(k=w-1;k>=0;k--){
+        text+=matrix[j][k];
+      }
+    }
+
+
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 40 41 42 43 44 30 31 32 33 34 ... */
+/*    text="";
+    for(j=h-1;j>=0;j--){
+      for(k=0;k<w;k++){
+        text+=matrix[j][k];
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 44 43 42 41 40 34 33 32 31 30 ... */
+/*    text="";
+    for(j=h-1;j>=0;j--){
+      for(k=w-1;k>=0;k--){
+        text+=matrix[j][k];
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+
+    /* 04 03 02 01 00 10 11 12 13 14 ... */
+/*    text="";
+    for(j=0;j<h;j++){
+      if( (j % 2 )==0 ) {
+         for(k=w-1;k>=0;k--){
+            text+=matrix[j][k];
+         }
+      }else{
+         for(k=0;k<w;k++){
+            text+=matrix[j][k];
+         }
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 00 01 02 03 04 14 13 12 11 10 ... */
+/*    text="";
+    for(j=0;j<h;j++){
+      if( (j % 2 )==1 ) {
+         for(k=w-1;k>=0;k--){
+            text+=matrix[j][k];
+         }
+      }else{
+         for(k=0;k<w;k++){
+            text+=matrix[j][k];
+         }
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+
+    /* 44 43 42 41 40 30 31 32 33 34 ... */
+/*    text="";
+    for(j=h-1;j>=0;j--){
+      if( (j % 2 )==0 ) {
+         for(k=w-1;k>=0;k--){
+            text+=matrix[j][k];
+         }
+      }else{
+         for(k=0;k<w;k++){
+            text+=matrix[j][k];
+         }
+      }
+    }
+     decoded_string_at = "";
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 40 41 42 43 44 34 33 32 31 30 ... */
+/*    text="";
+    for(j=h-1;j>=0;j--){
+      if( (j % 2 )==1 ) {
+         for(k=w-1;k>=0;k--){
+            text+=matrix[j][k];
+         }
+      }else{
+         for(k=0;k<w;k++){
+            text+=matrix[j][k];
+         }
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 40 30 20 10 00 41 31 21 11 01 ... */
+/*    text="";
+    for(k=w-1;k>=0;k--){
+      for(j=0;j<h;j++){
+        text+=matrix[j][k];
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 44 34 24 14 04 43 33 23 13 03 ... */
+/*    text="";
+    for(k=w-1;k>=0;k--){
+      for(j=h-1;j>=0;j--){
+        text+=matrix[j][k];
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 00 10 20 30 40 01 11 21 31 41 ... */
+/*    text="";
+    for(k=0;k<w;k++){
+      for(j=0;j<h;j++){
+        text+=matrix[j][k];
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 04 14 24 34 44 03 13 23 33 43 ... */
+/*    text="";
+    for(k=0;k<w;k++){
+      for(j=h-1;j>=0;j--){
+        text+=matrix[j][k];
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 04 14 24 34 44 43 33 23 13 03 ... */
+/*    text="";
+    for(k=w-1;k>=0;k--){
+      if( (k % 2 )==1 ) {
+         for(j=h-1;j>=0;j--){
+           text+=matrix[j][k];
+         }
+      }else{
+         for(j=0;j<h;j++){
+           text+=matrix[j][k];
+         }
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+
+    /* 44 34 24 14 04 03 13 23 33 43 ... */
+/*    text="";
+    for(k=w-1;k>=0;k--){
+      if( (k % 2 )==0 ) {
+         for(j=h-1;j>=0;j--){
+           text+=matrix[j][k];
+         }
+      }else{
+         for(j=0;j<h;j++){
+           text+=matrix[j][k];
+         }
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 00 10 20 30 40 41 31 21 11 01 ... */
+/*    text="";
+    for(k=0;k<w;k++){
+      if( (k % 2 )==1 ) {
+         for(j=h-1;j>=0;j--){
+           text+=matrix[j][k];
+         }
+      }else{
+         for(j=0;j<h;j++){
+           text+=matrix[j][k];
+         }
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+
+    /* 40 30 20 10 00 01 11 21 31 41 ... */
+/*    text="";
+    for(k=0;k<w;k++){
+      if( (k % 2 )==0 ) {
+         for(j=h-1;j>=0;j--){
+           text+=matrix[j][k];
+         }
+      }else{
+         for(j=0;j<h;j++){
+           text+=matrix[j][k];
+         }
+      }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 40 30 20 10 00 41 31 21 11 01 ... */
+/*    text="";
+    for(k=0;k<w;k++){
+         for(j=h-1;j>=0;j--){
+           text+=matrix[j][k];
+         }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+
+    /* 44 43 42 41 40 30 31 32 33 34 ... */
+/*    text="";
+    for(j=h-1;j>=0;j--){
+       for(k=w-1;k>0;k--){
+           text+=matrix[j][k];
+        }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /* 00 14 20 34 40 01 13 21 33 41 ... */
+/*    text="";
+    for(k=0;k<w;k++){
+       for(j=0;j<h;j++){
+           if( (j%2)==0){
+               text+=matrix[j][k];
+           }else{
+               text+=matrix[j][w-k-1];
+           }
+        }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+    /*04 10 24 30 44 03 11 23 31 43 ...*/
+/*    text="";
+    for(k=w-1;k>=0;k--){
+       for(j=0;j<h;j++){
+           if( (j%2)==0){
+               text+=matrix[j][k];
+           }else{
+               text+=matrix[j][w-k-1];
+           }
+        }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+
+    /*40 34 20 14 00 41 33 21 13 01 ...*/
+/*    text="";
+    for(k=0;k<w;k++){
+       for(j=h-1;j>=0;j--){
+           if( (j%2)==0){
+               text+=matrix[j][k];
+           }else{
+               text+=matrix[j][w-k-1];
+           }
+        }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+
+
+    /*44 30 24 10 04 43 31 23 11 03 ...*/
+/*    text="";
+    for(k=0;k<w;k++){
+       for(j=h-1;j>=0;j--){
+           if( (j%2)==1){
+               text+=matrix[j][k];
+           }else{
+               text+=matrix[j][w-k-1];
+           }
+        }
+    }
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+    /*00 01 02 03 04 14 24 34 44 43 42 41 40 30 20 10 11 12 13 23 33 32 31 21 22 ÇÆÇÈÇÆÇÈ ç∂è„ÇP...*/
+/*
+    text="";
+    var startw=w;
+    var starth=h-2;
+    var spin=0;
+    text="";
+    var maxspin= (((startw<starth)?startw:starth ) /2 ).toFixed(0) ;
+    while(spin <= maxspin && text.length < Rectangles.length){
+      if(startw >0){
+        for(k=spin;k<spin+startw;k++){
+           text+=matrix[spin][k];
+        }
+        k--;
+      }else{
+        k=spin+startw-1;
+      }
+      if(starth>0){
+        for(j=spin;j<starth;j++){
+           text+=matrix[j+1][k];
+        }
+        j++;
+      }else{
+        j=starth;
+      }
+      if(startw >0){
+        for(;k>spin-1;k--){
+           text+=matrix[j][k];
+        }
+        k++;j--;
+      }else{
+        k=spin-1;
+      }
+      if(starth>0){
+        for(;j>spin;j--){
+           text+=matrix[j][k];
+        }
+      }
+      startw-=2; starth-=2; spin++;
+    };
+
+    console.log(w+"x"+h+";"+text);
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+    checkprint("Rectangle : ", text.split("").reverse().join(""));
+    checkprint("Rectangle/Atbash : ",Atbash(text.split("").reverse().join("")));
+
+    /* 00 10 20 30 40 41 42 43 44 34 24 14 04 03 02 01 11 21 31 32 33 23 13 12 22 ÇÆÇÈÇÆÇÈ ç∂è„ÇQ ...*/
+/*
+    text="";
+    var startw=w-2;
+    var starth=h;
+    var spin=0;
+    text="";
+    var maxspin= (((startw<starth)?startw:starth ) /2 ).toFixed(0) ;
+    while(spin <= maxspin && text.length < Rectangles.length){
+      if(starth >0){
+        for(k=spin;k<spin+starth;k++){
+           text+=matrix[k][spin];
+        }
+        k--;
+      }else{
+        k=spin+starth-1;
+      }
+      if(startw>0){
+        for(j=spin;j<startw;j++){
+           text+=matrix[k][j+1];
+        }
+        j++;
+      }else{
+        j=startw;
+      }
+      if(starth >1 ){
+        for(;k>spin-1;k--){
+           text+=matrix[k][j];
+        }
+        k++;j--;
+      }else{
+        k=spin-1;
+      }
+      if(startw>1 ){
+        for(;j>spin;j--){
+           text+=matrix[k][j];
+        }
+      }
+      startw-=2; starth-=2; spin++;
+    };
+
+    console.log(w+"x"+h+";"+text);
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+    checkprint("Rectangle : ", text.split("").reverse().join(""));
+    checkprint("Rectangle/Atbash : ",Atbash(text.split("").reverse().join("")));
+
+    /* 00 10 20 30 40 41 42 43 44 34 24 14 04 03 02 01 11 21 31 32 33 23 13 12 22 ÇÆÇÈÇÆÇÈ âEè„ÇP ...*/
+/*
+    text="";
+    var startw=w;
+    var starth=h-2;
+    var spin=0;
+    text="";
+    var maxspin= (((startw<starth)?startw:starth ) /2 ).toFixed(0) ;
+    while(spin <= maxspin && text.length < Rectangles.length){
+      if(startw >0){
+        for(k=spin+startw-1;k>=spin;k--){
+           text+=matrix[spin][k];
+        }
+        k++;
+      }else{
+        k=spin;
+      }
+      if(starth>0){
+        for(j=spin;j<starth;j++){
+           text+=matrix[j+1][k];
+        }
+        j++;
+      }else{
+        j=starth;
+      }
+      if(startw >0){
+        for(;k<spin+startw;k++){
+           text+=matrix[j][k];
+        }
+        k--;j--;
+      }else{
+        k=spin-1;
+      }
+      if(starth>0){
+        for(;j>spin;j--){
+           text+=matrix[j][k];
+        }
+      }
+      startw-=2; starth-=2; spin++;
+    };
+    console.log(w+"x"+h+";"+text);
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+    checkprint("Rectangle : ", text.split("").reverse().join(""));
+    checkprint("Rectangle/Atbash : ",Atbash(text.split("").reverse().join("")));
+
+    /* 00 10 20 30 40 41 42 43 44 34 24 14 04 03 02 01 11 21 31 32 33 23 13 12 22 ÇÆÇÈÇÆÇÈ âEè„ÇQ ...*/
+/*
+    text="";
+    var startw=w-1;
+    var starth=h-1;
+    var spin=0;
+    var maxspin= (((startw<starth)?startw:starth ) /2 ).toFixed(0) ;
+    while(spin <= maxspin && text.length < Rectangles.length){
+      var nx=w-spin;
+      var ny=spin;
+      if(starth >0){
+//        for(k=spin+starth;k<spin+1;k++){
+        for(;ny<starth;ny++){
+           text+=matrix[ny][nx];
+        }
+      }else{
+//        k=spin+starth-1;
+      }
+      if(startw>0){
+        for(;nx<startw;nx--){
+           text+=matrix[ny][nx];
+        }
+        j++;
+      }else{
+//        j=startw;
+      }
+      if(starth >1){
+        for(;ny>spin-1;k--){
+           text+=matrix[k][j];
+        }
+        k++;j--;
+      }else{
+        k=spin-1;
+      }
+      if(startw>1){
+        for(;j>spin;j--){
+           text+=matrix[k][j];
+        }
+      }
+      startw-=2; starth-=2; spin++;
+    };
+    console.log(w+"x"+h+";"+text);
+
+    checkprint("Rectangle : ", text);
+    checkprint("Rectangle/Atbash : ",Atbash(text));
+    checkprint("Rectangle : ", text.split("").reverse().join(""));
+    checkprint("Rectangle/Atbash : ",Atbash(text.split("").reverse().join("")));
+
+*/

@@ -15,14 +15,6 @@ function Bin2Str(str){
 }
 
 
-/* for Symbol / Numeric / Polybius */
-function trimspace(str){
-	return str.replace(/ /g,"");
-}
-
-function trimCRLF(str){
-	return str.replace(/[\n\r]/g,"");
-}
 
 function Str2Morse(str) {
 	var alphabet = {
@@ -95,22 +87,6 @@ function sevendigit(text){
 		result += alphabet[text.substr(i, 7)] || '';
 	}
 	return result;
-}
-
-function Hex2String(str){
-	var ret="";
-	for (var i = 0; i < str.length; i += 2){
-		ret +=  String.fromCharCode(parseInt(str.substr(i, 2), 16).toString(10));
-	}
-	return ret;
-}
-
-function Dec2String(str){
-	var ret="";
-	for (var i = 0; i < str.length; i += 2){
-		ret +=  String.fromCharCode(parseInt(str.substr(i, 2), 10).toString(10));
-	}
-	return ret;
 }
 
 function baconian(text){
@@ -409,7 +385,7 @@ function code2braille(text){
 }
 
 
-function baudot(str){
+function baudot1(str){
 	let f = s=>s.replace(/.{5}/g,s=>(n='0b'+s-1)<2?m-n?(m^=1,''):' ':"? !YSBREXGMIWFNA-JKUTCQ/ZHLOVDP? ?!3 8-2 7) ?  1.6(4 9/ : =5'0+"[n+m*32],m=0).replace(/.!/g,'');
 	return f(str);
 }
