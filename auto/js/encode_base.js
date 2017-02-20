@@ -394,13 +394,13 @@ function check_default(){
 
   $( ".step1" ).append('Step 5 : Base64/32  start...');
   text = $( ".inputvalue" ).val().trim();
-    var base= Hex2String(GetHexbyBase64($( ".inputvalue" ).val().trim()));
+    var base= GetHexbyBase64(text);
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
  
     str = text.split("").reverse().join("");
-    base= Hex2String(GetHexbyBase64(str));
+    base= GetHexbyBase64(str);
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
@@ -412,12 +412,12 @@ function check_default(){
        if(ch>64 && ch <91) str +=  String.fromCharCode(ch+32);
        if(ch>40 && ch <63) str +=  String.fromCharCode(ch);
     }
-    base= Hex2String(GetHexbyBase64(str));
+    base= GetHexbyBase64(str);
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     str = str.split("").reverse().join("");
-    base=  Hex2String(GetHexbyBase64(str));
+    base=  GetHexbyBase64(str);
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
@@ -438,7 +438,7 @@ function check_default(){
     checkprint("Base32: ", base.split("").reverse().join("").toLowerCase());
 
 
-  base= Base64($( ".inputvalue" ).val().trim());
+  base= btoa($( ".inputvalue" ).val().trim());
   $( '<li> Base64->' +base+'</li>' ).appendTo($( ".step1" ));
   checkprint("Base64: ", base);
   checkprint("Base64: ", base.split("").reverse().join(""));
