@@ -4,6 +4,37 @@ var NUMNUM = ['3','7','8','3','4','5','7','8','9','2','3','4','5','6','7','8','9
 var colors;
 var webcolors;
 
+$( ".Numeric"    ).change(function() { 
+  if ($(".Numeric").is(':checked')) {
+	 numbercheckold1 ='^'+checknum3+'([a-z]{3})'+checknum3+'([0-9a-z]*?)'+'([a-z])'+checknum3+'([a-z])'+checknum3+'([a-z])$';
+	 numbercheckold2 ='^'+checknum3+'(...)'+checknum3+'([0-9a-z]*?)'+'(.)'+checknum3+'(.)'+checknum3+'(.)$';
+	 numbercheckinv1 ='^([a-z]{3})'+checknum3+checknum3+'([0-9a-z]*?)'+checknum3+checknum3+checknum3+'([a-z]{2})$';
+	 numbercheckinv2 ='^(...)'+checknum3+checknum3+'([0-9a-z]*?)'+checknum3+checknum3+checknum3+'(..)$';
+	 numbercheckano1 ='^([a-z]{8})'+checknum3+'([0-9a-z]*?)'+checknum3+'$';
+	 numbercheckano2 ='^(........)'+checknum3+'([0-9a-z]*?)'+checknum3+'$';
+	 numberchecknot1 ='^([0-9a-z]*?)'+checknum3+'([a-z]{2})'+checknum3+checknum3+'([a-z]{2})'+checknum3+'$';
+	 numberchecknot2 ='^([0-9a-z]*?)'+checknum3+'(..)'+checknum3+checknum3+'(..)'+checknum3+'$';
+	 numbercheckinv3 ='^([a-z]{3})'+checknum3+checknum3+'([0-9a-z]*?)'+checknum3+checknum3+checknum3+'([a-z]{2})'+'([a-z]{3})'+checknum3+checknum3+'([0-9a-z]*?)'+checknum3+checknum3+checknum3+'([a-z]{2})$'
+	 numbercheckinv4 ='^([a-z]{3})'+checknum3+checknum3+'([0-9a-z]*?)'+checknum3+checknum3+checknum3+'([a-z]{2})'+'([a-z]{3})'+checknum3+checknum3+'([0-9a-z]*?)'+checknum3+checknum3+checknum3+'([a-z]{2})'+'([a-z]{3})'+checknum3+checknum3+'([0-9a-z]*?)'+checknum3+checknum3+checknum3+'([a-z]{2})$';
+	 numeric = numeric2;
+  }else{
+	 numbercheckold1 ='^'+checknum+'([a-z]{3})'+checknum+'([0-9a-z]*?)'+'([a-z])'+checknum+'([a-z])'+checknum+'([a-z])$';
+	 numbercheckold2 ='^'+checknum+'(...)'+checknum+'([0-9a-z]*?)'+'(.)'+checknum+'(.)'+checknum+'(.)$';
+	 numbercheckinv1 ='^([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})$';
+	 numbercheckinv2 ='^(...)'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'(..)$';
+	 numbercheckjoj1 ='^([a-z])'+checknum2+'([a-z])'+checknum2+'([0-9a-z]*?)'+'([a-z])'+checknum2+'([a-z]{2})$';
+	 numbercheckjoj2 ='^(.)'+checknum2+'(.)'+checknum2+'([0-9a-z]*?)'+'(.)'+checknum2+'(..)$';
+	 numbercheckano1 ='^([a-z]{8})'+checknum+'([0-9a-z]*?)'+checknum+'$';
+	 numbercheckano2 ='^(........)'+checknum+'([0-9a-z]*?)'+checknum+'$';
+	 numberchecknot1 ='^([0-9a-z]*?)'+checknum+'([a-z]{2})'+checknum+checknum+'([a-z]{2})'+checknum+'$';
+	 numberchecknot2 ='^([0-9a-z]*?)'+checknum+'(..)'+checknum+checknum+'(..)'+checknum+'$';
+	 numbercheckinv3 ='^([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})$'
+	 numbercheckinv4 ='^([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})$';
+	numeric = numeric1;
+	}
+	check_default(); 
+});
+
 $( ".TypeRect"    ).change(function() { check_default(); });
 $( ".TypeRot"     ).change(function() { check_default(); });
 $( ".inputvalue"  ).change(function() { check_default(); });

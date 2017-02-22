@@ -2,8 +2,9 @@ var target="";
 var num=0;
 var KeyMap = new Array();
 var KeyMapJoJo = new Array();
-var checknum ="(three|seven|eight|thre|four|five|seve|eigh|nine|two|thr|fou|fiv|six|sev|eig|nin|tw|th|fo|fi|si|se|ei|ni|2|3|4|5|6|7|8|9|iii|ii|viii|vii|iv|vi|ix|v)";
+var checknum ="(three|seven|eight|thre|four|five|seve|eigh|nine|two|thr|fou|fiv|six|sev|eig|nin|tw|th|fo|fi|si|se|ei|ni|hree|even|ight|ree|our|ive|ven|ght|ine|wo|ee|ur|ve|en|ht|ne|2|3|4|5|6|7|8|9|iii|ii|viii|vii|iv|vi|ix|v)";
 var checknum2 ="(three|seven|eight|zero|thre|four|five|seve|eigh|nine|zer|one|two|thr|fou|fiv|six|sev|eig|nin|ze|on|tw|th|fo|fi|si|se|ei|ni|0|1|2|3|4|5|6|7|8|9|iii|ii|i|viii|vii|iv|vi|ix|v)";
+var checknum3 ="(three|seven|eight|thre|four|five|seve|eigh|nine|two|thr|fou|fiv|six|sev|eig|nin|tw|th|fo|fi|si|se|ei|ni|2|3|4|5|6|7|8|9|hree|even|ight|ree|our|ive|ven|ght|ine|wo|ee|ur|ve|ix|en|ht|ne|due|tre|qua|quat|quatt|quattr|quattrocin|cinq|cinqu|cinque|sei|set|sett|sette|ott|otto|nov|nove|deu|deux|tro|troi|trois|quatr|quatre|sep|sept|hui|huit|neu|neuf)";
 var TELCHECK    ='^[2-9 ]+$';
 var NUM2CHECK   ='^[0-1 ]+$';
 var NUM3CHECK   ='^[0-2 ]+$';
@@ -24,21 +25,43 @@ var numbercheckano2 ='^(........)'+checknum+'([0-9a-z]*?)'+checknum+'$';
 var numberchecknot1 ='^([0-9a-z]*?)'+checknum+'([a-z]{2})'+checknum+checknum+'([a-z]{2})'+checknum+'$';
 var numberchecknot2 ='^([0-9a-z]*?)'+checknum+'(..)'+checknum+checknum+'(..)'+checknum+'$';
 var numbercheckinv3 ='^([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})$'
-
 var numbercheckinv4 ='^([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})$';
 
-var numeric ={
+var numeric1 ={
 					"0" : "0",	"ze" : "0" ,	"zer" : "0" ,	"zero" : "0" ,
 	"i" : "1" ,		"1" : "1",	"on" : "1" ,	"one" : "1" ,	
-	"ii" : "2" ,	"2" : "2",	"tw" : "2" ,	"two" : "2" ,	
-	"iii" : "3" ,	"3" : "3",	"th" : "3" ,	"thr" : "3" ,	"thre" : "3" ,	"three" : "3" ,
-	"iv" : "4" ,	"4" : "4",	"fo" : "4" ,	"fou" : "4" ,	"four" : "4" ,
-	"v" : "5" ,		"5" : "5",	"fi" : "5" ,	"fiv" : "5" ,	"five" : "5" ,
+	"ii" : "2" ,	"2" : "2",	"tw" : "2" ,	"two" : "2" ,									"wo" : "2" ,
+	"iii" : "3" ,	"3" : "3",	"th" : "3" ,	"thr" : "3" ,	"thre" : "3" ,	"three" : "3" ,	"ee" : "3" ,	"ree" : "3" ,	"hree" :"3" ,
+	"iv" : "4" ,	"4" : "4",	"fo" : "4" ,	"fou" : "4" ,	"four" : "4" ,					"ur" : "4" ,	"our" : "4" ,
+	"v" : "5" ,		"5" : "5",	"fi" : "5" ,	"fiv" : "5" ,	"five" : "5" ,					"ve" : "5" ,	"ive" : "5" ,
 	"vi" : "6" ,	"6" : "6",	"si" : "6" ,	"six" : "6" ,
-	"vii" : "7" ,	"7" : "7",	"se" : "7" ,	"sev" : "7" ,	"seve" : "7" ,	"seven" : "7" ,
-	"viii" : "8" ,	"8" : "8",	"ei" : "8" ,	"eig" : "8" ,	"eigh" : "8" ,	"eight" : "8" ,
-	"ix" : "9" ,	"9" : "9",	"ni" : "9" ,	"nin" : "9" ,	"nine" : "9" ,
+	"vii" : "7" ,	"7" : "7",	"se" : "7" ,	"sev" : "7" ,	"seve" : "7" ,	"seven" : "7" ,	"en" : "7" ,	"ven" : "7" ,	"even" : "7" ,
+	"viii" : "8" ,	"8" : "8",	"ei" : "8" ,	"eig" : "8" ,	"eigh" : "8" ,	"eight" : "8" ,	"ht" : "8" ,	"ght" : "8" ,	"ight" : "8" ,
+	"ix" : "9" ,	"9" : "9",	"ni" : "9" ,	"nin" : "9" ,	"nine" : "9" ,					"ne" : "9" ,	"ine" : "9" ,	
 };
+
+var numeric2 ={
+	 "0" : "0" ,	 "ze" : "0" ,	"zer" : "0" ,	"zero" : "0" ,
+	 "1" : "1" ,	 "on" : "1" ,	"one" : "1" ,	
+	 "2" : "2" ,	 "tw" : "2" ,	"two" : "2" ,									"wo" : "2" ,
+	 "3" : "3" ,	 "th" : "3" ,	"thr" : "3" ,	"thre" : "3" ,	"three" : "3" ,	"ee" : "3" ,	"ree" : "3" ,	"hree" :"3" ,
+	 "4" : "4" ,	 "fo" : "4" ,	"fou" : "4" ,	"four" : "4" ,					"ur" : "4" ,	"our" : "4" ,
+	 "5" : "5" ,	 "fi" : "5" ,	"fiv" : "5" ,	"five" : "5" ,					"ve" : "5" ,	"ive" : "5" ,
+	 "6" : "6" ,	 "si" : "6" ,	"six" : "6" ,									"ix" : "6" ,
+	 "7" : "7" ,	 "se" : "7" ,	"sev" : "7" ,	"seve" : "7" ,	"seven" : "7" ,	"en" : "7" ,	"ven" : "7" ,	"even" : "7" ,
+	 "8" : "8" ,	 "ei" : "8" ,	"eig" : "8" ,	"eigh" : "8" ,	"eight" : "8" ,	"ht" : "8" ,	"ght" : "8" ,	"ight" : "8" ,
+	 "9" : "9" ,	 "ni" : "9" ,	"nin" : "9" ,	"nine" : "9" ,					"ne" : "9" ,	"ine" : "9" ,	
+	"du" : "2" ,	"due" : "2" ,	 "de" : "2" ,	 "deu" : "2" ,	 "deux" : "2" ,
+	"tr" : "3" ,	"tre" : "3" ,	"tro" : "3" ,	"troi" : "3" ,	"trois" : "3" ,
+	"qu" : "4" ,	"qua" : "4" ,	"quat": "4" ,	"quatt": "4" ,	"quattr": "4" ,"quattro" : "4" ,
+	"ci" : "5" ,	"cin" : "5" ,	"cinq": "5" ,	"quatr": "4" ,	"quatre": "4" ,
+	"sei": "6" ,	"set" : "7" ,	"sett": "7" ,	"sette": "7" ,	"sep"   : "7" ,	"sept" : "7" ,
+	"ot" : "8" ,	"ott" : "8" ,	"otto": "8" ,	"hu"   : "8" ,	"hui"   : "8" ,	"huit" : "8" ,
+	"no" : "9" ,	"nov" : "9" ,	"nove" : "9" ,					"neu"   : "9" ,	"neuf" : "9" ,	
+};
+
+var numeric = numeric1;
+
 function cleartextarea(){
 	$( "textarea" ).each(function(index){ $( this ).val(""); }); 
 }
