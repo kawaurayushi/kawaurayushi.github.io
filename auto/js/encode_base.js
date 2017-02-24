@@ -284,18 +284,25 @@ function check_default(){
 
   text = $( ".inputvalue" ).val().trim();
   var original= "";
+  var original2= "";
   if(!text.match(NUM2CHECK)){
     original = Str2Morse(text).split(" ").join("");
+    original2 = Str2Morse(text.split("").reverse().join("")).split(" ").join("");
   }else{
     original=text.split(" ").join();
+    original2=text.split(" ").reverse().join();
   }
   str = original;
+  str2 = original2;
   $( ".step1" ).append('--> ' + str +'<br>' );
+  $( ".step1" ).append('--> ' + str2 +'<br>' );
   code_exchange(str);
+  code_exchange(str2);
 
   if( (str.length % 7 ) ==0 ){
      $( ".step1" ).append('sevendigit<br>' );
      code_exchange(sevendigit(str));
+     code_exchange(sevendigit(str2));
   }else{
      $( ".step1" ).append('Not 7Seg <br>' );
   }
@@ -303,31 +310,45 @@ function check_default(){
   if( (str.length % 5 ) ==0 ){
      $( ".step1" ).append('Baudot<br>' );
      var baudot = baudot1(str);
+     var baudot2 = baudot1(str2);
      checkprint("baudot : ", baudot);
+     checkprint("baudot : ", baudot2);
      baudot = baudot1(str.split("").reverse().join(""));
+     baudot2 = baudot1(str2.split("").reverse().join(""));
      checkprint("baudot : ", baudot);
-
+     checkprint("baudot : ", baudot2);
 
      baudot = baudot2(str);
+     baudot2 = baudot2(str2);
      checkprint("baudot : ", baudot);
+     checkprint("baudot : ", baudot2);
      baudot = baudot2(str.split("").reverse().join(""));
+     baudot2 = baudot2(str2.split("").reverse().join(""));
      checkprint("baudot : ", baudot);
+     checkprint("baudot : ", baudot2);
 
      baudot = baconian(str);
+     baudot2 = baconian(str2);
      checkprint("baconian : ", baudot);
+     checkprint("baconian : ", baudot2);
      baudot = baconian(str.split("").reverse().join(""));
+     baudot2 = baconian(str2.split("").reverse().join(""));
      checkprint("baconian : ", baudot);
+     checkprint("baconian : ", baudot2);
   }else{
      $( ".step1" ).append('Not baudot / baconian<br>' );
   }
 
-
   if( (str.length % 12 ) ==0 ){
      $( ".step1" ).append('ibm80<br>' );
      var ibm = ibm80(str);
+     var ibm2 = ibm80(str2);
      checkprint("ibm80 : ", ibm);
+     checkprint("ibm80 : ", ibm2);
      ibm = ibm80(str.split("").reverse().join(""));
+     ibm2 = ibm80(str2.split("").reverse().join(""));
      checkprint("ibm80 : ", ibm);
+     checkprint("ibm80 : ", ibm2);
   }else{
      $( ".step1" ).append('Not ibm80 <br>' );
   }
@@ -335,10 +356,15 @@ function check_default(){
   if( (str.length % 11 ) ==2 ){
      $( ".step1" ).append('code128<br>' );
      var co28 = code128(str);
+     var co282 = code128(str2);
      checkprint("code128 : ", co28);
+     checkprint("code128 : ", co282);
      var checkstr = code128(str.split("").reverse().join(""));
+     var checkstr2 = code128(str2.split("").reverse().join(""));
      checkprint("code128 : ", checkstr);
+     checkprint("code128 : ", checkstr2);
      $( ".step1" ).append('code128--->'+co28+':'+checkstr+'<br>' );
+     $( ".step1" ).append('code128--->'+co282+':'+checkstr2+'<br>' );
   }else{
      $( ".step1" ).append('Not code128 <br>' );
   }
@@ -346,78 +372,114 @@ function check_default(){
   str=trimspace(str);
   str=trimCRLF(str);
 
+  str2=trimspace(str2);
+  str2=trimCRLF(str2);
+
   original=trimspace(original);
   original=trimCRLF(original);
+
+  original2=trimspace(original2);
+  original2=trimCRLF(original2);
+
+
 
   if( (str.length % 6 ) ==0 ){
      $( ".step1" ).append('braille<br>' );
      var braille = code2braille(str);
+     var braille2 = code2braille(str2);
      checkprint("braille 2xN : ", braille);
+     checkprint("braille 2xN : ", braille2);
      str = braille;
+     str2 = braille2;
      $( ".step1" ).append('--2xN--> ' + braille +'<br>' );
+     $( ".step1" ).append('--2xN--> ' + braille2 +'<br>' );
      str = "";
      for( var k=0 ; k<original.length ; k+=6){
-        str = str + original.charAt(k+2);
-        str = str + original.charAt(k+5);
-        str = str + original.charAt(k  );
-        str = str + original.charAt(k+4);
-        str = str + original.charAt(k+0);
-        str = str + original.charAt(k+3);
+        str = str + original.charAt(k+2); str2 = str2 + original2.charAt(k+2);
+        str = str + original.charAt(k+5); str2 = str2 + original2.charAt(k+5);
+        str = str + original.charAt(k  ); str2 = str2 + original2.charAt(k  );
+        str = str + original.charAt(k+4); str2 = str2 + original2.charAt(k+4);
+        str = str + original.charAt(k+0); str2 = str2 + original2.charAt(k+0);
+        str = str + original.charAt(k+3); str2 = str2 + original2.charAt(k+3);
      }
      braille = code2braille(str);
+     braille2 = code2braille(str2);
      checkprint("braille 2xN : ", braille);
+     checkprint("braille 2xN : ", braille2);
      $( ".step1" ).append('--2xN--> ' + braille +'<br>' );
+     $( ".step1" ).append('--2xN--> ' + braille2 +'<br>' );
      braille = code2braille(str.split("").reverse().join(""));
+     braille2 = code2braille(str2.split("").reverse().join(""));
      checkprint("braille 2xN(R) : ", braille);
+     checkprint("braille 2xN(R) : ", braille2);
      $( ".step1" ).append('--2xN(R)--> ' + braille +'<br>' );
-     str = "";
+     $( ".step1" ).append('--2xN(R)--> ' + braille2 +'<br>' );
+     str = ""; str2="";
      for( var k=0 ; k<original.length ; k+=6){
-        str+=original.charAt(k+3);
-        str+=original.charAt(k  );
-        str+=original.charAt(k+4);
-        str+=original.charAt(k+1);
-        str+=original.charAt(k+5);
-        str+=original.charAt(k+2);
+        str+=original.charAt(k+3); str2+=original2.charAt(k+3);
+        str+=original.charAt(k  ); str2+=original2.charAt(k  );
+        str+=original.charAt(k+4); str2+=original2.charAt(k+4);
+        str+=original.charAt(k+1); str2+=original2.charAt(k+1);
+        str+=original.charAt(k+5); str2+=original2.charAt(k+5);
+        str+=original.charAt(k+2); str2+=original2.charAt(k+2);
      }
      braille = code2braille(str);
+     braille2 = code2braille(str2);
      checkprint("braille 3xN : ", braille);
+     checkprint("braille 3xN : ", braille2);
      $( ".step1" ).append('--3xN--> ' + braille +'<br>' );
+     $( ".step1" ).append('--3xN--> ' + braille2 +'<br>' );
      braille = code2braille(str.split("").reverse().join(""));
+     braille2 = code2braille(str2.split("").reverse().join(""));
      checkprint("braille 3xN(R) : ", braille);
+     checkprint("braille 3xN(R) : ", braille2);
      $( ".step1" ).append('--3xN(R)--> ' + braille +'<br>' );
-     str = "";
+     $( ".step1" ).append('--3xN(R)--> ' + braille2 +'<br>' );
+     str = ""; str2="";
      for( var k=0 ; k<original.length ; k+=6){
-        str+=original.charAt(k  );
-        str+=original.charAt(k+3);
-        str+=original.charAt(k+1);
-        str+=original.charAt(k+4);
-        str+=original.charAt(k+2);
-        str+=original.charAt(k+5);
+        str+=original.charAt(k  ); str2+=original2.charAt(k  );
+        str+=original.charAt(k+3); str2+=original2.charAt(k+3);
+        str+=original.charAt(k+1); str2+=original2.charAt(k+1);
+        str+=original.charAt(k+4); str2+=original2.charAt(k+4);
+        str+=original.charAt(k+2); str2+=original2.charAt(k+2);
+        str+=original.charAt(k+5); str2+=original2.charAt(k+5);
      }
 
      braille = code2braille(str);
+     braille = code2braille(str2);
      checkprint("braille 3xN : ", braille);
+     checkprint("braille 3xN : ", braille2);
      $( ".step1" ).append('--3xN--> ' + braille +'<br>' );
+     $( ".step1" ).append('--3xN--> ' + braille2 +'<br>' );
      braille = code2braille(str.split("").reverse().join(""));
+     braille2 = code2braille(str2.split("").reverse().join(""));
      checkprint("braille 3xN(R) : ", braille);
+     checkprint("braille 3xN(R) : ", braille2);
      $( ".step1" ).append('--3xN(R)--> ' + braille +'<br>' );
+     $( ".step1" ).append('--3xN(R)--> ' + braille2 +'<br>' );
 
-     str = "";
+     str = ""; str2="";
      maxline=original.length / 3;
      for( var k=0 ; k<maxline ; k+=2){
-        str+=original.charAt(k  );
-        str+=original.charAt(k+1);
-        str+=original.charAt(k  +maxline);
-        str+=original.charAt(k+1+maxline);
-        str+=original.charAt(k  +maxline*2);
-        str+=original.charAt(k+1+maxline*2);
+        str+=original.charAt(k  );            str2+=original2.charAt(k  );           
+        str+=original.charAt(k+1);            str2+=original2.charAt(k+1);           
+        str+=original.charAt(k  +maxline);    str2+=original2.charAt(k  +maxline);   
+        str+=original.charAt(k+1+maxline);    str2+=original2.charAt(k+1+maxline);   
+        str+=original.charAt(k  +maxline*2);  str2+=original2.charAt(k  +maxline*2); 
+        str+=original.charAt(k+1+maxline*2);  str2+=original2.charAt(k+1+maxline*2); 
      }
      braille = code2braille(str);
+     braille2 = code2braille(str2);
      checkprint("braille Nx3 : ", braille);
+     checkprint("braille Nx3 : ", braille2);
      $( ".step1" ).append('--Nx3--> ' + braille +'<br>' );
+     $( ".step1" ).append('--Nx3--> ' + braille2 +'<br>' );
      braille = code2braille(str.split("").reverse().join(""));
+     braille2 = code2braille(str2.split("").reverse().join(""));
      checkprint("braille Nx3(R) : ", braille);
+     checkprint("braille Nx3(R) : ", braille2);
      $( ".step1" ).append('--Nx3(R)--> ' + braille +'<br>' );
+     $( ".step1" ).append('--Nx3(R)--> ' + braille2 +'<br>' );
   }else{
      $( ".step1" ).append('Not Braille <br>' );
   }
