@@ -310,31 +310,31 @@ function check_default(){
   if( (str.length % 5 ) ==0 ){
      $( ".step1" ).append('Baudot<br>' );
      var baudot = baudot1(str);
-     var baudot2 = baudot1(str2);
+     var baudota = baudot1(str2);
      checkprint("baudot : ", baudot);
-     checkprint("baudot : ", baudot2);
+     checkprint("baudot : ", baudota);
      baudot = baudot1(str.split("").reverse().join(""));
-     baudot2 = baudot1(str2.split("").reverse().join(""));
+     baudota = baudot1(str2.split("").reverse().join(""));
      checkprint("baudot : ", baudot);
-     checkprint("baudot : ", baudot2);
+     checkprint("baudot : ", baudota);
 
      baudot = baudot2(str);
-     baudot2 = baudot2(str2);
+     baudota = baudot2(str2);
      checkprint("baudot : ", baudot);
-     checkprint("baudot : ", baudot2);
+     checkprint("baudot : ", baudota);
      baudot = baudot2(str.split("").reverse().join(""));
-     baudot2 = baudot2(str2.split("").reverse().join(""));
+     baudota = baudot2(str2.split("").reverse().join(""));
      checkprint("baudot : ", baudot);
-     checkprint("baudot : ", baudot2);
+     checkprint("baudot : ", baudota);
 
      baudot = baconian(str);
-     baudot2 = baconian(str2);
+     baudota = baconian(str2);
      checkprint("baconian : ", baudot);
-     checkprint("baconian : ", baudot2);
+     checkprint("baconian : ", baudota);
      baudot = baconian(str.split("").reverse().join(""));
-     baudot2 = baconian(str2.split("").reverse().join(""));
+     baudota = baconian(str2.split("").reverse().join(""));
      checkprint("baconian : ", baudot);
-     checkprint("baconian : ", baudot2);
+     checkprint("baconian : ", baudota);
   }else{
      $( ".step1" ).append('Not baudot / baconian<br>' );
   }
