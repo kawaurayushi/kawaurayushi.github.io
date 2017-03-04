@@ -491,13 +491,32 @@ function check_default(){
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
- 
+
+    base=GetHexbyBase64(Atbash(text));
+    $( '<li> DecodeBase64(A)->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base64: ", base.toLowerCase());
+    checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
+    base=GetHexbyBase64(Atbash2(text));
+    $( '<li> DecodeBase64(A)->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base64: ", base.toLowerCase());
+    checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
+
     str = text.split("").reverse().join("");
     base= GetHexbyBase64(str);
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
  
+    base=GetHexbyBase64(Atbash(str));
+    $( '<li> DecodeBase64(A)->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base64: ", base.toLowerCase());
+    checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
+    base=GetHexbyBase64(Atbash2(str));
+    $( '<li> DecodeBase64(A)->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base64: ", base.toLowerCase());
+    checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
+
+
     str=""; /* 大文字小文字変換 */
     for(var i=0; i<text.length;i++){
        ch = text.charCodeAt(i);
@@ -509,17 +528,40 @@ function check_default(){
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
+
+    base=GetHexbyBase64(Atbash(text));
+    $( '<li> DecodeBase64(A)->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base64: ", base.toLowerCase());
+    checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
+    base=GetHexbyBase64(Atbash2(text));
+    $( '<li> DecodeBase64(A)->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base64: ", base.toLowerCase());
+    checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
+
+
     str = str.split("").reverse().join("");
     base=  GetHexbyBase64(str);
     $( '<li> DecodeBase64->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base64: ", base.toLowerCase());
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
     checkprint("Base64: ", base);
+    base=GetHexbyBase64(Atbash(str));
+    $( '<li> DecodeBase64(A)->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base64: ", base.toLowerCase());
+    checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
+    base=GetHexbyBase64(Atbash2(str));
+    $( '<li> DecodeBase64(A)->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base64: ", base.toLowerCase());
+    checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
 
 
 
     str=text;
     base= Hex2String(GetHexbyBase32(str.toUpperCase()));
+    $( '<li> DecodeBase32->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base32: ", base.toLowerCase());
+    checkprint("Base32: ", base.split("").reverse().join("").toLowerCase());
+    base= Hex2String(GetHexbyBase32(Atbash(str.toUpperCase())));
     $( '<li> DecodeBase32->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base32: ", base.toLowerCase());
     checkprint("Base32: ", base.split("").reverse().join("").toLowerCase());
@@ -529,8 +571,12 @@ function check_default(){
     $( '<li> DecodeBase32->' +base+'</li>' ).appendTo($( ".step1" ));
     checkprint("Base32: ", base.toLowerCase());
     checkprint("Base32: ", base.split("").reverse().join("").toLowerCase());
+    base= Hex2String(GetHexbyBase32(Atbash(str.toUpperCase())));
+    $( '<li> DecodeBase32->' +base+'</li>' ).appendTo($( ".step1" ));
+    checkprint("Base32: ", base.toLowerCase());
+    checkprint("Base32: ", base.split("").reverse().join("").toLowerCase());
 
-
+/*
   base= btoa($( ".inputvalue" ).val().trim());
   $( '<li> Base64->' +base+'</li>' ).appendTo($( ".step1" ));
   checkprint("Base64: ", base);
@@ -538,8 +584,8 @@ function check_default(){
     base=base.toLowerCase();
   decode_string=base;
 
-//  checkprint("Base64: ", base);
-//  checkprint("Base64: ", base.split("").reverse().join(""));
+*/
+
   base= Hex2String(GetHexbyBase85( $( ".inputvalue" ).val().trim() ));
   $( '<li> Base85->' +base+'</li>' ).appendTo($( ".step1" ));
   checkprint("Base85: ", base.toLowerCase());
@@ -626,7 +672,7 @@ function check_default(){
 
 
 
-  var key=["a","ab","abc","bz","z","zy","zyx"];
+  var key=["a","aa","ab","aaa","abc","bz","z","zy","zyx"];
   for (var i=0; i<key.length;i++){
     var vig=vigeneredecrypt(str,key[i]);
     checkprint("Vigenere:", vig);
@@ -645,6 +691,37 @@ function check_default(){
   }
 
 
+  $.each(KeyMap, function(key,value){
+    var vig=vigeneredecrypt(str,value);
+    checkprint("Vigenere:"+value+":", vig);
+    var key2=value;
+    vig="";
+    var j=0;
+    while(j< str.length ){
+       var temp=vigeneredecrypt(str.substr(j,value.length),key2);
+       key2=temp;
+       vig += temp;
+       j+=key2.length;
+    }
+    checkprint("Vigenere Auto:"+value+":", vig);
+  });
+  if($( ".TypeJ").prop( "checked" ) ){
+  $.each(KeyMapJoJo, function(key,value){
+    var vig=vigeneredecrypt(str,value);
+    checkprint("Vigenere:"+value+":", vig);
+    var key2=value;
+    vig="";
+    var j=0;
+    while(j< str.length ){
+       var temp=vigeneredecrypt(str.substr(j,value.length),key2);
+       key2=temp;
+       vig += temp;
+       j+=key2.length;
+    }
+    checkprint("Vigenere Auto:"+value+":", vig);
+  });
+  }
+
   $( ".step1" ).append('Step 7 : Element  start...');
   var an =encipherAtomicNumbers ($( ".inputvalue" ).val().toLowerCase().trim());
   $( '<li> Element->' +an+'</li>' ).appendTo($( ".step1" ));
@@ -661,7 +738,7 @@ function check_default(){
 
   $( ".step1" ).append('Step 8 : telephone  start...');
   var text =$( ".inputvalue" ).val().toLowerCase().trim();
-  if(!text.match(TELCHECK)){
+  if(text.match(TELCHECK)){
      str = tel1(text);
      checkprint("telephone:", str);
      $( '<li> telephone->' +str+'</li>' ).appendTo($( ".step1" ));
@@ -681,7 +758,6 @@ function check_default(){
   }else{
      $( ".step1" ).append('Not telephone <br>' );
   }
-
   $( ".step1" ).append('Step 10 : Color Index  start...');
   an =colordecode ($( ".inputvalue" ).val().toLowerCase().trim().split("").join(""));
   str=an;
@@ -712,7 +788,6 @@ function basic(mode,text){
   var decoded_string_at = str;
   var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   var tebahpla = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA0123456789";
-  decoded_string_at = "";
   for (k = 0; k < text.length; k++) {
      var coded_letter = text.charAt(k);
      var letter_index = alphabet.indexOf(coded_letter);
@@ -725,7 +800,7 @@ function basic(mode,text){
   code_exchange(decoded_string_at.split("").reverse().join(""));
   checkprint(mode+"/Atbash                : ", decoded_string_at);
   checkprint(mode+"/Atbash                : ", decoded_string_at.split("").reverse().join(""));
-
+/*
   var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   var tebahpla = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210";
   decoded_string_at = "";
@@ -734,6 +809,8 @@ function basic(mode,text){
      var letter_index = alphabet.indexOf(coded_letter);
          decoded_string_at += tebahpla.charAt(letter_index);
      }
+*/
+  decoded_string_at = Atbash(str);
   if(mode =="Normal"){
      $( '<li> atbash2 -> ' +decoded_string_at+'</li>' ).appendTo($( ".step1" ));
   }
@@ -741,7 +818,7 @@ function basic(mode,text){
   code_exchange(decoded_string_at.split("").reverse().join(""));
   checkprint(mode+"/Atbash2                : ", decoded_string_at);
   checkprint(mode+"/Atbash2                : ", decoded_string_at.split("").reverse().join(""));
-
+/*
   var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   var tebahpla = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA0987654321";
   decoded_string_at = "";
@@ -750,6 +827,9 @@ function basic(mode,text){
      var letter_index = alphabet.indexOf(coded_letter);
          decoded_string_at += tebahpla.charAt(letter_index);
      }
+*/
+  decoded_string_at = Atbash2(str);
+
   if(mode =="Normal"){
      $( '<li> atbash3 -> ' +decoded_string_at+'</li>' ).appendTo($( ".step1" ));
   }
@@ -809,6 +889,11 @@ function basic(mode,text){
      $( '<li> Morse XR/R-> ' +decoded_string_at3+'</li>' ).appendTo($( ".step1" ));
   }
 
+  decoded_string_at=Morse2Str(Str2Morse(text));
+  if ( decoded_string_at != text){
+     checkprint(mode+"/Morse Extra : ", decoded_string_at);
+     $( '<li> Morse Extra-> ' +decoded_string_at+'</li>' ).appendTo($( ".step1" ));
+  }
   for (i = 1 ; i < 26; i++) {
     var decoded_string = "";
     for (j = 0; j < text.length; j++) {

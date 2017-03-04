@@ -5,7 +5,7 @@ var KeyMapJoJo = new Array();
 var checknum ="(three|seven|eight|thre|four|five|seve|eigh|nine|two|thr|fou|fiv|six|sev|eig|nin|tw|th|fo|fi|si|se|ei|ni|hree|even|ight|ree|our|ive|ven|ght|ine|wo|ee|ur|ve|en|ht|ne|2|3|4|5|6|7|8|9|iii|ii|viii|vii|iv|vi|ix|v)";
 var checknum2 ="(three|seven|eight|zero|thre|four|five|seve|eigh|nine|zer|one|two|thr|fou|fiv|six|sev|eig|nin|ze|on|tw|th|fo|fi|si|se|ei|ni|0|1|2|3|4|5|6|7|8|9|iii|ii|i|viii|vii|iv|vi|ix|v)";
 var checknum3 ="(three|seven|eight|thre|four|five|seve|eigh|nine|two|thr|fou|fiv|six|sev|eig|nin|tw|th|fo|fi|si|se|ei|ni|2|3|4|5|6|7|8|9|hree|even|ight|ree|our|ive|ven|ght|ine|wo|ee|ur|ve|ix|en|ht|ne|due|tre|qua|quat|quatt|quattr|quattrocin|cinq|cinqu|cinque|sei|set|sett|sette|ott|otto|nov|nove|deu|deux|tro|troi|trois|quatr|quatre|sep|sept|hui|huit|neu|neuf)";
-var TELCHECK    ='^[2-9 ]+$';
+var TELCHECK    ='^[1-9]+$';
 var NUM2CHECK   ='^[0-1 ]+$';
 var NUM3CHECK   ='^[0-2 ]+$';
 var NUM8CHECK   ='^[0-7 ]+$';
@@ -884,6 +884,9 @@ function Str2Morse(str) {
 		"）" : "010010",	"１" : "01111",		"２" : "00111",		"３" : "00011",
 		"４" : "00001",		"５" : "00000",		"６" : "10000",		"７" : "11000",
 		"８" : "11100",		"９" : "11110",		"０" : "11111",
+		"一" : "01111",		"二" : "00111",		"三" : "00011",		"四" : "00001",
+		"五" : "00000",		"六" : "10000",		"七" : "11000",		"八" : "11100",
+		"九" : "11110",		"零" : "11111",
 		"ａ" : "01",		"ｂ" : "1000",		"ｃ" : "1010",		"ｄ" : "100",
 		"ｅ" : "0",			"ｆ" : "0010",		"ｇ" : "110",		"ｈ" : "0000",
 		"ｉ" : "00",		"ｊ" : "0111",		"ｋ" : "101",		"ｌ" : "0100",
