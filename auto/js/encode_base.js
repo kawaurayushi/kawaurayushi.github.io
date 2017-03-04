@@ -35,6 +35,7 @@ $( ".Numeric"    ).change(function() {
 	check_default(); 
 });
 
+$( ".AllKey "    ).change(function() { check_default(); });
 $( ".TypeRect"    ).change(function() { check_default(); });
 $( ".TypeRot"     ).change(function() { check_default(); });
 $( ".inputvalue"  ).change(function() { check_default(); });
@@ -671,11 +672,15 @@ function check_default(){
   }
 
 
-
+ if(str.length > 9){
   var key=["a","aa","ab","aaa","abc","bz","z","zy","zyx"];
   for (var i=0; i<key.length;i++){
     var vig=vigeneredecrypt(str,key[i]);
+    var vig2=vigeneredecrypt(str.split('').reverse().join(''),key[i]);
     checkprint("Vigenere:", vig);
+    checkprint("Vigenere:", vig2);
+    checkprint("Vigenere:", vig.split('').reverse().join(''));
+    checkprint("Vigenere:", vig2.split('').reverse().join(''));
     $( '<li> Vigenere'+key[i]+' ->' +vig+'</li>' ).appendTo($( ".step1" ));
     var key2=key[i];
     vig="";
@@ -689,21 +694,34 @@ function check_default(){
     checkprint("Vigenere Auto:", vig);
     $( '<li> Vigenere Auto '+key[i]+' ->' +vig+'</li>' ).appendTo($( ".step1" ));
   }
-
-
+  if($( ".AllKey").prop( "checked" )){
   $.each(KeyMap, function(key,value){
     var vig=vigeneredecrypt(str,value);
+    var str2=str.split('').reverse().join('');
+    var vig2=vigeneredecrypt(str2,value);
     checkprint("Vigenere:"+value+":", vig);
+    checkprint("Vigenere:"+value+":", vig2);
+    checkprint("Vigenere:"+value+":", vig.split('').reverse().join(''));
+    checkprint("Vigenere:"+value+":", vig2.split('').reverse().join(''));
+
     var key2=value;
+    var key3=value;
     vig="";
+    vig2="";
     var j=0;
     while(j< str.length ){
        var temp=vigeneredecrypt(str.substr(j,value.length),key2);
+       var temp2=vigeneredecrypt(str2.substr(j,value.length),key3);
        key2=temp;
+       key3=temp2;
        vig += temp;
+       vig2 += temp2;
        j+=key2.length;
     }
-    checkprint("Vigenere Auto:"+value+":", vig);
+    checkprint("Vigenere: Auto :"+value+":", vig);
+    checkprint("Vigenere: Auto :"+value+":", vig2);
+    checkprint("Vigenere: Auto :"+value+":", vig.split('').reverse().join(''));
+    checkprint("Vigenere: Auto :"+value+":", vig2.split('').reverse().join(''));
   });
   if($( ".TypeJ").prop( "checked" ) ){
   $.each(KeyMapJoJo, function(key,value){
@@ -721,6 +739,8 @@ function check_default(){
     checkprint("Vigenere Auto:"+value+":", vig);
   });
   }
+  }
+ }
 
   $( ".step1" ).append('Step 7 : Element  start...');
   var an =encipherAtomicNumbers ($( ".inputvalue" ).val().toLowerCase().trim());
