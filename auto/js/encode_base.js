@@ -71,17 +71,26 @@ function init(){
   $( "#demo").html("");
   $( ".result").html("");
   $( ".result2").html("");
+  $( ".step1" ).html('Step 1 :  code check ...<br>');
+  $( ".step2" ).html('...<br>');
 }
 function check_default1(){
+	var startTime = new Date();
 	$( ".inputvalue" ).val($( ".inputvalue1" ).val());
 	check_default();
+	var endTime = new Date();
+	$( ".LapTime").html( (endTime - startTime) + "ms");
 }
 
 function check_default2(){
+	var startTime = new Date();
 	$( ".inputvalue" ).val($( ".inputvalue1" ).val() + $( ".inputvalue2" ).val());
 	check_default();
+	var endTime = new Date();
+	$( ".LapTime").html( (endTime - startTime) + "ms");
 }
 function check_default3(){
+	var startTime = new Date();
 	$( ".inputvalue" ).val($( ".inputvalue1" ).val() + $( ".inputvalue2" ).val()+ $( ".inputvalue3" ).val());
 	check_default();
 	$( ".inputvalue" ).val($( ".inputvalue1" ).val() + $( ".inputvalue3" ).val()+ $( ".inputvalue2" ).val());
@@ -89,8 +98,61 @@ function check_default3(){
 	$( ".inputvalue" ).val($( ".inputvalue2" ).val() + $( ".inputvalue1" ).val()+ $( ".inputvalue3" ).val());
 	check_default();
 
+	var Rectangles = $( ".inputvalue1" ).val() + $( ".inputvalue2" ).val()+ $( ".inputvalue3" ).val();
+	if( Rectangles.length %3 ==0){
+		h= Rectangles.length / 3;
+		var rect = ["","","","","","","","","","","","","","","","","","","","","",""];
+		for(j=0;j<h;j++){
+			rect[0] += Rectangles.charAt(0+j*3);
+			rect[1] += Rectangles.charAt(1+j*3);
+			rect[2] += Rectangles.charAt(2+j*3);
+		}
+		$( ".inputvalue" ).val(rect[0]);
+		check_default();
+		$( ".inputvalue" ).val(rect[1]);
+		check_default();
+		$( ".inputvalue" ).val(rect[2]);
+		check_default();
+	}
+
+	Rectangles = $( ".inputvalue1" ).val() + $( ".inputvalue3" ).val()+ $( ".inputvalue2" ).val();
+	if( Rectangles.length %3 ==0){
+		h= Rectangles.length / 3;
+		var rect = ["","","","","","","","","","","","","","","","","","","","","",""];
+		for(j=0;j<h;j++){
+			rect[0] += Rectangles.charAt(0+j*3);
+			rect[1] += Rectangles.charAt(1+j*3);
+			rect[2] += Rectangles.charAt(2+j*3);
+		}
+		$( ".inputvalue" ).val(rect[0]);
+		check_default();
+		$( ".inputvalue" ).val(rect[1]);
+		check_default();
+		$( ".inputvalue" ).val(rect[2]);
+		check_default();
+	}
+
+	Rectangles = $( ".inputvalue2" ).val() + $( ".inputvalue1" ).val()+ $( ".inputvalue3" ).val();
+	if( Rectangles.length %3 ==0){
+		h= Rectangles.length / 3;
+		var rect = ["","","","","","","","","","","","","","","","","","","","","",""];
+		for(j=0;j<h;j++){
+			rect[0] += Rectangles.charAt(0+j*3);
+			rect[1] += Rectangles.charAt(1+j*3);
+			rect[2] += Rectangles.charAt(2+j*3);
+		}
+		$( ".inputvalue" ).val(rect[0]);
+		check_default();
+		$( ".inputvalue" ).val(rect[1]);
+		check_default();
+		$( ".inputvalue" ).val(rect[2]);
+		check_default();
+	}
+	var endTime = new Date();
+	$( ".LapTime").html( (endTime - startTime) + "ms");
 
 }
+
 function check_default4(){
 	init();
 	if( $(".TypeSet2").is(':checked') ){
@@ -113,8 +175,6 @@ function check_default4(){
 }
 
 function check_default(){
-  $( ".step1" ).html('Step 1 :  code check ...<br>');
-  $( ".step2" ).html('...<br>');
   code_exchange($( ".inputvalue" ).val().toLowerCase().trim());
   key_exchange($( ".inputvalue" ).val().toLowerCase().trim());
   keyboard2morse($( ".inputvalue" ).val().toLowerCase().trim());
@@ -827,7 +887,6 @@ function check_default(){
   an =colordecode2 ($( ".inputvalue" ).val().toLowerCase().trim().split("").reverse().join(""));
   $( '<li> Colors->' +an+'</li>' ).appendTo($( ".step1" ));
   checkprint("Colors: ", an);
-
 };
 
 function basic(mode,text){
