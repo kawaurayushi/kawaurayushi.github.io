@@ -1,8 +1,6 @@
-
-var ASCNUM = ['three','seven','eight','thre','four','five','seve','eigh','nine','two','thr','fou','fiv','six','sev','eig','nin','tw','th','fo','fi','si','se','ei','ni','viii','vii','iii','ii','vi','iv','v','ix'];
-var NUMNUM = ['3','7','8','3','4','5','7','8','9','2','3','4','5','6','7','8','9','2','3','4','5','6','7','8','9','8','7','3','2','6','4','5','9'];
 var colors;
 var webcolors;
+var flag=1;
 
 $( ".Numeric"    ).change(function() { 
   if ($(".Numeric").is(':checked')) {
@@ -35,17 +33,19 @@ $( ".Numeric"    ).change(function() {
 	check_default(); 
 });
 
-$( ".AllKey "    ).change(function() { check_default(); });
-$( ".TypeRect"    ).change(function() { check_default(); });
-$( ".TypeRot"     ).change(function() { check_default(); });
-$( ".inputvalue"  ).change(function() { check_default(); });
-$( ".TypeO"       ).change(function() { check_default(); });
-$( ".TypeN"       ).change(function() { check_default(); });
-$( ".TypeJ"       ).change(function() { check_default(); });
-$( ".TypeA"       ).change(function() { check_default(); });
-$( ".TypeE"       ).change(function() { check_default(); });
-$( ".TypeSet2"    ).change(function() { check_default(); });
-$( ".TypeSet3"    ).change(function() { check_default(); });
+$( ".AllKey "     ).change(function() { check_default4(); });
+$( ".TypeRect"    ).change(function() { check_default4(); });
+$( ".TypeRot"     ).change(function() { check_default4(); });
+$( ".inputvalue1" ).change(function() { check_default4(); });
+$( ".inputvalue2" ).change(function() { check_default4(); });
+$( ".inputvalue3" ).change(function() { check_default4(); });
+$( ".TypeO"       ).change(function() { check_default4(); });
+$( ".TypeN"       ).change(function() { check_default4(); });
+$( ".TypeJ"       ).change(function() { check_default4(); });
+$( ".TypeA"       ).change(function() { check_default4(); });
+$( ".TypeE"       ).change(function() { check_default4(); });
+$( ".TypeSet2"    ).change(function() { check_default4(); });
+$( ".TypeSet3"    ).change(function() { check_default4(); });
 
 $(document).ready(function() {
   $.getJSON( "https://raw.githubusercontent.com/ingresscodes/keywords/master/keywords.json", function( json ) {
@@ -72,11 +72,47 @@ function init(){
   $( ".result").html("");
   $( ".result2").html("");
 }
+function check_default1(){
+	$( ".inputvalue" ).val($( ".inputvalue1" ).val());
+	check_default();
+}
+
+function check_default2(){
+	$( ".inputvalue" ).val($( ".inputvalue1" ).val() + $( ".inputvalue2" ).val());
+	check_default();
+}
+function check_default3(){
+	$( ".inputvalue" ).val($( ".inputvalue1" ).val() + $( ".inputvalue2" ).val()+ $( ".inputvalue3" ).val());
+	check_default();
+	$( ".inputvalue" ).val($( ".inputvalue1" ).val() + $( ".inputvalue3" ).val()+ $( ".inputvalue2" ).val());
+	check_default();
+	$( ".inputvalue" ).val($( ".inputvalue2" ).val() + $( ".inputvalue1" ).val()+ $( ".inputvalue3" ).val());
+	check_default();
 
 
+}
+function check_default4(){
+	init();
+	if( $(".TypeSet2").is(':checked') ){
+		$(".TypeSet3").prop("checked",false);
+		flag=2;
+	}else if ($(".TypeSet3").is(':checked') ){
+		$(".TypeSet2").prop("checked",false);
+		flag=3;
+	}else{
+		flag=1;
+	}
+
+	if(flag==1){
+		check_default1();
+	}else if(flag ==2){
+		check_default2();
+	}else if(flag ==3){
+		check_default3();
+	}
+}
 
 function check_default(){
-  init();
   $( ".step1" ).html('Step 1 :  code check ...<br>');
   $( ".step2" ).html('...<br>');
   code_exchange($( ".inputvalue" ).val().toLowerCase().trim());
