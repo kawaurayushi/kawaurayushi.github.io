@@ -840,6 +840,23 @@ function Base36(str) {
   return ret;
 }
 
+function morsecp(str){
+	$(str).val(Morse2Str($(str).val()));
+}
+
+function a2bcp(str){
+	$(str).val(a2b($(str).val()));
+}
+
+function a2b(str){
+	var alphabet = {
+		"a"	 : "0",		"b"	 : "1",		"c"	 : "2",		"d"	 : "3",		"e"	 : "4",
+		"f"	 : "5",		"g"	 : "6",		"h"	 : "7",		"i"	 : "8",		"j"	 : "9",
+	};
+	return str.split('').map(function(e){ return alphabet[e.toLowerCase()] || '';}).join(''); 
+
+}
+
 function Str2Morse(str) {
 	var alphabet = {
 		"a"	 : "01",		"b"	 : "1000",		"c"	 : "1010",		"d"	 : "100",
@@ -1433,150 +1450,168 @@ function checkprint(name,str){
 	var res2="";
 
 	str=str.toLowerCase();
-  if($( ".TypeO").prop( "checked" ) ){
-	if( code  = str.match(numbercheckold1) ){
-		if($.inArray(code[4], KeyMap) >= 0){
-			res1 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
+	if($( ".TypeO").prop( "checked" ) ){
+		if( code  = str.match(numbercheckold1) ){
+			if($.inArray(code[4], KeyMap) >= 0){
+				res1 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
+			}else{
+				res2 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
+			}
 		}else{
-			res2 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
-		}
-	}else if( code  = str.match(numbercheckold2) ){
-		if($.inArray(code[4], KeyMap) >= 0){
-			res1 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
-		}else{
-			res2 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
-		}
-	}
-  }
-
-
-  if($( ".TypeE").prop( "checked" ) ){
-	if( code  = str.match(numberchecknot1) ){
-		if($.inArray(code[1], KeyMap) >= 0){
-			res1 += "Not FR Passcode: " +'<font color="red">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
-		}else{
-			res2 += "Not FR Passcode: " +'<font color="green">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
-		}
-	}else if( code  = str.match(numbercheckold2) ){
-		if($.inArray(code[1], KeyMap) >= 0){
-			res1 += "Not FR Passcode: " +'<font color="red">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
-		}else{
-			res2 += "Not FR Passcode: " +'<font color="green">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
+			if($( ".LogOut").prop( "checked" ) ){
+				if( code  = str.match(numbercheckold2) ){
+					if($.inArray(code[4], KeyMap) >= 0){
+						res1 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
+					}else{
+						res2 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
+					}
+				}
+			}
 		}
 	}
-  }
 
-
-  if($( ".TypeSet2").prop( "checked" ) ){
-	var setflag=0;
-	var checkstr="";
-	if( code  = str.match(numbercheckinv3) ){
-		if($.inArray(code[4], KeyMap) >= 0){
-			checkstr += "2 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-			setflag ++;
+	if($( ".TypeE").prop( "checked" ) ){
+		if( code  = str.match(numberchecknot1) ){
+			if($.inArray(code[1], KeyMap) >= 0){
+				res1 += "Not FR Passcode: " +'<font color="red">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
+			}else{
+				res2 += "Not FR Passcode: " +'<font color="green">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
+			}
 		}else{
-			checkstr += "2 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-		}
-		if($.inArray(code[12], KeyMap) >= 0){
-			checkstr +=  code[9]+numeric[code[10]]+numeric[code[11]]+'<font color="red">'+code[12]+'</font>'+numeric[code[13]]+numeric[code[14]]+numeric[code[15]]+code[16];
-			setflag ++;
-		}else{
-			checkstr +=  code[9]+numeric[code[10]]+numeric[code[11]]+'<font color="green">'+code[12]+'</font>'+numeric[code[13]]+numeric[code[14]]+numeric[code[15]]+code[16];
-		}
-		if(setflag ==2){
-			res1 +=checkstr+"<br>";
-		}else{
-			res2 +=checkstr+"<br>";
+			if($( ".LogOut").prop( "checked" ) ){
+				if( code  = str.match(numbercheckold2) ){
+					if($.inArray(code[1], KeyMap) >= 0){
+						res1 += "Not FR Passcode: " +'<font color="red">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
+					}else{
+						res2 += "Not FR Passcode: " +'<font color="green">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
+					}
+				}
+			}
 		}
 	}
-  }
 
-  if($( ".TypeSet3").prop( "checked" ) ){
-	var setflag=0;
-	var checkstr="";
-
-	if( code  = str.match(numbercheckinv4) ){
-		if($.inArray(code[4], KeyMap) >= 0){
-			checkstr += "3 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-			setflag++;
-		}else{
-			checkstr += "3 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-		}
-
-		if($.inArray(code[12], KeyMap) >= 0){
-			checkstr += ' : '+ code[9]+numeric[code[10]]+numeric[code[11]]+'<font color="red">'+code[12]+'</font>'+numeric[code[13]]+numeric[code[14]]+numeric[code[15]]+code[16];
-			setflag++;
-		}else{
-			checkstr += ' : '+ code[9]+numeric[code[10]]+numeric[code[11]]+'<font color="green">'+code[12]+'</font>'+numeric[code[13]]+numeric[code[14]]+numeric[code[15]]+code[16];
-		}
-
-		if($.inArray(code[20], KeyMap) >= 0){
-			checkstr += ' : '+ code[17]+numeric[code[18]]+numeric[code[19]]+'<font color="red">'+code[20]+'</font>'+numeric[code[21]]+numeric[code[22]]+numeric[code[23]]+code[24];
-			setflag++;
-		}else{
-			checkstr += ' : '+ code[17]+numeric[code[18]]+numeric[code[19]]+'<font color="green">'+code[20]+'</font>'+numeric[code[21]]+numeric[code[22]]+numeric[code[23]]+code[24];
-		}
-
-		if(setflag ==3){
-			res1 +=checkstr+"<br>";
-		}else{
-			res2 +=checkstr+"<br>";
+	if($( ".TypeSet2").prop( "checked" ) ){
+		var setflag=0;
+		var checkstr="";
+		if( code  = str.match(numbercheckinv3) ){
+			if($.inArray(code[4], KeyMap) >= 0){
+				checkstr += "2 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+				setflag ++;
+			}else{
+				checkstr += "2 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+			}
+			if($.inArray(code[12], KeyMap) >= 0){
+				checkstr +=  code[9]+numeric[code[10]]+numeric[code[11]]+'<font color="red">'+code[12]+'</font>'+numeric[code[13]]+numeric[code[14]]+numeric[code[15]]+code[16];
+				setflag ++;
+			}else{
+				checkstr +=  code[9]+numeric[code[10]]+numeric[code[11]]+'<font color="green">'+code[12]+'</font>'+numeric[code[13]]+numeric[code[14]]+numeric[code[15]]+code[16];
+			}
+			if(setflag ==2){
+				res1 +=checkstr+"<br>";
+			}else{
+				res2 +=checkstr+"<br>";
+			}
 		}
 	}
-  }
 
-  if($( ".TypeN").prop( "checked" ) ){
-	if( code  = str.match(numbercheckinv1) ){
-		if($.inArray(code[4], KeyMap) >= 0){
-			res1 += "Investigate Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-		}else{
-			res2 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-		}
-	}else if( code  = str.match(numbercheckinv2) ){
-		if($.inArray(code[4], KeyMap) >= 0){
-			res1 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-		}else{
-			res2 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-		}
-	}
-  }
-  if($( ".TypeJ").prop( "checked" ) ){
-	if( code  = str.match(numbercheckjoj1) ){
-		if($.inArray(code[5], KeyMapJoJo) >= 0){
-			res1 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="red">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
-		}else{
-			res2 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="green">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
-		}
-	}else if( code  = str.match(numbercheckjoj2) ){
-		if($.inArray(code[5], KeyMapJoJo) >= 0){
-			res1 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="red">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
-		}else{
-			res2 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="green">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
-		}
-	}
-  }
-  if($( ".TypeA").prop( "checked" ) ){
-	if( code  = str.match(numbercheckano1) ){
-		if($.inArray(code[3], KeyMap) >= 0){
-			res1 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="red">'+code[3]+'</font>'+numeric[code[4]];
-		}else{
-			res2 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="green">'+code[3]+'</font>'+numeric[code[4]];
-		}
-	}else if( code  = str.match(numbercheckano2) ){
-		if($.inArray(code[3], KeyMap) >= 0){
-			res1 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="red">'+code[3]+'</font>'+numeric[code[4]];
-		}else{
-			res2 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="green">'+code[3]+'</font>'+numeric[code[4]];
+	if($( ".TypeSet3").prop( "checked" ) ){
+		var setflag=0;
+		var checkstr="";
+
+		if( code  = str.match(numbercheckinv4) ){
+			if($.inArray(code[4], KeyMap) >= 0){
+				checkstr += "3 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+				setflag++;
+			}else{
+				checkstr += "3 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+			}
+
+			if($.inArray(code[12], KeyMap) >= 0){
+				checkstr += ' : '+ code[9]+numeric[code[10]]+numeric[code[11]]+'<font color="red">'+code[12]+'</font>'+numeric[code[13]]+numeric[code[14]]+numeric[code[15]]+code[16];
+				setflag++;
+			}else{
+				checkstr += ' : '+ code[9]+numeric[code[10]]+numeric[code[11]]+'<font color="green">'+code[12]+'</font>'+numeric[code[13]]+numeric[code[14]]+numeric[code[15]]+code[16];
+			}
+
+			if($.inArray(code[20], KeyMap) >= 0){
+				checkstr += ' : '+ code[17]+numeric[code[18]]+numeric[code[19]]+'<font color="red">'+code[20]+'</font>'+numeric[code[21]]+numeric[code[22]]+numeric[code[23]]+code[24];
+				setflag++;
+			}else{
+				checkstr += ' : '+ code[17]+numeric[code[18]]+numeric[code[19]]+'<font color="green">'+code[20]+'</font>'+numeric[code[21]]+numeric[code[22]]+numeric[code[23]]+code[24];
+			}
+
+			if(setflag ==3){
+				res1 +=checkstr+"<br>";
+			}else{
+				res2 +=checkstr+"<br>";
+			}
 		}
 	}
-  }
+
+	if($( ".TypeN").prop( "checked" ) ){
+		if( code  = str.match(numbercheckinv1) ){
+			if($.inArray(code[4], KeyMap) >= 0){
+				res1 += "Investigate Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+			}else{
+				res2 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+			}
+		}else{
+			if($( ".LogOut").prop( "checked" ) ){
+				if( code  = str.match(numbercheckinv2) ){
+					if($.inArray(code[4], KeyMap) >= 0){
+						res1 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+					}else{
+						res2 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+					}
+				}
+			}
+		}
+	}
+	if($( ".TypeJ").prop( "checked" ) ){
+		if( code  = str.match(numbercheckjoj1) ){
+			if($.inArray(code[5], KeyMapJoJo) >= 0){
+				res1 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="red">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
+			}else{
+				res2 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="green">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
+			}
+		}else{
+			if($( ".LogOut").prop( "checked" ) ){
+				if( code  = str.match(numbercheckjoj2) ){
+					if($.inArray(code[5], KeyMapJoJo) >= 0){
+						res1 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="red">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
+					}else{
+						res2 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="green">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
+					}
+				}
+			}
+		}
+	}
+	if($( ".TypeA").prop( "checked" ) ){
+		if( code  = str.match(numbercheckano1) ){
+			if($.inArray(code[3], KeyMap) >= 0){
+				res1 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="red">'+code[3]+'</font>'+numeric[code[4]];
+			}else{
+				res2 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="green">'+code[3]+'</font>'+numeric[code[4]];
+			}
+		}else{
+			if($( ".LogOut").prop( "checked" ) ){
+				if( code  = str.match(numbercheckano2) ){
+					if($.inArray(code[3], KeyMap) >= 0){
+						res1 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="red">'+code[3]+'</font>'+numeric[code[4]];
+					}else{
+						res2 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="green">'+code[3]+'</font>'+numeric[code[4]];
+					}
+				}
+			}
+		}
+	}
 	if(res1.length >1 ){
 		$('<li>'+name+'--  '+res1+'</li>').appendTo($( ".result" ));
 	}
 	if(res2.length >1 ){
 		$('<li>'+name+'--  '+res2+'</li>').appendTo($( ".result2" ));
 	}
-//	return res;
+
 }
 
 

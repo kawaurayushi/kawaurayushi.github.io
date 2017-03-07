@@ -19,9 +19,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
      </header>
      <form>
         <input type="hidden" class="inputvalue" size="50"> <br />
-        [1]<input type="text" class="inputvalue1" size="50"> <br />
-        [2]<input type="text" class="inputvalue2" size="50"> <br />
-        [3]<input type="text" class="inputvalue3" size="50"> <br />
+        [1]<input type="text" class="inputvalue1" size="50">
+                <input type="button" id="morse" value="morse" onclick="morsecp('.inputvalue1'); return false">
+                <input type="button" id="a2n" value="a2n" onclick="a2bcp('.inputvalue1'); return false"><br /> 
+        [2]<input type="text" class="inputvalue2" size="50">
+                <input type="button" id="morse" value="morse" onclick="morsecp('.inputvalue2'); return false">
+                <input type="button" id="a2n" value="a2n" onclick="a2bcp('.inputvalue2'); return false"><br /> 
+
+        [3]<input type="text" class="inputvalue3" size="50">
+                <input type="button" id="morse" value="morse" onclick="morsecp('.inputvalue3'); return false">
+                <input type="button" id="a2n" value="a2n" onclick="a2bcp('.inputvalue3'); return false"><br /> 
         <input type="hidden" class="inputvalue" size="50"> <br />
         <label for="TypeO"><input type="checkbox" id="TypeO" class="TypeO" >old pattern (#xxx#keywordx#x#x)</label><br />
         <label for="TypeN"><input type="checkbox" id="TypeN" class="TypeN" checked="checked">new pattern (xxx##keyword###xx)</label><br />
@@ -34,6 +41,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         <label for="AllKey"><input type="checkbox" id="AllKey" class="AllKey" >All Keyword Vigenere</label><br /><br />
         <label for="TypeRect"><input type="checkbox" id="TypeRect" class="TypeRect" >Check Rectangle => Code Retry(very slow...)</label><br />
         <label for="TypeRot"><input type="checkbox" id="TypeRot" class="TypeRot" >Check Rot => Code Retry(very slow...)</label><br /><br />
+        <label for="LogOut"><input type="checkbox" id="LogOut" class="LogOut" >Candidate Out Put</label><br /><br />
      </form>
      <div>Lap Time</div>
      <div class="LapTime"> </div>
