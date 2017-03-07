@@ -46,6 +46,7 @@ $( ".TypeA"       ).change(function() { check_default4(); });
 $( ".TypeE"       ).change(function() { check_default4(); });
 $( ".TypeSet2"    ).change(function() { check_default4(); });
 $( ".TypeSet3"    ).change(function() { check_default4(); });
+$( ".LogOut "     ).change(function() { check_default4(); });
 
 $(document).ready(function() {
   $.getJSON( "https://raw.githubusercontent.com/ingresscodes/keywords/master/keywords.json", function( json ) {
@@ -900,7 +901,7 @@ function basic(mode,text){
       $( '<li> Reverse -> ' +str+'</li>' ).appendTo($( ".step1" ));
   }
   checkprint(mode+"/Reverse                : ", str);
-  var decoded_string_at = str;
+  var decoded_string_at = "";
   var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   var tebahpla = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA0123456789";
   for (k = 0; k < text.length; k++) {
