@@ -99,6 +99,54 @@ function check_default3(){
 	$( ".inputvalue" ).val($( ".inputvalue2" ).val() + $( ".inputvalue1" ).val()+ $( ".inputvalue3" ).val());
 	check_default();
 
+	if(    ($( ".inputvalue1" ).val().length == $( ".inputvalue2" ).val().length)
+		&& ($( ".inputvalue2" ).val().length == $( ".inputvalue3" ).val().length)  
+		&& ( ($( ".inputvalue1" ).val().length %3) ==0 ) ){
+		var i=0;
+		var str11="",str12="",str13="";
+		var str21="",str22="",str23="";
+		var str31="",str32="",str33="";
+		while (i<$( ".inputvalue1" ).val().length){
+			str11 += $( ".inputvalue1" ).val().charAt(i);
+			str11 += $( ".inputvalue2" ).val().charAt(i);
+			str11 += $( ".inputvalue3" ).val().charAt(i);
+			str21 += $( ".inputvalue1" ).val().charAt(i);
+			str21 += $( ".inputvalue3" ).val().charAt(i);
+			str21 += $( ".inputvalue2" ).val().charAt(i);
+			str31 += $( ".inputvalue2" ).val().charAt(i);
+			str31 += $( ".inputvalue1" ).val().charAt(i);
+			str31 += $( ".inputvalue3" ).val().charAt(i);
+			i++;
+			str12 += $( ".inputvalue1" ).val().charAt(i);
+			str12 += $( ".inputvalue2" ).val().charAt(i);
+			str12 += $( ".inputvalue3" ).val().charAt(i);
+			str22 += $( ".inputvalue1" ).val().charAt(i);
+			str22 += $( ".inputvalue3" ).val().charAt(i);
+			str22 += $( ".inputvalue2" ).val().charAt(i);
+			str32 += $( ".inputvalue2" ).val().charAt(i);
+			str32 += $( ".inputvalue1" ).val().charAt(i);
+			str32 += $( ".inputvalue3" ).val().charAt(i);
+			i++;
+			str13 += $( ".inputvalue1" ).val().charAt(i);
+			str13 += $( ".inputvalue2" ).val().charAt(i);
+			str13 += $( ".inputvalue3" ).val().charAt(i);
+			str23 += $( ".inputvalue1" ).val().charAt(i);
+			str23 += $( ".inputvalue3" ).val().charAt(i);
+			str23 += $( ".inputvalue2" ).val().charAt(i);
+			str33 += $( ".inputvalue2" ).val().charAt(i);
+			str33 += $( ".inputvalue1" ).val().charAt(i);
+			str33 += $( ".inputvalue3" ).val().charAt(i);
+			i++;
+
+		}
+		$( ".inputvalue" ).val(str11+str12+str13);
+		check_default();
+		$( ".inputvalue" ).val(str21+str22+str23);
+		check_default();
+		$( ".inputvalue" ).val(str31+str32+str33);
+		check_default();
+	}
+
 	var Rectangles = $( ".inputvalue1" ).val() + $( ".inputvalue2" ).val()+ $( ".inputvalue3" ).val();
 	if( Rectangles.length %3 ==0){
 		h= Rectangles.length / 3;
@@ -149,6 +197,8 @@ function check_default3(){
 		$( ".inputvalue" ).val(rect[2]);
 		check_default();
 	}
+
+
 	var endTime = new Date();
 	$( ".LapTime").html( (endTime - startTime) + "ms");
 

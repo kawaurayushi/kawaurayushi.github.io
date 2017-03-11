@@ -1515,10 +1515,10 @@ function checkprint(name,str){
 
 		if( code  = str.match(numbercheckinv4) ){
 			if($.inArray(code[4], KeyMap) >= 0){
-				checkstr += "3 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+				checkstr += '<font color="red">3 Set Passcode</font>: ' + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
 				setflag++;
 			}else{
-				checkstr += "3 Set Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
+				checkstr += '<font color="red">3 Set Passcode</font>: ' + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
 			}
 
 			if($.inArray(code[12], KeyMap) >= 0){
