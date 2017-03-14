@@ -14,18 +14,18 @@ var NUM16CHECK  ='^[0-9a-fA-F ]+$';
 
 var StringCHECK  ='^[0-9a-zA-z]+$';
 
-var numbercheckold1 ='^'+checknum+'([a-z]{3})'+checknum+'([0-9a-z]*?)'+'([a-z])'+checknum+'([a-z])'+checknum+'([a-z])$';
+var numbercheckold1 ='^'+checknum+'([a-hjkm-z]{3})'+checknum+'([0-9a-z]*?)'+'([a-hjkm-z])'+checknum+'([a-hjkm-z])'+checknum+'([a-hjkm-z])$';
 var numbercheckold2 ='^'+checknum+'(...)'+checknum+'([0-9a-z]*?)'+'(.)'+checknum+'(.)'+checknum+'(.)$';
-var numbercheckinv1 ='^([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})$';
+var numbercheckinv1 ='^([a-hjkm-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-hjkm-z]{2})$';
 var numbercheckinv2 ='^(...)'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'(..)$';
-var numbercheckjoj1 ='^([a-z])'+checknum2+'([a-z])'+checknum2+'([0-9a-z]*?)'+'([a-z])'+checknum2+'([a-z]{2})$';
+var numbercheckjoj1 ='^([a-hjkm-z])'+checknum2+'([a-hjkm-z])'+checknum2+'([0-9a-z]*?)'+'([a-hjkm-z])'+checknum2+'([a-hjkm-z]{2})$';
 var numbercheckjoj2 ='^(.)'+checknum2+'(.)'+checknum2+'([0-9a-z]*?)'+'(.)'+checknum2+'(..)$';
-var numbercheckano1 ='^([a-z]{8})'+checknum+'([0-9a-z]*?)'+checknum+'$';
+var numbercheckano1 ='^([a-hjkm-z]{8})'+checknum+'([0-9a-z]*?)'+checknum+'$';
 var numbercheckano2 ='^(........)'+checknum+'([0-9a-z]*?)'+checknum+'$';
-var numberchecknot1 ='^([0-9a-z]*?)'+checknum+'([a-z]{2})'+checknum+checknum+'([a-z]{2})'+checknum+'$';
+var numberchecknot1 ='^([0-9a-z]*?)'+checknum+'([a-hjkm-z]{2})'+checknum+checknum+'([a-hjkm-z]{2})'+checknum+'$';
 var numberchecknot2 ='^([0-9a-z]*?)'+checknum+'(..)'+checknum+checknum+'(..)'+checknum+'$';
-var numbercheckinv3 ='^([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})$'
-var numbercheckinv4 ='^([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})'+'([a-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-z]{2})$';
+var numbercheckinv3 ='^([a-hjkm-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-hjkm-z]{2})'+'([a-hjkm-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-hjkm-z]{2})$'
+var numbercheckinv4 ='^([a-hjkm-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-hjkm-z]{2})'+'([a-hjkm-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-hjkm-z]{2})'+'([a-hjkm-z]{3})'+checknum+checknum+'([0-9a-z]*?)'+checknum+checknum+checknum+'([a-hjkm-z]{2})$';
 
 var numeric1 ={
 					"0" : "0",	"ze" : "0" ,	"zer" : "0" ,	"zero" : "0" ,
@@ -1426,7 +1426,25 @@ function Skip_Decode(t, sk, st){
    return o;
 }
 
-
+function Skip_Decode2(t, sk, st){
+   var i, pos, o = "",temp1=t,temp2="";
+   for (i = 0, pos = st; i < t.length; i ++){
+      o += temp1.charAt(pos);
+      temp2 += temp1.substr(pos+1,sk-1);
+      pos += sk;
+      if(pos >= temp1.length ){
+         pos = 0;
+         sk=sk-1;
+         temp1=temp2;
+         temp2="";
+      }
+      if(sk<1){
+        o +=temp1;
+        i= t.length +1;
+      }
+   }
+   return o;
+}
 
 var escapeHTML = function(unsafe) {
   return unsafe.replace(/[&<"']/g, function(m) {
@@ -1457,10 +1475,10 @@ function checkprint(name,str){
 				res2 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
 			}
 		}else{
-			if( code  = str.match(numbercheckold2) ){
+			if( code  = str.match(numbercheckold2)){
 				if($.inArray(code[4], KeyMap) >= 0){
 					res1 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
-				}else{
+				}else if(!str.match(NUM10CHECK)){
 					res2 += "Old Passcode: " + numeric[code[1]]+code[2]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+code[5]+numeric[code[6]]+code[7]+numeric[code[8]]+code[9];
 				}
 			}
@@ -1475,10 +1493,10 @@ function checkprint(name,str){
 				res2 += "Not FR Passcode: " +'<font color="green">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
 			}
 		}else{
-			if( code  = str.match(numberchecknot2) ){
+			if( code  = str.match(numberchecknot2)){
 				if($.inArray(code[1], KeyMap) >= 0){
 					res1 += "Not FR Passcode: " +'<font color="red">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
-				}else{
+				}else if(!str.match(NUM10CHECK)){
 					res2 += "Not FR Passcode: " +'<font color="green">'+code[1]+'</font>'+  numeric[code[2]]+code[3]+numeric[code[4]]+numeric[code[5]]+code[6]+numeric[code[7]];
 				}
 			}
@@ -1547,14 +1565,14 @@ function checkprint(name,str){
 		if( code  = str.match(numbercheckinv1) ){
 			if($.inArray(code[4], KeyMap) >= 0){
 				res1 += "Investigate Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-			}else{
+			}else if(!str.match(NUM10CHECK)){
 				res2 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
 			}
 		}else{
-			if( code  = str.match(numbercheckinv2) ){
+			if( code  = str.match(numbercheckinv2)){
 				if($.inArray(code[4], KeyMap) >= 0){
 					res1 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
-				}else{
+				}else if(!str.match(NUM10CHECK)){
 					res2 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
 				}
 			}
@@ -1571,7 +1589,7 @@ function checkprint(name,str){
 			if( code  = str.match(numbercheckjoj2) ){
 				if($.inArray(code[5], KeyMapJoJo) >= 0){
 					res1 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="red">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
-				}else{
+				}else if(!str.match(NUM10CHECK)){
 					res2 += "JoJo Passcode: " + code[1]+numeric[code[2]]+code[3]+numeric[code[4]]+'<font color="green">'+code[5]+'</font>'+code[6]+numeric[code[7]]+code[8];
 				}
 			}
@@ -1588,7 +1606,7 @@ function checkprint(name,str){
 			if( code  = str.match(numbercheckano2) ){
 				if($.inArray(code[3], KeyMap) >= 0){
 					res1 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="red">'+code[3]+'</font>'+numeric[code[4]];
-				}else{
+				}else if(!str.match(NUM10CHECK)){
 					res2 += "Anomary Passcode: " + code[1]+numeric[code[2]]+'<font color="green">'+code[3]+'</font>'+numeric[code[4]];
 				}
 			}

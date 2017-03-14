@@ -94,10 +94,24 @@ function check_default3(){
 	var startTime = new Date();
 	$( ".inputvalue" ).val($( ".inputvalue1" ).val() + $( ".inputvalue2" ).val()+ $( ".inputvalue3" ).val());
 	check_default();
+
+	$( ".inputvalue" ).val(Skip_Decode2($( ".inputvalue" ).val(),3,0) );
+	check_default();
+
 	$( ".inputvalue" ).val($( ".inputvalue1" ).val() + $( ".inputvalue3" ).val()+ $( ".inputvalue2" ).val());
 	check_default();
+
+	$( ".inputvalue" ).val(Skip_Decode2($( ".inputvalue" ).val(),3,0) );
+	check_default();
+
 	$( ".inputvalue" ).val($( ".inputvalue2" ).val() + $( ".inputvalue1" ).val()+ $( ".inputvalue3" ).val());
 	check_default();
+
+	$( ".inputvalue" ).val(Skip_Decode2($( ".inputvalue" ).val(),3,0) );
+	check_default();
+
+
+
 
 	if(    ($( ".inputvalue1" ).val().length == $( ".inputvalue2" ).val().length)
 		&& ($( ".inputvalue2" ).val().length == $( ".inputvalue3" ).val().length)  
