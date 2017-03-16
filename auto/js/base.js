@@ -1564,6 +1564,7 @@ function checkprint(name,str){
 	if($( ".TypeN").prop( "checked" ) ){
 		if( code  = str.match(numbercheckinv1) ){
 			if($.inArray(code[4], KeyMap) >= 0){
+//				res1 += "Investigate Passcode: " + '<button class="btn" data-clipboard-text="'+ code[1]+numeric[code[2]]+numeric[code[3]]+code[4]+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8]+'">Copy</button> :'; 
 				res1 += "Investigate Passcode: " + code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="red">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
 			}else if(!str.match(NUM10CHECK)){
 				res2 += "Investigate Passcode: " +code[1]+numeric[code[2]]+numeric[code[3]]+'<font color="green">'+code[4]+'</font>'+numeric[code[5]]+numeric[code[6]]+numeric[code[7]]+code[8];
@@ -1614,6 +1615,7 @@ function checkprint(name,str){
 	}
 
 	if(res1.length >1 ){
+//		$('<li>'+name+'--  '+res1+'</li>').appendTo("<script>  $(function () { var clipboard = new Clipboard('.btn');});</script>" );
 		$('<li>'+name+'--  '+res1+'</li>').appendTo($( ".result" ));
 	}
 	if($( ".LogOut").prop( "checked" ) ){

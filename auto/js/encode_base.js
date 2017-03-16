@@ -161,6 +161,46 @@ function check_default3(){
 		check_default();
 	}
 
+	if( (($( ".inputvalue1" ).val().length + $( ".inputvalue2" ).val().length + $( ".inputvalue3" ).val().length)) %6 ==0) { 
+		var original1 = $( ".inputvalue1" ).val() + $( ".inputvalue2" ).val() + $( ".inputvalue3" ).val();
+		var original2 = $( ".inputvalue1" ).val() + $( ".inputvalue3" ).val() + $( ".inputvalue2" ).val();
+		var original3 = $( ".inputvalue2" ).val() + $( ".inputvalue1" ).val() + $( ".inputvalue3" ).val();
+		var i=0;
+		var str11="",str12="",str13="";
+		var str21="",str22="",str23="";
+		var str31="",str32="",str33="";
+		while (i<original1.length){
+			str11 += original1.substr(i   ,2);
+			str21 += original2.substr(i   ,2);
+			str31 += original3.substr(i   ,2);
+			str12 += original1.substr(i+2 ,2);
+			str22 += original2.substr(i+2 ,2);
+			str32 += original3.substr(i+2 ,2);
+			str13 += original1.substr(i+4 ,2);
+			str23 += original2.substr(i+4 ,2);
+			str33 += original2.substr(i+4 ,2);
+			i+=6;
+		}
+		$( ".inputvalue" ).val(str11);
+		check_default();
+		$( ".inputvalue" ).val(str21);
+		check_default();
+		$( ".inputvalue" ).val(str31);
+		check_default();
+		$( ".inputvalue" ).val(str12);
+		check_default();
+		$( ".inputvalue" ).val(str22);
+		check_default();
+		$( ".inputvalue" ).val(str32);
+		check_default();
+		$( ".inputvalue" ).val(str13);
+		check_default();
+		$( ".inputvalue" ).val(str23);
+		check_default();
+		$( ".inputvalue" ).val(str33);
+		check_default();
+	}
+
 	var Rectangles = $( ".inputvalue1" ).val() + $( ".inputvalue2" ).val()+ $( ".inputvalue3" ).val();
 	if( Rectangles.length %3 ==0){
 		h= Rectangles.length / 3;
