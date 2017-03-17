@@ -757,6 +757,44 @@ function check_default(){
     checkprint("Base64: ", base.split("").reverse().join("").toLowerCase());
 
 
+    original=""; /* 英数字以外けす */
+    for(var i=0; i<text.length;i++){
+       ch = text.charCodeAt(i);
+       if(ch>96 && ch <123){
+           original +=  String.fromCharCode(ch);
+       }else if(ch>64 && ch <91){
+           original +=  String.fromCharCode(ch);
+       }else if(ch>47 && ch <68){
+           original +=  String.fromCharCode(ch);
+       }else {
+           i++;
+           ch = text.charCodeAt(i);
+           if(ch>96 && ch <123) original +=  String.fromCharCode(ch-32);
+           if(ch>64 && ch <91) original +=  String.fromCharCode(ch+32);
+           if(ch>40 && ch <63) original +=  String.fromCharCode(ch);
+       }
+    }
+    console.log(original);
+    base= GetHexbyBase64(original);
+    checkprint("Base64++: ", base.toLowerCase());
+    checkprint("Base64++: ", base.split("").reverse().join("").toLowerCase());
+    $( '<li> DecodeBase64++->' +base+'</li>' ).appendTo($( ".step1" ));
+
+    str=""; /* 大文字小文字変換 */
+    for(var i=0; i<original.length;i++){
+       ch = original.charCodeAt(i);
+       if(ch>96 && ch <123) str +=  String.fromCharCode(ch-32);
+       if(ch>64 && ch <91) str +=  String.fromCharCode(ch+32);
+       if(ch>40 && ch <63) str +=  String.fromCharCode(ch);
+    }
+    base= GetHexbyBase64(str);
+    checkprint("Base64++: ", base.toLowerCase());
+    checkprint("Base64++: ", base.split("").reverse().join("").toLowerCase());
+    $( '<li> DecodeBase64++->' +base+'</li>' ).appendTo($( ".step1" ));
+
+
+
+
 
     str=text;
     base= Hex2String(GetHexbyBase32(str.toUpperCase()));
@@ -778,15 +816,6 @@ function check_default(){
     checkprint("Base32: ", base.toLowerCase());
     checkprint("Base32: ", base.split("").reverse().join("").toLowerCase());
 
-/*
-  base= btoa($( ".inputvalue" ).val().trim());
-  $( '<li> Base64->' +base+'</li>' ).appendTo($( ".step1" ));
-  checkprint("Base64: ", base);
-  checkprint("Base64: ", base.split("").reverse().join(""));
-    base=base.toLowerCase();
-  decode_string=base;
-
-*/
 
   base= Hex2String(GetHexbyBase85( $( ".inputvalue" ).val().trim() ));
   $( '<li> Base85->' +base+'</li>' ).appendTo($( ".step1" ));
@@ -992,6 +1021,8 @@ function check_default(){
   an =colordecode2 ($( ".inputvalue" ).val().toLowerCase().trim().split("").reverse().join(""));
   $( '<li> Colors->' +an+'</li>' ).appendTo($( ".step1" ));
   checkprint("Colors: ", an);
+
+
 };
 
 function basic(mode,text){
