@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 16 number </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td  {
+    font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+</style>
+<script language="JavaScript">
+function Coordinate(p) {
+	this.col = p % 16;
+	this.row = Math.floor(p / 16);
+	this.blk = Math.floor(this.row / 4) * 4 + Math.floor(this.col / 4);
+}
+function Coordinate_toString() {
+	return "Coordinate(" + this.col + ", " + this.row + ", " + this.blk + ")";
+}
+
+new Coordinate(0);
+Coordinate.prototype.toString = Coordinate_toString;
+
+function Sudoku() {
+	this.board = new Array(256);
+	this.col_flags = new Array(16);
+	this.row_flags = new Array(16);
+	this.blk_flags = new Array(16);
+	for (var i = 0; i < 16; i++)
+		this.col_flags[i] = this.row_flags[i] = this.blk_flags[i] = 0x3fe;
+	for (i = 0; i < 256; i++)
+		this.board[i] = 0;
+	this.remain = 256;
+}
+function Sudoku_done() {
+	return this.remain == 0;
+}
+function copyArray(dest, sou) {
+	for (var i = sou.length - 1; i >= 0; i--)
+		dest[i] = sou[i];
+}
+function Sudoku_copy(source) {
+	copyArray(this.board,     source.board);
+	copyArray(this.col_flags, source.col_flags);
+	copyArray(this.row_flags, source.row_flags);
+	copyArray(this.blk_flags, source.blk_flags);
+	this.remain = source.remain;
+}
+function Sudoku_setData(s) {
+	var p = 0;
+	for (var i = 0; i < s.length && p < 256; i++) {
+		c = s.charAt(i).toUpperCase();
+		if ("-0123456789ABCDEFGH".indexOf(c) >= 0) {
+			var n = parseInt(c,16);
+			if (n > 0)
+				this.setNum(p, n);
+			p++;
+		}
+	}
+	for (; p < 256; p++) {
+		this.board[p] = 0;
+	}
+}
+function Sudoku_getData(form) {
+	for (var p = 0; p < 256; p++) {
+		var c = form["A" + p].value;
+		var ix = "0123456789ABCDEFGH".indexOf(parseInt(c).toString(16).toUpperCase());
+		if (ix > 0) {
+			this.setNum(p, ix);
+		} else
+			this.board[p] = 0;
+	}
+}
+
+function Sudoku_output(form) {
+	var output="";
+	for (var p = 0; p < 16; p++) {
+		for (var q = 0; q < 16; q++) {
+			var c = form["A" + (p*16+q).toString()].value;
+//			console.log(parseInt(c).toString(16));
+			var ix = "0123456789ABCDEFGH".indexOf(parseInt(c).toString(16).toUpperCase());
+			if (ix > 0) {
+				output+=parseInt(c).toString(16).toUpperCase();
+			} else {
+				output+="-";
+			}
+		}
+		output+="\n";		
+	}
+	form["output"].value=output;
+}
+function Sudoku_view(form) {
+	for (var i = 0; i < 256; i++) {
+		if (this.board[i] == 0)
+			form["A" + i].value = " ";
+		else
+			form["A" + i].value = this.board[i];
+	}
+}
+function Sudoku_setNum(p, n) {
+	var coord = new Coordinate(p);
+	var mask = ~(1 << n);
+	this.col_flags[coord.col] &= mask;
+	this.row_flags[coord.row] &= mask;
+	this.blk_flags[coord.blk] &= mask;
+	this.board[p] = n;
+	this.remain--;
+}
+function Sudoku_getFlags(p) {
+	var coord = new Coordinate(p);
+	var flag = 	this.col_flags[coord.col] & this.row_flags[coord.row]
+				& this.blk_flags[coord.blk];
+	return flag;
+}
+function Sudoku_canPlace(p, n) {
+	if (this.board[p] != 0)
+		return 0;
+	var coord = new Coordinate(p);
+	return this.col_flags[coord.col] & this.row_flags[coord.row] 
+			& this.blk_flags[coord.blk] & (1 << n);
+}
+function Sudoku_countAvail(p) {
+	var flag = this.getFlags(p);
+	return countBits(flag);
+}
+
+function Sudoku_nextAvail() {
+	var min_c = 17;		// 16 = 9 + 1
+	var min_p = -1;
+
+	for (var p = 0; p < 256; p++) {
+		if (this.board[p] == 0) {
+			var c = this.countAvail(p);
+			if (c < min_c) {
+				min_c = c;
+				min_p = p;
+			}
+		}
+	}
+	return min_p;
+}
+function Sudoku_save() {
+	var area = new Sudoku();
+	area.copy(this);
+	return area;
+}
+function Sudoku_load(area) {
+	this.copy(area);
+}
+
+new Sudoku();	// dummy
+Sudoku.prototype.getData = Sudoku_getData;
+Sudoku.prototype.setData = Sudoku_setData;
+Sudoku.prototype.view = Sudoku_view;
+Sudoku.prototype.setNum = Sudoku_setNum;
+Sudoku.prototype.getFlags = Sudoku_getFlags;
+Sudoku.prototype.canPlace = Sudoku_canPlace;
+Sudoku.prototype.nextAvail = Sudoku_nextAvail;
+Sudoku.prototype.countAvail = Sudoku_countAvail;
+Sudoku.prototype.copy = Sudoku_copy;
+Sudoku.prototype.save = Sudoku_save;
+Sudoku.prototype.load = Sudoku_load;
+Sudoku.prototype.done = Sudoku_done;
+Sudoku.prototype.output = Sudoku_output;
+
+function dumpx(objName, obj) {
+	for (var prop in obj) {
+		document.writeln(objName + "." + prop + " = " + obj[prop] + "<BR>");
+	}
+}
+function getFirstNum(flag) {
+	var n = 0;
+	if (flag == 0)
+		return 0;
+	while ((flag & 1) == 0) {
+		n++;
+		flag >>= 1;
+	}
+	return n;
+}
+function methodA(sudoku) {
+	for (var p = 0; p < 256; p++) {
+		if (sudoku.board[p] == 0) {
+			flag = sudoku.getFlags(p);
+			if (flag != 0 && 512 % flag == 0) {
+				n = getFirstNum(flag);
+				sudoku.setNum(p, n);
+				return true;
+			}
+		}
+	}
+	return false;
+}
+function makeZeroArray(n) {
+	var a = new Array(n);
+	for (var i = 0; i < n; i++)
+		a[i] = 0;
+	return a;
+}
+function methodB(sudoku) {
+	var prow = new Array(16);
+	var pcol = new Array(16);
+	var pblk = new Array(16);
+
+	for (var n = 1; n <= 16; n++) {
+		var crow = makeZeroArray(16);
+		var ccol = makeZeroArray(16);
+		var cblk = makeZeroArray(16);
+		for (var p = 0; p < 256; p++) {
+			if (sudoku.canPlace(p, n)) {
+				var coord = new Coordinate(p);
+				crow[coord.row]++; prow[coord.row] = p;
+				ccol[coord.col]++; pcol[coord.col] = p;
+				cblk[coord.blk]++; pblk[coord.blk] = p;
+			}
+		}
+		for (var row = 0; row < 16; row++) {
+			if (crow[row] == 1) {
+				sudoku.setNum(prow[row], n);
+				return true;
+			}
+		}
+		for (var col = 0; col < 16; col++) {
+			if (ccol[col] == 1) {
+				sudoku.setNum(pcol[col], n);
+				return true;
+			}
+		}
+		for (var blk = 0; blk < 16; blk++) {
+			if (cblk[blk] == 1) {
+				sudoku.setNum(pblk[blk], n);
+				return true;
+			}
+		}
+	
+	}
+	return false;
+}
+
+function countBits(f) {
+	var n = 0;
+	while (f) {
+		if (f & 1){
+			n++;
+		}
+		f >>= 1;
+	}
+	return n;
+}
+
+function backtrack(sudoku, form) {
+	var backupSpace = sudoku.save();
+	var p = sudoku.nextAvail();
+	for (var n = 1; n <= 16; n++) {
+		if (sudoku.canPlace(p, n)) {
+			sudoku.setNum(p, n);
+			tryIt(sudoku, form);
+			sudoku.load(backupSpace);
+		}
+	}
+}
+function tryIt(sudoku, form) {
+	var cont;
+	do {
+		do {
+			cont = methodA(sudoku);
+		} while (cont);
+		if (! sudoku.done())
+			cont = methodB(sudoku);
+	} while (cont);
+	if (sudoku.done())
+		sudoku.view(form);
+	else 
+		backtrack(sudoku, form);
+}
+function setInitData(form, str) {
+	sudoku = new Sudoku();
+	sudoku.setData(str);
+	sudoku.view(form);
+	return sudoku;
+}
+function solve(form) {
+	sudoku = new Sudoku();
+	sudoku.getData(form);
+	sudoku.view(form);
+	tryIt(sudoku, form);
+}
+function out(form) {
+	sudoku = new Sudoku();
+	sudoku.output(form);
+}
+
+// @@@@
+</script>
+  </head>
+<body>
+
+<HR>
+<form name="tbl">
+<table border="0">
+<tr>
+<td VALIGN="TOP">
+<table border="1">
+<tr>
+<td>
+	<table VALIGN="TOP" border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A0"> </td> <td><input type="text" size="1" name="A1"> </td>
+	    <td><input type="text" size="1" name="A2"> </td> <td><input type="text" size="1" name="A3"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A16"> </td> <td><input type="text" size="1" name="A17"> </td>
+	    <td><input type="text" size="1" name="A18"> </td> <td><input type="text" size="1" name="A19"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A32"> </td> <td><input type="text" size="1" name="A33"> </td>
+	    <td><input type="text" size="1" name="A34"> </td> <td><input type="text" size="1" name="A35"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A48"> </td> <td><input type="text" size="1" name="A49"> </td>
+	    <td><input type="text" size="1" name="A50"> </td> <td><input type="text" size="1" name="A51"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+	<table border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A4"> </td> <td><input type="text" size="1" name="A5"> </td>
+	    <td><input type="text" size="1" name="A6"> </td> <td><input type="text" size="1" name="A7"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A20"> </td> <td><input type="text" size="1" name="A21"> </td>
+	    <td><input type="text" size="1" name="A22"> </td> <td><input type="text" size="1" name="A23"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A36"> </td> <td><input type="text" size="1" name="A37"> </td>
+	    <td><input type="text" size="1" name="A38"> </td> <td><input type="text" size="1" name="A39"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A52"> </td> <td><input type="text" size="1" name="A53"> </td>
+	    <td><input type="text" size="1" name="A54"> </td> <td><input type="text" size="1" name="A55"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+	<table border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A8"> </td> <td><input type="text" size="1" name="A9"> </td>
+	    <td><input type="text" size="1" name="A10"> </td> <td><input type="text" size="1" name="A11"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A24"> </td> <td><input type="text" size="1" name="A25"> </td>
+	    <td><input type="text" size="1" name="A26"> </td> <td><input type="text" size="1" name="A27"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A40"> </td> <td><input type="text" size="1" name="A41"> </td>
+	    <td><input type="text" size="1" name="A42"> </td> <td><input type="text" size="1" name="A43"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A56"> </td> <td><input type="text" size="1" name="A57"> </td>
+	    <td><input type="text" size="1" name="A58"> </td> <td><input type="text" size="1" name="A59"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+<table border="0">
+	<tr><td><input type="text" size="1" name="A12"> </td> <td><input type="text" size="1" name="A13"> </td>
+	    <td><input type="text" size="1" name="A14"> </td> <td><input type="text" size="1" name="A15"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A28"> </td> <td><input type="text" size="1" name="A29"> </td>
+	    <td><input type="text" size="1" name="A30"> </td> <td><input type="text" size="1" name="A31"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A44"> </td> <td><input type="text" size="1" name="A45"> </td>
+	    <td><input type="text" size="1" name="A46"> </td> <td><input type="text" size="1" name="A47"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A60"> </td> <td><input type="text" size="1" name="A61"> </td>
+	    <td><input type="text" size="1" name="A62"> </td> <td><input type="text" size="1" name="A63"> </td>
+	</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td>
+	<table VALIGN="TOP" border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A64"> </td> <td><input type="text" size="1" name="A65"> </td>
+	    <td><input type="text" size="1" name="A66"> </td> <td><input type="text" size="1" name="A67"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A80"> </td> <td><input type="text" size="1" name="A81"> </td>
+	    <td><input type="text" size="1" name="A82"> </td> <td><input type="text" size="1" name="A83"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A96"> </td> <td><input type="text" size="1" name="A97"> </td>
+	    <td><input type="text" size="1" name="A98"> </td> <td><input type="text" size="1" name="A99"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A112"> </td> <td><input type="text" size="1" name="A113"> </td>
+	    <td><input type="text" size="1" name="A114"> </td> <td><input type="text" size="1" name="A115"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+	<table border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A68"> </td> <td><input type="text" size="1" name="A69"> </td>
+	    <td><input type="text" size="1" name="A70"> </td> <td><input type="text" size="1" name="A71"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A84"> </td> <td><input type="text" size="1" name="A85"> </td>
+	    <td><input type="text" size="1" name="A86"> </td> <td><input type="text" size="1" name="A87"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A100"> </td> <td><input type="text" size="1" name="A101"> </td>
+	    <td><input type="text" size="1" name="A102"> </td> <td><input type="text" size="1" name="A103"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A116"> </td> <td><input type="text" size="1" name="A117"> </td>
+	    <td><input type="text" size="1" name="A118"> </td> <td><input type="text" size="1" name="A119"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+	<table border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A72"> </td> <td><input type="text" size="1" name="A73"> </td>
+	    <td><input type="text" size="1" name="A74"> </td> <td><input type="text" size="1" name="A75"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A88"> </td> <td><input type="text" size="1" name="A89"> </td>
+	    <td><input type="text" size="1" name="A90"> </td> <td><input type="text" size="1" name="A91"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A104"> </td> <td><input type="text" size="1" name="A105"> </td>
+	    <td><input type="text" size="1" name="A106"> </td> <td><input type="text" size="1" name="A107"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A120"> </td> <td><input type="text" size="1" name="A121"> </td>
+	    <td><input type="text" size="1" name="A122"> </td> <td><input type="text" size="1" name="A123"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+<table border="0">
+	<tr><td><input type="text" size="1" name="A76"> </td> <td><input type="text" size="1" name="A77"> </td>
+	    <td><input type="text" size="1" name="A78"> </td> <td><input type="text" size="1" name="A79"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A92"> </td> <td><input type="text" size="1" name="A93"> </td>
+	    <td><input type="text" size="1" name="A94"> </td> <td><input type="text" size="1" name="A95"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A108"> </td> <td><input type="text" size="1" name="A109"> </td>
+	    <td><input type="text" size="1" name="A110"> </td> <td><input type="text" size="1" name="A111"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A124"> </td> <td><input type="text" size="1" name="A125"> </td>
+	    <td><input type="text" size="1" name="A126"> </td> <td><input type="text" size="1" name="A127"> </td>
+	</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td>
+	<table VALIGN="TOP" border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A128"> </td> <td><input type="text" size="1" name="A129"> </td>
+	    <td><input type="text" size="1" name="A130"> </td> <td><input type="text" size="1" name="A131"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A144"> </td> <td><input type="text" size="1" name="A145"> </td>
+	    <td><input type="text" size="1" name="A146"> </td> <td><input type="text" size="1" name="A147"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A160"> </td> <td><input type="text" size="1" name="A161"> </td>
+	    <td><input type="text" size="1" name="A162"> </td> <td><input type="text" size="1" name="A163"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A176"> </td> <td><input type="text" size="1" name="A177"> </td>
+	    <td><input type="text" size="1" name="A178"> </td> <td><input type="text" size="1" name="A179"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+	<table border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A132"> </td> <td><input type="text" size="1" name="A133"> </td>
+	    <td><input type="text" size="1" name="A134"> </td> <td><input type="text" size="1" name="A135"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A148"> </td> <td><input type="text" size="1" name="A149"> </td>
+	    <td><input type="text" size="1" name="A150"> </td> <td><input type="text" size="1" name="A151"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A164"> </td> <td><input type="text" size="1" name="A165"> </td>
+	    <td><input type="text" size="1" name="A166"> </td> <td><input type="text" size="1" name="A167"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A180"> </td> <td><input type="text" size="1" name="A181"> </td>
+	    <td><input type="text" size="1" name="A182"> </td> <td><input type="text" size="1" name="A183"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+	<table border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A136"> </td> <td><input type="text" size="1" name="A137"> </td>
+	    <td><input type="text" size="1" name="A138"> </td> <td><input type="text" size="1" name="A139"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A152"> </td> <td><input type="text" size="1" name="A153"> </td>
+	    <td><input type="text" size="1" name="A154"> </td> <td><input type="text" size="1" name="A155"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A168"> </td> <td><input type="text" size="1" name="A169"> </td>
+	    <td><input type="text" size="1" name="A170"> </td> <td><input type="text" size="1" name="A171"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A184"> </td> <td><input type="text" size="1" name="A185"> </td>
+	    <td><input type="text" size="1" name="A186"> </td> <td><input type="text" size="1" name="A187"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+<table border="0">
+	<tr><td><input type="text" size="1" name="A140"> </td> <td><input type="text" size="1" name="A141"> </td>
+	    <td><input type="text" size="1" name="A142"> </td> <td><input type="text" size="1" name="A143"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A156"> </td> <td><input type="text" size="1" name="A157"> </td>
+	    <td><input type="text" size="1" name="A158"> </td> <td><input type="text" size="1" name="A159"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A172"> </td> <td><input type="text" size="1" name="A173"> </td>
+	    <td><input type="text" size="1" name="A174"> </td> <td><input type="text" size="1" name="A175"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A188"> </td> <td><input type="text" size="1" name="A189"> </td>
+	    <td><input type="text" size="1" name="A190"> </td> <td><input type="text" size="1" name="A191"> </td>
+	</tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td>
+	<table VALIGN="TOP" border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A192"> </td> <td><input type="text" size="1" name="A193"> </td>
+	    <td><input type="text" size="1" name="A194"> </td> <td><input type="text" size="1" name="A195"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A208"> </td> <td><input type="text" size="1" name="A209"> </td>
+	    <td><input type="text" size="1" name="A210"> </td> <td><input type="text" size="1" name="A211"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A224"> </td> <td><input type="text" size="1" name="A225"> </td>
+	    <td><input type="text" size="1" name="A226"> </td> <td><input type="text" size="1" name="A227"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A240"> </td> <td><input type="text" size="1" name="A241"> </td>
+	    <td><input type="text" size="1" name="A242"> </td> <td><input type="text" size="1" name="A243"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+	<table border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A196"> </td> <td><input type="text" size="1" name="A197"> </td>
+	    <td><input type="text" size="1" name="A198"> </td> <td><input type="text" size="1" name="A199"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A212"> </td> <td><input type="text" size="1" name="A213"> </td>
+	    <td><input type="text" size="1" name="A214"> </td> <td><input type="text" size="1" name="A215"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A228"> </td> <td><input type="text" size="1" name="A229"> </td>
+	    <td><input type="text" size="1" name="A230"> </td> <td><input type="text" size="1" name="A231"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A244"> </td> <td><input type="text" size="1" name="A245"> </td>
+	    <td><input type="text" size="1" name="A246"> </td> <td><input type="text" size="1" name="A247"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+	<table border="0">
+	<tr>
+	    <td><input type="text" size="1" name="A200"> </td> <td><input type="text" size="1" name="A201"> </td>
+	    <td><input type="text" size="1" name="A202"> </td> <td><input type="text" size="1" name="A203"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A216"> </td> <td><input type="text" size="1" name="A217"> </td>
+	    <td><input type="text" size="1" name="A218"> </td> <td><input type="text" size="1" name="A219"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A232"> </td> <td><input type="text" size="1" name="A233"> </td>
+	    <td><input type="text" size="1" name="A234"> </td> <td><input type="text" size="1" name="A235"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A248"> </td> <td><input type="text" size="1" name="A249"> </td>
+	    <td><input type="text" size="1" name="A250"> </td> <td><input type="text" size="1" name="A251"> </td>
+	</tr>
+	</table>
+</td>
+<td>
+<table border="0">
+	<tr><td><input type="text" size="1" name="A204"> </td> <td><input type="text" size="1" name="A205"> </td>
+	    <td><input type="text" size="1" name="A206"> </td> <td><input type="text" size="1" name="A207"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A220"> </td> <td><input type="text" size="1" name="A221"> </td>
+	    <td><input type="text" size="1" name="A222"> </td> <td><input type="text" size="1" name="A223"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A236"> </td> <td><input type="text" size="1" name="A237"> </td>
+	    <td><input type="text" size="1" name="A238"> </td> <td><input type="text" size="1" name="A239"> </td>
+	</tr>
+	<tr>
+	    <td><input type="text" size="1" name="A252"> </td> <td><input type="text" size="1" name="A253"> </td>
+	    <td><input type="text" size="1" name="A254"> </td> <td><input type="text" size="1" name="A255"> </td>
+	</tr>
+</table>
+</td>
+</tr>
+
+
+
+
+</table>
+</td>
+<td valign="top" width="10">　</td>
+<td valign="top"><textarea name="dmp" rows="12" cols="20"></textarea> <br><input type="button" value="セット" onclick="setInitData(this.form, this.form.dmp.value);"> </td>
+<td valign="top" width="10">　</td>
+<td valign="top"><textarea name="output" rows="12" cols="20"></textarea>  </td>
+</tr>
+</table>
+<p>
+<input type="button" value="解く" onclick="solve(this.form)"> 
+<input type="reset" value="CLEAR">
+<input type="button" value="出力" onclick="out(this.form)"> 
+
+</p>
+
+</form>
+  </body>
+</html>

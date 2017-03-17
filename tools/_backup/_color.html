@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Color  Finder</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    .codehighlight { background: #000; color: #fff; }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Regex Color Name  Finder</h1>
+        <form id="regex-form">
+        <div class="form-group" id="regex-fg">
+          <input type="text" class="form-control input-lg" id="regex-query" placeholder="Regular Expression">
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-xs-12">
+            <input type="radio" class="" id="web-color" name="type">Web Safe Color Only
+            <input type="radio" class="" id="x11-color" name="type">X11 Color Only
+            <input type="radio" class="" id="all-color" name="type">All
+            <button type="submit" class="btn btn-primary btn-block" id="regex-query-submit">Search</button>
+          </div>
+        </div>
+        </form>
+      </div>
+      <div class="alert alert-danger hide" id="error-loading">Something went wrong.</div>
+      <div class="row" id="match">
+      </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/script2.js"></script>
+  </body>
+</html>

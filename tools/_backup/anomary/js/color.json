@@ -1,0 +1,5806 @@
+{
+  "colors":[
+	{
+		"color": "#000000",
+		"name": "Black",
+		"rgb": "0 0 0",
+		"cmyk": "0 0 0 100"
+	},
+	{
+		"color": "#000080",
+		"name": "Navy, Navy Blue",
+		"rgb": "0 0 128",
+		"cmyk": "100 100 0 50"
+	},
+	{
+		"color": "#00008b",
+		"name": "Dark Blue",
+		"rgb": "0 0 139",
+		"cmyk": "100 100 0 46"
+	},
+	{
+		"color": "#00009c",
+		"name": "Duke Blue",
+		"rgb": "0 0 156",
+		"cmyk": "100 100 0 39"
+	},
+	{
+		"color": "#0000cd",
+		"name": "Medium Blue",
+		"rgb": "0 0 205",
+		"cmyk": "100 100 0 20"
+	},
+	{
+		"color": "#0000ff",
+		"name": "Blue",
+		"rgb": "0 0 255",
+		"cmyk": "100 100 0 0"
+	},
+	{
+		"color": "#000f89",
+		"name": "Phthalo Blue",
+		"rgb": "0 15 137",
+		"cmyk": "100 89 0 46"
+	},
+	{
+		"color": "#0014a8",
+		"name": "Zaffre",
+		"rgb": "0 20 168",
+		"cmyk": "100 88 0 34"
+	},
+	{
+		"color": "#002147",
+		"name": "Oxford Blue",
+		"rgb": "0 33 71",
+		"cmyk": "100 54 0 72"
+	},
+	{
+		"color": "#002366",
+		"name": "Royal Blue",
+		"rgb": "0 35 102",
+		"cmyk": "100 66 0 60"
+	},
+	{
+		"color": "#002387",
+		"name": "Resolution Blue",
+		"rgb": "0 35 135",
+		"cmyk": "100 74 0 47"
+	},
+	{
+		"color": "#002395",
+		"name": "Imperial Blue",
+		"rgb": "0 35 149",
+		"cmyk": "100 77 0 42"
+	},
+	{
+		"color": "#002e63",
+		"name": "Cool Black",
+		"rgb": "0 46 99",
+		"cmyk": "100 54 0 61"
+	},
+	{
+		"color": "#002fa7",
+		"name": "International Klein Blue",
+		"rgb": "0 47 167",
+		"cmyk": "100 72 0 35"
+	},
+	{
+		"color": "#00308f",
+		"name": "Air Force Blue (USAF)",
+		"rgb": "0 48 143",
+		"cmyk": "100 66 0 44"
+	},
+	{
+		"color": "#003153",
+		"name": "Prussian Blue",
+		"rgb": "0 49 83",
+		"cmyk": "100 41 0 68"
+	},
+	{
+		"color": "#003366",
+		"name": "Dark Midnight Blue",
+		"rgb": "0 51 102",
+		"cmyk": "100 50 0 60"
+	},
+	{
+		"color": "#003399",
+		"name": "Dark Powder Blue, Smalt",
+		"rgb": "0 51 153",
+		"cmyk": "100 67 0 40"
+	},
+	{
+		"color": "#0033aa",
+		"name": "UA Blue",
+		"rgb": "0 51 170",
+		"cmyk": "100 70 0 33"
+	},
+	{
+		"color": "#0038a8",
+		"name": "Royal Azure",
+		"rgb": "0 56 168",
+		"cmyk": "100 67 0 34"
+	},
+	{
+		"color": "#004040",
+		"name": "Rich Black",
+		"rgb": "0 64 64",
+		"cmyk": "100 0 0 75"
+	},
+	{
+		"color": "#00416a",
+		"name": "Dark Imperial Blue, Indigo (dye)",
+		"rgb": "0 65 106",
+		"cmyk": "100 39 0 58"
+	},
+	{
+		"color": "#004225",
+		"name": "British Racing Green",
+		"rgb": "0 66 37",
+		"cmyk": "100 0 44 74"
+	},
+	{
+		"color": "#004242",
+		"name": "Warm Black",
+		"rgb": "0 66 66",
+		"cmyk": "100 0 0 74"
+	},
+	{
+		"color": "#0047ab",
+		"name": "Cobalt",
+		"rgb": "0 71 171",
+		"cmyk": "100 59 0 33"
+	},
+	{
+		"color": "#004953",
+		"name": "Eagle Green, Midnight Green",
+		"rgb": "0 73 83",
+		"cmyk": "100 12 0 68"
+	},
+	{
+		"color": "#004b49",
+		"name": "Deep Jungle Green",
+		"rgb": "0 75 73",
+		"cmyk": "100 0 3 71"
+	},
+	{
+		"color": "#004e98",
+		"name": "Windows XP Desktop",
+		"rgb": "0 78 152",
+		"cmyk": "100 49 0 40"
+	},
+	{
+		"color": "#004f98",
+		"name": "USAFA Blue",
+		"rgb": "0 79 152",
+		"cmyk": "100 48 0 40"
+	},
+	{
+		"color": "#00563f",
+		"name": "Castleton Green, Sacramento State Green",
+		"rgb": "0 86 63",
+		"cmyk": "100 0 27 66"
+	},
+	{
+		"color": "#006600",
+		"name": "Pakistan Green",
+		"rgb": "0 102 0",
+		"cmyk": "100 0 100 60"
+	},
+	{
+		"color": "#0067a5",
+		"name": "Medium Persian Blue, Sapphire Blue",
+		"rgb": "0 103 165",
+		"cmyk": "100 38 0 35"
+	},
+	{
+		"color": "#006994",
+		"name": "Sea Blue",
+		"rgb": "0 105 148",
+		"cmyk": "100 29 0 42"
+	},
+	{
+		"color": "#006a4e",
+		"name": "Bangladesh Green, Bottle Green",
+		"rgb": "0 106 78",
+		"cmyk": "100 0 26 58"
+	},
+	{
+		"color": "#006b3c",
+		"name": "Cadmium Green",
+		"rgb": "0 107 60",
+		"cmyk": "100 0 44 58"
+	},
+	{
+		"color": "#00703c",
+		"name": "Dartmouth Green",
+		"rgb": "0 112 60",
+		"cmyk": "100 0 46 56"
+	},
+	{
+		"color": "#0070b8",
+		"name": "Spanish Blue",
+		"rgb": "0 112 184",
+		"cmyk": "100 39 0 28"
+	},
+	{
+		"color": "#0070ff",
+		"name": "Brandeis Blue",
+		"rgb": "0 112 255",
+		"cmyk": "100 56 0 0"
+	},
+	{
+		"color": "#0072bb",
+		"name": "French Blue",
+		"rgb": "0 114 187",
+		"cmyk": "100 39 0 27"
+	},
+	{
+		"color": "#0073cf",
+		"name": "True Blue",
+		"rgb": "0 115 207",
+		"cmyk": "100 44 0 19"
+	},
+	{
+		"color": "#007474",
+		"name": "Skobeloff",
+		"rgb": "0 116 116",
+		"cmyk": "100 0 0 55"
+	},
+	{
+		"color": "#00755e",
+		"name": "Tropical Rain Forest",
+		"rgb": "0 117 94",
+		"cmyk": "100 0 20 54"
+	},
+	{
+		"color": "#0077be",
+		"name": "Ocean Boat Blue",
+		"rgb": "0 119 190",
+		"cmyk": "100 37 0 26"
+	},
+	{
+		"color": "#007aa5",
+		"name": "CG Blue",
+		"rgb": "0 122 165",
+		"cmyk": "100 26 0 35"
+	},
+	{
+		"color": "#007ba7",
+		"name": "Celadon Blue, Cerulean",
+		"rgb": "0 123 167",
+		"cmyk": "100 26 0 35"
+	},
+	{
+		"color": "#007bbb",
+		"name": "Star Command Blue",
+		"rgb": "0 123 187",
+		"cmyk": "100 34 0 27"
+	},
+	{
+		"color": "#007f5c",
+		"name": "Spanish Viridian",
+		"rgb": "0 127 92",
+		"cmyk": "100 0 28 50"
+	},
+	{
+		"color": "#007f66",
+		"name": "Generic Viridian",
+		"rgb": "0 127 102",
+		"cmyk": "100 0 20 50"
+	},
+	{
+		"color": "#007fbf",
+		"name": "Honolulu Blue",
+		"rgb": "0 127 191",
+		"cmyk": "100 34 0 25"
+	},
+	{
+		"color": "#007fff",
+		"name": "Azure",
+		"rgb": "0 127 255",
+		"cmyk": "100 50 0 0"
+	},
+	{
+		"color": "#008000",
+		"name": "Ao, Green (HTML/CSS Color), Office Green",
+		"rgb": "0 128 0",
+		"cmyk": "100 0 100 50"
+	},
+	{
+		"color": "#008080",
+		"name": "Teal, Windows 95/98 Desktop",
+		"rgb": "0 128 128",
+		"cmyk": "100 0 0 50"
+	},
+	{
+		"color": "#00827f",
+		"name": "Teal Green",
+		"rgb": "0 130 127",
+		"cmyk": "100 0 2 49"
+	},
+	{
+		"color": "#0087bd",
+		"name": "Blue (NCS)",
+		"rgb": "0 135 189",
+		"cmyk": "100 29 0 26"
+	},
+	{
+		"color": "#008b8b",
+		"name": "Dark Cyan",
+		"rgb": "0 139 139",
+		"cmyk": "100 0 0 46"
+	},
+	{
+		"color": "#009000",
+		"name": "Islamic Green",
+		"rgb": "0 144 0",
+		"cmyk": "100 0 100 44"
+	},
+	{
+		"color": "#009150",
+		"name": "Spanish Green",
+		"rgb": "0 145 80",
+		"cmyk": "100 0 45 43"
+	},
+	{
+		"color": "#0093af",
+		"name": "Blue (Munsell)",
+		"rgb": "0 147 175",
+		"cmyk": "100 16 0 31"
+	},
+	{
+		"color": "#0095b6",
+		"name": "Bondi Blue",
+		"rgb": "0 149 182",
+		"cmyk": "100 18 0 29"
+	},
+	{
+		"color": "#009698",
+		"name": "Viridian Green",
+		"rgb": "0 150 152",
+		"cmyk": "100 1 0 40"
+	},
+	{
+		"color": "#009925",
+		"name": "Google green",
+		"rgb": "0 153 37",
+		"cmyk": "100 0 76 40"
+	},
+	{
+		"color": "#009b7d",
+		"name": "Paolo Veronese Green",
+		"rgb": "0 155 125",
+		"cmyk": "100 0 19 39"
+	},
+	{
+		"color": "#009e60",
+		"name": "Shamrock Green",
+		"rgb": "0 158 96",
+		"cmyk": "100 0 39 38"
+	},
+	{
+		"color": "#009f6b",
+		"name": "Green (NCS)",
+		"rgb": "0 159 107",
+		"cmyk": "100 0 33 38"
+	},
+	{
+		"color": "#00a550",
+		"name": "Green (pigment)",
+		"rgb": "0 165 80",
+		"cmyk": "100 0 52 35"
+	},
+	{
+		"color": "#00a693",
+		"name": "Persian Green",
+		"rgb": "0 166 147",
+		"cmyk": "100 0 11 35"
+	},
+	{
+		"color": "#00a86b",
+		"name": "Jade",
+		"rgb": "0 168 107",
+		"cmyk": "100 0 36 34"
+	},
+	{
+		"color": "#00a877",
+		"name": "Green (Munsell)",
+		"rgb": "0 168 119",
+		"cmyk": "100 0 29 34"
+	},
+	{
+		"color": "#00ab66",
+		"name": "GO Green",
+		"rgb": "0 171 102",
+		"cmyk": "100 0 40 33"
+	},
+	{
+		"color": "#00adef",
+		"name": "Windows 8 logo",
+		"rgb": "0 173 239",
+		"cmyk": "100 28 0 6"
+	},
+	{
+		"color": "#00b7eb",
+		"name": "Cyan (process)",
+		"rgb": "0 183 235",
+		"cmyk": "100 22 0 8"
+	},
+	{
+		"color": "#00bfff",
+		"name": "Capri, Deep Sky Blue",
+		"rgb": "0 191 255",
+		"cmyk": "100 25 0 0"
+	},
+	{
+		"color": "#00cc99",
+		"name": "Caribbean Green",
+		"rgb": "0 204 153",
+		"cmyk": "100 0 25 20"
+	},
+	{
+		"color": "#00cccc",
+		"name": "Robin Egg Blue",
+		"rgb": "0 204 204",
+		"cmyk": "100 0 0 20"
+	},
+	{
+		"color": "#00ccff",
+		"name": "Vivid Sky Blue",
+		"rgb": "0 204 255",
+		"cmyk": "100 20 0 0"
+	},
+	{
+		"color": "#00ced1",
+		"name": "Dark Turquoise",
+		"rgb": "0 206 209",
+		"cmyk": "100 1 0 18"
+	},
+	{
+		"color": "#00fa9a",
+		"name": "Medium Spring Green",
+		"rgb": "0 250 154",
+		"cmyk": "100 0 38 2"
+	},
+	{
+		"color": "#00ff00",
+		"name": "Electric Green, Green, Lime (web)",
+		"rgb": "0 255 0",
+		"cmyk": "100 0 100 0"
+	},
+	{
+		"color": "#00ff7f",
+		"name": "Guppie Green, Spring Green",
+		"rgb": "0 255 127",
+		"cmyk": "100 0 50 0"
+	},
+	{
+		"color": "#00ffef",
+		"name": "Turquoise Blue",
+		"rgb": "0 255 239",
+		"cmyk": "100 0 6 0"
+	},
+	{
+		"color": "#00ffff",
+		"name": "Aqua, Cyan, Electric Cyan, Spanish Sky Blue",
+		"rgb": "0 255 255",
+		"cmyk": "100 0 0 0"
+	},
+	{
+		"color": "#013220",
+		"name": "Dark Green",
+		"rgb": "1 50 32",
+		"cmyk": "98 0 36 80"
+	},
+	{
+		"color": "#014421",
+		"name": "Forest Green, UP Forest Green",
+		"rgb": "1 68 33",
+		"cmyk": "99 0 52 73"
+	},
+	{
+		"color": "#01796f",
+		"name": "Pine Green",
+		"rgb": "1 121 111",
+		"cmyk": "99 0 8 53"
+	},
+	{
+		"color": "#0247fe",
+		"name": "Blue (RYB)",
+		"rgb": "2 71 254",
+		"cmyk": "99 72 0 0"
+	},
+	{
+		"color": "#035096",
+		"name": "Medium Electric Blue",
+		"rgb": "3 80 150",
+		"cmyk": "98 47 0 41"
+	},
+	{
+		"color": "#03c03c",
+		"name": "Dark Pastel Green",
+		"rgb": "3 192 60",
+		"cmyk": "98 0 69 25"
+	},
+	{
+		"color": "#059033",
+		"name": "North Texas Green",
+		"rgb": "5 144 51",
+		"cmyk": "97 0 65 44"
+	},
+	{
+		"color": "#062a78",
+		"name": "Catalina Blue",
+		"rgb": "6 42 120",
+		"cmyk": "95 65 0 53"
+	},
+	{
+		"color": "#08457e",
+		"name": "Dark Cerulean",
+		"rgb": "8 69 126",
+		"cmyk": "94 45 0 51"
+	},
+	{
+		"color": "#087830",
+		"name": "La Salle Green",
+		"rgb": "8 120 48",
+		"cmyk": "93 0 60 53"
+	},
+	{
+		"color": "#0892d0",
+		"name": "Rich Electric Blue",
+		"rgb": "8 146 208",
+		"cmyk": "96 30 0 18"
+	},
+	{
+		"color": "#08e8de",
+		"name": "Bright Turquoise",
+		"rgb": "8 232 222",
+		"cmyk": "97 0 4 9"
+	},
+	{
+		"color": "#091f92",
+		"name": "Indigo Dye",
+		"rgb": "9 31 146",
+		"cmyk": "94 79 0 43"
+	},
+	{
+		"color": "#0a7e8c",
+		"name": "Metallic Seaweed",
+		"rgb": "10 126 140",
+		"cmyk": "93 10 0 45"
+	},
+	{
+		"color": "#0abab5",
+		"name": "Tiffany Blue",
+		"rgb": "10 186 181",
+		"cmyk": "95 0 3 27"
+	},
+	{
+		"color": "#0bda51",
+		"name": "Malachite",
+		"rgb": "11 218 81",
+		"cmyk": "95 0 63 15"
+	},
+	{
+		"color": "#0d98ba",
+		"name": "Blue-green",
+		"rgb": "13 152 186",
+		"cmyk": "93 18 0 27"
+	},
+	{
+		"color": "#0f4d92",
+		"name": "Yale Blue",
+		"rgb": "15 77 146",
+		"cmyk": "90 47 0 43"
+	},
+	{
+		"color": "#0f52ba",
+		"name": "Sapphire",
+		"rgb": "15 82 186",
+		"cmyk": "92 56 0 27"
+	},
+	{
+		"color": "#0fc0fc",
+		"name": "Spiro Disco Ball",
+		"rgb": "15 192 252",
+		"cmyk": "94 24 0 1"
+	},
+	{
+		"color": "#100c08",
+		"name": "Smoky Black",
+		"rgb": "16 12 8",
+		"cmyk": "0 25 50 94"
+	},
+	{
+		"color": "#1034a6",
+		"name": "Egyptian Blue",
+		"rgb": "16 52 166",
+		"cmyk": "90 69 0 35"
+	},
+	{
+		"color": "#120a8f",
+		"name": "Ultramarine",
+		"rgb": "18 10 143",
+		"cmyk": "87 93 0 44"
+	},
+	{
+		"color": "#122e18",
+		"name": "British Racing Green II Metalic",
+		"rgb": "18 46 24",
+		"cmyk": "61 0 48 82"
+	},
+	{
+		"color": "#123524",
+		"name": "Phthalo Green",
+		"rgb": "18 53 36",
+		"cmyk": "66 0 32 79"
+	},
+	{
+		"color": "#126180",
+		"name": "Blue Sapphire",
+		"rgb": "18 97 128",
+		"cmyk": "86 24 0 50"
+	},
+	{
+		"color": "#138808",
+		"name": "India Green",
+		"rgb": "19 136 8",
+		"cmyk": "86 0 94 47"
+	},
+	{
+		"color": "#1560bd",
+		"name": "Denim",
+		"rgb": "21 96 189",
+		"cmyk": "89 49 0 26"
+	},
+	{
+		"color": "#177245",
+		"name": "Dark Spring Green",
+		"rgb": "23 114 69",
+		"cmyk": "80 0 40 55"
+	},
+	{
+		"color": "#18453b",
+		"name": "MSU Green",
+		"rgb": "24 69 59",
+		"cmyk": "65 0 15 73"
+	},
+	{
+		"color": "#191970",
+		"name": "Midnight Blue",
+		"rgb": "25 25 112",
+		"cmyk": "78 78 0 56"
+	},
+	{
+		"color": "#195905",
+		"name": "Lincoln Green",
+		"rgb": "25 89 5",
+		"cmyk": "72 0 94 65"
+	},
+	{
+		"color": "#1974d2",
+		"name": "Bright Navy Blue",
+		"rgb": "25 116 210",
+		"cmyk": "88 45 0 18"
+	},
+	{
+		"color": "#1a1110",
+		"name": "Licorice",
+		"rgb": "26 17 16",
+		"cmyk": "0 35 39 90"
+	},
+	{
+		"color": "#1a2421",
+		"name": "Dark Jungle Green",
+		"rgb": "26 36 33",
+		"cmyk": "28 0 8 86"
+	},
+	{
+		"color": "#1b1b1b",
+		"name": "Eerie Black",
+		"rgb": "27 27 27",
+		"cmyk": "0 0 0 89"
+	},
+	{
+		"color": "#1b4d3e",
+		"name": "Brunswick Green, English Green",
+		"rgb": "27 77 62",
+		"cmyk": "65 0 20 70"
+	},
+	{
+		"color": "#1c1cf0",
+		"name": "Bluebonnet",
+		"rgb": "28 28 240",
+		"cmyk": "88 88 0 6"
+	},
+	{
+		"color": "#1c2841",
+		"name": "Yankees Blue",
+		"rgb": "28 40 65",
+		"cmyk": "57 39 0 75"
+	},
+	{
+		"color": "#1c352d",
+		"name": "Medium Jungle Green",
+		"rgb": "28 53 45",
+		"cmyk": "47 0 15 79"
+	},
+	{
+		"color": "#1c39bb",
+		"name": "Persian Blue",
+		"rgb": "28 57 187",
+		"cmyk": "85 70 0 27"
+	},
+	{
+		"color": "#1cac78",
+		"name": "Green (Crayola)",
+		"rgb": "28 172 120",
+		"cmyk": "84 0 30 33"
+	},
+	{
+		"color": "#1d2951",
+		"name": "Space Cadet",
+		"rgb": "29 41 81",
+		"cmyk": "64 49 0 68"
+	},
+	{
+		"color": "#1dacd6",
+		"name": "Bright Cerulean",
+		"rgb": "29 172 214",
+		"cmyk": "86 20 0 16"
+	},
+	{
+		"color": "#1e4d2b",
+		"name": "Cal Poly Green",
+		"rgb": "30 77 43",
+		"cmyk": "61 0 44 70"
+	},
+	{
+		"color": "#1e90ff",
+		"name": "Dodger Blue",
+		"rgb": "30 144 255",
+		"cmyk": "88 44 0 0"
+	},
+	{
+		"color": "#1f75fe",
+		"name": "Blue (Crayola)",
+		"rgb": "31 117 254",
+		"cmyk": "88 54 0 0"
+	},
+	{
+		"color": "#20b2aa",
+		"name": "Light Sea Green",
+		"rgb": "32 178 170",
+		"cmyk": "82 0 5 30"
+	},
+	{
+		"color": "#21421e",
+		"name": "Myrtle",
+		"rgb": "33 66 30",
+		"cmyk": "50 0 55 74"
+	},
+	{
+		"color": "#214fc6",
+		"name": "New Car",
+		"rgb": "33 79 198",
+		"cmyk": "83 60 0 22"
+	},
+	{
+		"color": "#21abcd",
+		"name": "Ball Blue",
+		"rgb": "33 171 205",
+		"cmyk": "84 17 0 20"
+	},
+	{
+		"color": "#228b22",
+		"name": "Forest Green (web)",
+		"rgb": "34 139 34",
+		"cmyk": "76 0 76 46"
+	},
+	{
+		"color": "#23297a",
+		"name": "St. Patricks Blue",
+		"rgb": "35 41 122",
+		"cmyk": "71 66 0 52"
+	},
+	{
+		"color": "#232b2b",
+		"name": "Charleston Green",
+		"rgb": "35 43 43",
+		"cmyk": "19 0 0 83"
+	},
+	{
+		"color": "#253529",
+		"name": "Black Leather Jacket",
+		"rgb": "37 53 41",
+		"cmyk": "30 0 23 79"
+	},
+	{
+		"color": "#264348",
+		"name": "Japanese Indigo",
+		"rgb": "38 67 72",
+		"cmyk": "47 7 0 72"
+	},
+	{
+		"color": "#26619c",
+		"name": "Lapis Lazuli",
+		"rgb": "38 97 156",
+		"cmyk": "76 38 0 39"
+	},
+	{
+		"color": "#273be2",
+		"name": "Palatinate Blue",
+		"rgb": "39 59 226",
+		"cmyk": "83 74 0 11"
+	},
+	{
+		"color": "#29ab87",
+		"name": "Jungle Green",
+		"rgb": "41 171 135",
+		"cmyk": "76 0 21 33"
+	},
+	{
+		"color": "#2a52be",
+		"name": "Cerulean Blue",
+		"rgb": "42 82 190",
+		"cmyk": "78 57 0 26"
+	},
+	{
+		"color": "#2a8000",
+		"name": "Napier Green",
+		"rgb": "42 128 0",
+		"cmyk": "67 0 100 50"
+	},
+	{
+		"color": "#2c1608",
+		"name": "Zinnwaldite Brown",
+		"rgb": "44 22 8",
+		"cmyk": "0 50 82 83"
+	},
+	{
+		"color": "#2e5894",
+		"name": "Bdazzled Blue",
+		"rgb": "46 88 148",
+		"cmyk": "69 41 0 42"
+	},
+	{
+		"color": "#2e8b57",
+		"name": "Sea Green",
+		"rgb": "46 139 87",
+		"cmyk": "67 0 37 46"
+	},
+	{
+		"color": "#2f4f4f",
+		"name": "Dark Slate Gray",
+		"rgb": "47 79 79",
+		"cmyk": "41 0 0 69"
+	},
+	{
+		"color": "#2f847c",
+		"name": "Celadon Green",
+		"rgb": "47 132 124",
+		"cmyk": "64 0 6 48"
+	},
+	{
+		"color": "#306030",
+		"name": "Mughal Green",
+		"rgb": "48 96 48",
+		"cmyk": "50 0 50 62"
+	},
+	{
+		"color": "#30ba8f",
+		"name": "Mountain Meadow",
+		"rgb": "48 186 143",
+		"cmyk": "74 0 23 27"
+	},
+	{
+		"color": "#30d5c8",
+		"name": "Turquoise",
+		"rgb": "48 213 200",
+		"cmyk": "78 0 6 17"
+	},
+	{
+		"color": "#317873",
+		"name": "Myrtle Green",
+		"rgb": "49 120 115",
+		"cmyk": "59 0 4 53"
+	},
+	{
+		"color": "#318ce7",
+		"name": "Bleu De France",
+		"rgb": "49 140 231",
+		"cmyk": "79 39 0 9"
+	},
+	{
+		"color": "#319177",
+		"name": "Illuminating Emerald",
+		"rgb": "49 145 119",
+		"cmyk": "66 0 18 43"
+	},
+	{
+		"color": "#32127a",
+		"name": "Persian Indigo",
+		"rgb": "50 18 122",
+		"cmyk": "59 85 0 52"
+	},
+	{
+		"color": "#321414",
+		"name": "Seal Brown",
+		"rgb": "50 20 20",
+		"cmyk": "0 60 60 80"
+	},
+	{
+		"color": "#32174d",
+		"name": "Russian Violet",
+		"rgb": "50 23 77",
+		"cmyk": "35 70 0 70"
+	},
+	{
+		"color": "#324ab2",
+		"name": "Violet-blue",
+		"rgb": "50 74 178",
+		"cmyk": "72 58 0 30"
+	},
+	{
+		"color": "#32cd32",
+		"name": "Lime Green",
+		"rgb": "50 205 50",
+		"cmyk": "76 0 76 20"
+	},
+	{
+		"color": "#333399",
+		"name": "Blue (pigment)",
+		"rgb": "51 51 153",
+		"cmyk": "67 67 0 40"
+	},
+	{
+		"color": "#3369e8",
+		"name": "Google blue",
+		"rgb": "51 105 232",
+		"cmyk": "78 55 0 9"
+	},
+	{
+		"color": "#343434",
+		"name": "Jet",
+		"rgb": "52 52 52",
+		"cmyk": "0 0 0 80"
+	},
+	{
+		"color": "#353839",
+		"name": "Onyx",
+		"rgb": "53 56 57",
+		"cmyk": "7 2 0 78"
+	},
+	{
+		"color": "#354230",
+		"name": "Kombu Green",
+		"rgb": "53 66 48",
+		"cmyk": "20 0 27 74"
+	},
+	{
+		"color": "#355e3b",
+		"name": "Deep Moss Green, Hunter Green",
+		"rgb": "53 94 59",
+		"cmyk": "44 0 37 63"
+	},
+	{
+		"color": "#36454f",
+		"name": "Charcoal",
+		"rgb": "54 69 79",
+		"cmyk": "32 13 0 69"
+	},
+	{
+		"color": "#367588",
+		"name": "Teal Blue",
+		"rgb": "54 117 136",
+		"cmyk": "60 14 0 47"
+	},
+	{
+		"color": "#39a78e",
+		"name": "Zomp",
+		"rgb": "57 167 142",
+		"cmyk": "66 0 15 35"
+	},
+	{
+		"color": "#39ff14",
+		"name": "Neon Green",
+		"rgb": "57 255 20",
+		"cmyk": "78 0 92 0"
+	},
+	{
+		"color": "#3ab09e",
+		"name": "Keppel",
+		"rgb": "58 176 158",
+		"cmyk": "67 0 10 31"
+	},
+	{
+		"color": "#3b3c36",
+		"name": "Black Olive",
+		"rgb": "59 60 54",
+		"cmyk": "2 0 10 77"
+	},
+	{
+		"color": "#3b444b",
+		"name": "Arsenic",
+		"rgb": "59 68 75",
+		"cmyk": "21 9 0 71"
+	},
+	{
+		"color": "#3b5998",
+		"name": "Facebook Blue",
+		"rgb": "59 89 152",
+		"cmyk": "61 41 0 40"
+	},
+	{
+		"color": "#3b7a57",
+		"name": "Amazon",
+		"rgb": "59 122 87",
+		"cmyk": "52 0 29 52"
+	},
+	{
+		"color": "#3c1414",
+		"name": "Dark Sienna",
+		"rgb": "60 20 20",
+		"cmyk": "0 67 67 77"
+	},
+	{
+		"color": "#3c341f",
+		"name": "Olive Drab #7",
+		"rgb": "60 52 31",
+		"cmyk": "0 13 48 77"
+	},
+	{
+		"color": "#3cb371",
+		"name": "Medium Sea Green",
+		"rgb": "60 179 113",
+		"cmyk": "67 0 37 30"
+	},
+	{
+		"color": "#3cd070",
+		"name": "UFO Green",
+		"rgb": "60 208 112",
+		"cmyk": "71 0 46 18"
+	},
+	{
+		"color": "#3d0c02",
+		"name": "Black Bean",
+		"rgb": "61 12 2",
+		"cmyk": "0 80 97 76"
+	},
+	{
+		"color": "#3d2b1f",
+		"name": "Bistre",
+		"rgb": "61 43 31",
+		"cmyk": "0 30 49 76"
+	},
+	{
+		"color": "#3eb489",
+		"name": "Mint",
+		"rgb": "62 180 137",
+		"cmyk": "66 0 24 29"
+	},
+	{
+		"color": "#3f00ff",
+		"name": "Electric Ultramarine",
+		"rgb": "63 0 255",
+		"cmyk": "75 100 0 0"
+	},
+	{
+		"color": "#3fff00",
+		"name": "Harlequin",
+		"rgb": "63 255 0",
+		"cmyk": "75 0 100 0"
+	},
+	{
+		"color": "#40826d",
+		"name": "Viridian",
+		"rgb": "64 130 109",
+		"cmyk": "51 0 16 49"
+	},
+	{
+		"color": "#4099ff",
+		"name": "Tweeter blue",
+		"rgb": "64 153 255",
+		"cmyk": "75 40 0 0"
+	},
+	{
+		"color": "#414833",
+		"name": "Rifle Green",
+		"rgb": "65 72 51",
+		"cmyk": "10 0 29 72"
+	},
+	{
+		"color": "#414a4c",
+		"name": "Outer Space",
+		"rgb": "65 74 76",
+		"cmyk": "15 3 0 70"
+	},
+	{
+		"color": "#4166f5",
+		"name": "Ultramarine Blue",
+		"rgb": "65 102 245",
+		"cmyk": "74 58 0 4"
+	},
+	{
+		"color": "#4169e1",
+		"name": "Royal Blue (web)",
+		"rgb": "65 105 225",
+		"cmyk": "71 53 0 12"
+	},
+	{
+		"color": "#417dc1",
+		"name": "Tufts Blue",
+		"rgb": "65 125 193",
+		"cmyk": "66 35 0 24"
+	},
+	{
+		"color": "#43302e",
+		"name": "Old Burgundy",
+		"rgb": "67 48 46",
+		"cmyk": "0 28 31 74"
+	},
+	{
+		"color": "#436b95",
+		"name": "Queen Blue",
+		"rgb": "67 107 149",
+		"cmyk": "55 28 0 42"
+	},
+	{
+		"color": "#43b3ae",
+		"name": "Verdigris",
+		"rgb": "67 179 174",
+		"cmyk": "63 0 3 30"
+	},
+	{
+		"color": "#446ccf",
+		"name": "Han Blue",
+		"rgb": "68 108 207",
+		"cmyk": "67 48 0 19"
+	},
+	{
+		"color": "#44d7a8",
+		"name": "Eucalyptus",
+		"rgb": "68 215 168",
+		"cmyk": "68 0 22 16"
+	},
+	{
+		"color": "#45b1e8",
+		"name": "Picton Blue",
+		"rgb": "69 177 232",
+		"cmyk": "70 24 0 9"
+	},
+	{
+		"color": "#465945",
+		"name": "Gray-asparagus",
+		"rgb": "70 89 69",
+		"cmyk": "21 0 23 65"
+	},
+	{
+		"color": "#4682b4",
+		"name": "Steel Blue",
+		"rgb": "70 130 180",
+		"cmyk": "61 28 0 29"
+	},
+	{
+		"color": "#480607",
+		"name": "Bulgarian Rose",
+		"rgb": "72 6 7",
+		"cmyk": "0 92 90 72"
+	},
+	{
+		"color": "#483c32",
+		"name": "Dark Lava, Dark Taupe, Taupe",
+		"rgb": "72 60 50",
+		"cmyk": "0 17 31 72"
+	},
+	{
+		"color": "#483d8b",
+		"name": "Dark Slate Blue",
+		"rgb": "72 61 139",
+		"cmyk": "48 56 0 46"
+	},
+	{
+		"color": "#48d1cc",
+		"name": "Medium Turquoise",
+		"rgb": "72 209 204",
+		"cmyk": "66 0 2 18"
+	},
+	{
+		"color": "#49796b",
+		"name": "Hookers Green",
+		"rgb": "73 121 107",
+		"cmyk": "40 0 12 53"
+	},
+	{
+		"color": "#4997d0",
+		"name": "Celestial Blue",
+		"rgb": "73 151 208",
+		"cmyk": "65 27 0 18"
+	},
+	{
+		"color": "#4a5d23",
+		"name": "Dark Moss Green",
+		"rgb": "74 93 35",
+		"cmyk": "20 0 62 64"
+	},
+	{
+		"color": "#4a646c",
+		"name": "Deep Space Sparkle",
+		"rgb": "74 100 108",
+		"cmyk": "32 7 0 58"
+	},
+	{
+		"color": "#4b0082",
+		"name": "Indigo (web)",
+		"rgb": "75 0 130",
+		"cmyk": "42 100 0 49"
+	},
+	{
+		"color": "#4b3621",
+		"name": "Cafè´± Noir",
+		"rgb": "75 54 33",
+		"cmyk": "0 28 56 71"
+	},
+	{
+		"color": "#4b5320",
+		"name": "Army Green",
+		"rgb": "75 83 32",
+		"cmyk": "10 0 61 68"
+	},
+	{
+		"color": "#4c2882",
+		"name": "Spanish Violet",
+		"rgb": "76 40 130",
+		"cmyk": "42 69 0 49"
+	},
+	{
+		"color": "#4c516d",
+		"name": "Independence",
+		"rgb": "76 81 109",
+		"cmyk": "30 26 0 57"
+	},
+	{
+		"color": "#4c9141",
+		"name": "May Green",
+		"rgb": "76 145 65",
+		"cmyk": "48 0 55 43"
+	},
+	{
+		"color": "#4cbb17",
+		"name": "Kelly Green",
+		"rgb": "76 187 23",
+		"cmyk": "59 0 88 27"
+	},
+	{
+		"color": "#4d5d53",
+		"name": "Feldgrau",
+		"rgb": "77 93 83",
+		"cmyk": "17 0 11 64"
+	},
+	{
+		"color": "#4e1609",
+		"name": "French Puce",
+		"rgb": "78 22 9",
+		"cmyk": "0 72 89 69"
+	},
+	{
+		"color": "#4e5180",
+		"name": "Purple Navy",
+		"rgb": "78 81 128",
+		"cmyk": "39 37 0 50"
+	},
+	{
+		"color": "#4f3a3c",
+		"name": "Dark Puce",
+		"rgb": "79 58 60",
+		"cmyk": "0 27 24 69"
+	},
+	{
+		"color": "#4f666a",
+		"name": "Stormcloud",
+		"rgb": "79 102 106",
+		"cmyk": "26 4 0 58"
+	},
+	{
+		"color": "#4f7942",
+		"name": "Fern Green",
+		"rgb": "79 121 66",
+		"cmyk": "35 0 46 53"
+	},
+	{
+		"color": "#4f86f7",
+		"name": "Blueberry",
+		"rgb": "79 134 247",
+		"cmyk": "68 46 0 3"
+	},
+	{
+		"color": "#50404d",
+		"name": "Purple Taupe",
+		"rgb": "80 64 77",
+		"cmyk": "0 20 4 69"
+	},
+	{
+		"color": "#5072a7",
+		"name": "Blue Yonder",
+		"rgb": "80 114 167",
+		"cmyk": "52 32 0 35"
+	},
+	{
+		"color": "#507d2a",
+		"name": "Sap Green",
+		"rgb": "80 125 42",
+		"cmyk": "36 0 66 51"
+	},
+	{
+		"color": "#50c878",
+		"name": "Emerald, Paris Green",
+		"rgb": "80 200 120",
+		"cmyk": "60 0 40 22"
+	},
+	{
+		"color": "#51484f",
+		"name": "Quartz",
+		"rgb": "81 72 79",
+		"cmyk": "0 11 3 68"
+	},
+	{
+		"color": "#5218fa",
+		"name": "Han Purple",
+		"rgb": "82 24 250",
+		"cmyk": "67 90 0 2"
+	},
+	{
+		"color": "#522d80",
+		"name": "Regalia",
+		"rgb": "82 45 128",
+		"cmyk": "36 65 0 50"
+	},
+	{
+		"color": "#534b4f",
+		"name": "Dark Liver, Liver",
+		"rgb": "83 75 79",
+		"cmyk": "0 10 5 68"
+	},
+	{
+		"color": "#536872",
+		"name": "Cadet",
+		"rgb": "83 104 114",
+		"cmyk": "27 9 0 55"
+	},
+	{
+		"color": "#536878",
+		"name": "Dark Electric Blue, Paynes Grey",
+		"rgb": "83 104 120",
+		"cmyk": "31 13 0 53"
+	},
+	{
+		"color": "#536895",
+		"name": "UCLA Blue",
+		"rgb": "83 104 149",
+		"cmyk": "44 30 0 42"
+	},
+	{
+		"color": "#543d37",
+		"name": "Dark Liver (Horses)",
+		"rgb": "84 61 55",
+		"cmyk": "0 27 35 67"
+	},
+	{
+		"color": "#545aa7",
+		"name": "Liberty",
+		"rgb": "84 90 167",
+		"cmyk": "50 46 0 35"
+	},
+	{
+		"color": "#555555",
+		"name": "Davys Grey",
+		"rgb": "85 85 85",
+		"cmyk": "0 0 0 67"
+	},
+	{
+		"color": "#555d50",
+		"name": "Ebony",
+		"rgb": "85 93 80",
+		"cmyk": "9 0 14 64"
+	},
+	{
+		"color": "#556b2f",
+		"name": "Dark Olive Green",
+		"rgb": "85 107 47",
+		"cmyk": "21 0 56 58"
+	},
+	{
+		"color": "#560319",
+		"name": "Dark Scarlet",
+		"rgb": "86 3 25",
+		"cmyk": "0 97 71 66"
+	},
+	{
+		"color": "#563c5c",
+		"name": "English Violet, Old Heliotrope",
+		"rgb": "86 60 92",
+		"cmyk": "7 35 0 64"
+	},
+	{
+		"color": "#568203",
+		"name": "Avocado",
+		"rgb": "86 130 3",
+		"cmyk": "34 0 98 49"
+	},
+	{
+		"color": "#58427c",
+		"name": "Cyber Grape",
+		"rgb": "88 66 124",
+		"cmyk": "29 47 0 51"
+	},
+	{
+		"color": "#592720",
+		"name": "Caput Mortuum",
+		"rgb": "89 39 32",
+		"cmyk": "0 56 64 65"
+	},
+	{
+		"color": "#5a4fcf",
+		"name": "Iris",
+		"rgb": "90 79 207",
+		"cmyk": "57 62 0 19"
+	},
+	{
+		"color": "#5b3256",
+		"name": "Japanese Violet",
+		"rgb": "91 50 86",
+		"cmyk": "0 45 6 64"
+	},
+	{
+		"color": "#5b92e5",
+		"name": "United Nations Blue",
+		"rgb": "91 146 229",
+		"cmyk": "60 36 0 10"
+	},
+	{
+		"color": "#5d3954",
+		"name": "Dark Byzantium",
+		"rgb": "93 57 84",
+		"cmyk": "0 39 10 64"
+	},
+	{
+		"color": "#5d89ba",
+		"name": "Silver Lake Blue",
+		"rgb": "93 137 186",
+		"cmyk": "50 26 0 27"
+	},
+	{
+		"color": "#5d8aa8",
+		"name": "Air Force Blue (RAF), Rackley",
+		"rgb": "93 138 168",
+		"cmyk": "45 18 0 34"
+	},
+	{
+		"color": "#5f9ea0",
+		"name": "Cadet Blue",
+		"rgb": "95 158 160",
+		"cmyk": "41 1 0 37"
+	},
+	{
+		"color": "#602ffb",
+		"name": "Imperial",
+		"rgb": "96 47 251",
+		"cmyk": "62 81 0 2"
+	},
+	{
+		"color": "#6050dc",
+		"name": "Majorelle Blue",
+		"rgb": "96 80 220",
+		"cmyk": "56 64 0 14"
+	},
+	{
+		"color": "#6082b6",
+		"name": "Glaucous",
+		"rgb": "96 130 182",
+		"cmyk": "47 29 0 29"
+	},
+	{
+		"color": "#614051",
+		"name": "Eggplant",
+		"rgb": "97 64 81",
+		"cmyk": "0 34 17 62"
+	},
+	{
+		"color": "#635147",
+		"name": "Umber",
+		"rgb": "99 81 71",
+		"cmyk": "0 18 28 61"
+	},
+	{
+		"color": "#644117",
+		"name": "Pullman Brown (UPS Brown)",
+		"rgb": "100 65 23",
+		"cmyk": "0 35 77 61"
+	},
+	{
+		"color": "#645452",
+		"name": "Wenge",
+		"rgb": "100 84 82",
+		"cmyk": "0 16 18 61"
+	},
+	{
+		"color": "#648c11",
+		"name": "Bitter Lime",
+		"rgb": "100 140 17",
+		"cmyk": "29 0 88 45"
+	},
+	{
+		"color": "#6495ed",
+		"name": "Cornflower Blue",
+		"rgb": "100 149 237",
+		"cmyk": "58 37 0 7"
+	},
+	{
+		"color": "#65000b",
+		"name": "Rosewood",
+		"rgb": "101 0 11",
+		"cmyk": "0 100 89 60"
+	},
+	{
+		"color": "#654321",
+		"name": "Dark Brown, Otter Brown",
+		"rgb": "101 67 33",
+		"cmyk": "0 34 67 60"
+	},
+	{
+		"color": "#66023c",
+		"name": "Imperial Purple, Tyrian Purple",
+		"rgb": "102 2 60",
+		"cmyk": "0 98 41 60"
+	},
+	{
+		"color": "#663854",
+		"name": "Halayè´¢ è™‚be",
+		"rgb": "102 56 84",
+		"cmyk": "0 45 18 60"
+	},
+	{
+		"color": "#66424d",
+		"name": "Deep Tuscan Red",
+		"rgb": "102 66 77",
+		"cmyk": "0 35 25 60"
+	},
+	{
+		"color": "#664c28",
+		"name": "Donkey Brown",
+		"rgb": "102 76 40",
+		"cmyk": "0 26 61 60"
+	},
+	{
+		"color": "#665d1e",
+		"name": "Antique Bronze",
+		"rgb": "102 93 30",
+		"cmyk": "0 9 71 60"
+	},
+	{
+		"color": "#666699",
+		"name": "Dark Blue-Gray",
+		"rgb": "102 102 153",
+		"cmyk": "33 33 0 40"
+	},
+	{
+		"color": "#6699cc",
+		"name": "Blue-gray, Livid",
+		"rgb": "102 153 204",
+		"cmyk": "50 25 0 20"
+	},
+	{
+		"color": "#66b032",
+		"name": "Green (RYB)",
+		"rgb": "102 176 50",
+		"cmyk": "42 0 72 31"
+	},
+	{
+		"color": "#66ddaa",
+		"name": "Medium Aquamarine",
+		"rgb": "102 221 170",
+		"cmyk": "54 0 23 13"
+	},
+	{
+		"color": "#66ff00",
+		"name": "Bright Green",
+		"rgb": "102 255 0",
+		"cmyk": "60 0 100 0"
+	},
+	{
+		"color": "#673147",
+		"name": "Old Mauve, Wine Dregs",
+		"rgb": "103 49 71",
+		"cmyk": "0 52 31 60"
+	},
+	{
+		"color": "#674846",
+		"name": "Rose Ebony",
+		"rgb": "103 72 70",
+		"cmyk": "0 30 32 60"
+	},
+	{
+		"color": "#674c47",
+		"name": "Medium Taupe",
+		"rgb": "103 76 71",
+		"cmyk": "0 26 31 60"
+	},
+	{
+		"color": "#679267",
+		"name": "Russian Green",
+		"rgb": "103 146 103",
+		"cmyk": "30 0 30 43"
+	},
+	{
+		"color": "#682860",
+		"name": "Palatinate Purple",
+		"rgb": "104 40 96",
+		"cmyk": "0 62 8 59"
+	},
+	{
+		"color": "#69359c",
+		"name": "Purple Heart",
+		"rgb": "105 53 156",
+		"cmyk": "33 66 0 39"
+	},
+	{
+		"color": "#696969",
+		"name": "Dim Gray",
+		"rgb": "105 105 105",
+		"cmyk": "0 0 0 59"
+	},
+	{
+		"color": "#6a5acd",
+		"name": "Slate Blue",
+		"rgb": "106 90 205",
+		"cmyk": "48 56 0 20"
+	},
+	{
+		"color": "#6b4423",
+		"name": "Brown-Nose, Flattery",
+		"rgb": "107 68 35",
+		"cmyk": "0 36 67 58"
+	},
+	{
+		"color": "#6b8e23",
+		"name": "Olive Drab (web #3)",
+		"rgb": "107 142 35",
+		"cmyk": "25 0 75 44"
+	},
+	{
+		"color": "#6c2e1f",
+		"name": "Liver (Organ)",
+		"rgb": "108 46 31",
+		"cmyk": "0 57 71 58"
+	},
+	{
+		"color": "#6c3082",
+		"name": "Eminence",
+		"rgb": "108 48 130",
+		"cmyk": "17 63 0 49"
+	},
+	{
+		"color": "#6c541e",
+		"name": "Field Drab",
+		"rgb": "108 84 30",
+		"cmyk": "0 22 72 58"
+	},
+	{
+		"color": "#6ca0dc",
+		"name": "Little Boy Blue",
+		"rgb": "108 160 220",
+		"cmyk": "51 27 0 14"
+	},
+	{
+		"color": "#6d9bc3",
+		"name": "Cerulean Frost",
+		"rgb": "109 155 195",
+		"cmyk": "44 21 0 24"
+	},
+	{
+		"color": "#6e7f80",
+		"name": "AuroMetalSaurus",
+		"rgb": "110 127 128",
+		"cmyk": "14 1 0 50"
+	},
+	{
+		"color": "#6f00ff",
+		"name": "Electric Indigo, Indigo",
+		"rgb": "111 0 255",
+		"cmyk": "57 100 0 0"
+	},
+	{
+		"color": "#6f2da8",
+		"name": "Grape",
+		"rgb": "111 45 168",
+		"cmyk": "34 73 0 34"
+	},
+	{
+		"color": "#6f4e37",
+		"name": "Coffee, Tuscan Brown",
+		"rgb": "111 78 55",
+		"cmyk": "0 30 51 57"
+	},
+	{
+		"color": "#701c1c",
+		"name": "Persian Plum, Prune",
+		"rgb": "112 28 28",
+		"cmyk": "0 75 75 56"
+	},
+	{
+		"color": "#702963",
+		"name": "Byzantium",
+		"rgb": "112 41 99",
+		"cmyk": "0 63 12 56"
+	},
+	{
+		"color": "#703642",
+		"name": "Catawba",
+		"rgb": "112 54 66",
+		"cmyk": "0 52 41 56"
+	},
+	{
+		"color": "#704214",
+		"name": "Sepia",
+		"rgb": "112 66 20",
+		"cmyk": "0 41 82 56"
+	},
+	{
+		"color": "#704241",
+		"name": "Deep Coffee, Roast Coffee",
+		"rgb": "112 66 65",
+		"cmyk": "0 41 42 56"
+	},
+	{
+		"color": "#708090",
+		"name": "Slate Gray",
+		"rgb": "112 128 144",
+		"cmyk": "22 11 0 44"
+	},
+	{
+		"color": "#71a6d2",
+		"name": "Iceberg",
+		"rgb": "113 166 210",
+		"cmyk": "46 21 0 18"
+	},
+	{
+		"color": "#722f37",
+		"name": "Puce Red, Wine",
+		"rgb": "114 47 55",
+		"cmyk": "0 59 52 55"
+	},
+	{
+		"color": "#72a0c1",
+		"name": "Air Superiority Blue",
+		"rgb": "114 160 193",
+		"cmyk": "41 17 0 24"
+	},
+	{
+		"color": "#734f96",
+		"name": "Dark Lavender",
+		"rgb": "115 79 150",
+		"cmyk": "23 47 0 41"
+	},
+	{
+		"color": "#737000",
+		"name": "Bronze Yellow",
+		"rgb": "115 112 0",
+		"cmyk": "0 3 100 55"
+	},
+	{
+		"color": "#738276",
+		"name": "Smoke",
+		"rgb": "115 130 118",
+		"cmyk": "12 0 9 49"
+	},
+	{
+		"color": "#738678",
+		"name": "Xanadu",
+		"rgb": "115 134 120",
+		"cmyk": "14 0 10 48"
+	},
+	{
+		"color": "#73a9c2",
+		"name": "Moonstone Blue",
+		"rgb": "115 169 194",
+		"cmyk": "41 13 0 24"
+	},
+	{
+		"color": "#73c2fb",
+		"name": "Maya Blue",
+		"rgb": "115 194 251",
+		"cmyk": "54 23 0 2"
+	},
+	{
+		"color": "#746cc0",
+		"name": "Toolbox",
+		"rgb": "116 108 192",
+		"cmyk": "40 44 0 25"
+	},
+	{
+		"color": "#74c365",
+		"name": "Mantis",
+		"rgb": "116 195 101",
+		"cmyk": "41 0 48 24"
+	},
+	{
+		"color": "#757575",
+		"name": "Sonic Silver",
+		"rgb": "117 117 117",
+		"cmyk": "0 0 0 54"
+	},
+	{
+		"color": "#76ff7a",
+		"name": "Screamin Green",
+		"rgb": "118 255 122",
+		"cmyk": "54 0 52 0"
+	},
+	{
+		"color": "#777696",
+		"name": "Rhythm",
+		"rgb": "119 118 150",
+		"cmyk": "21 21 0 41"
+	},
+	{
+		"color": "#778899",
+		"name": "Light Slate Gray",
+		"rgb": "119 136 153",
+		"cmyk": "22 11 0 40"
+	},
+	{
+		"color": "#778ba5",
+		"name": "Shadow Blue",
+		"rgb": "119 139 165",
+		"cmyk": "28 16 0 35"
+	},
+	{
+		"color": "#779ecb",
+		"name": "Dark Pastel Blue",
+		"rgb": "119 158 203",
+		"cmyk": "41 22 0 20"
+	},
+	{
+		"color": "#77b5fe",
+		"name": "French Sky Blue",
+		"rgb": "119 181 254",
+		"cmyk": "53 29 0 0"
+	},
+	{
+		"color": "#77dd77",
+		"name": "Pastel Green",
+		"rgb": "119 221 119",
+		"cmyk": "46 0 46 13"
+	},
+	{
+		"color": "#78184a",
+		"name": "Pansy Purple",
+		"rgb": "120 24 74",
+		"cmyk": "0 80 38 53"
+	},
+	{
+		"color": "#7851a9",
+		"name": "Royal Purple",
+		"rgb": "120 81 169",
+		"cmyk": "29 52 0 34"
+	},
+	{
+		"color": "#78866b",
+		"name": "Camouflage Green",
+		"rgb": "120 134 107",
+		"cmyk": "10 0 20 48"
+	},
+	{
+		"color": "#79443b",
+		"name": "Bole, Medium Tuscan Red",
+		"rgb": "121 68 59",
+		"cmyk": "0 44 51 53"
+	},
+	{
+		"color": "#796878",
+		"name": "Old Lavender",
+		"rgb": "121 104 120",
+		"cmyk": "0 14 1 53"
+	},
+	{
+		"color": "#7b1113",
+		"name": "UP Maroon",
+		"rgb": "123 17 19",
+		"cmyk": "0 86 85 52"
+	},
+	{
+		"color": "#7b3f00",
+		"name": "Chocolate",
+		"rgb": "123 63 0",
+		"cmyk": "0 49 100 52"
+	},
+	{
+		"color": "#7b68ee",
+		"name": "Medium Slate Blue",
+		"rgb": "123 104 238",
+		"cmyk": "48 56 0 7"
+	},
+	{
+		"color": "#7bb661",
+		"name": "Bud Green",
+		"rgb": "123 182 97",
+		"cmyk": "32 0 47 29"
+	},
+	{
+		"color": "#7c0a02",
+		"name": "Barn Red",
+		"rgb": "124 10 2",
+		"cmyk": "0 92 98 51"
+	},
+	{
+		"color": "#7c1c05",
+		"name": "Kenyan Copper",
+		"rgb": "124 28 5",
+		"cmyk": "0 77 96 51"
+	},
+	{
+		"color": "#7c4848",
+		"name": "Tuscan Red",
+		"rgb": "124 72 72",
+		"cmyk": "0 42 42 51"
+	},
+	{
+		"color": "#7cb9e8",
+		"name": "Aero",
+		"rgb": "124 185 232",
+		"cmyk": "47 20 0 9"
+	},
+	{
+		"color": "#7cfc00",
+		"name": "Lawn Green",
+		"rgb": "124 252 0",
+		"cmyk": "51 0 100 1"
+	},
+	{
+		"color": "#7df9ff",
+		"name": "Electric Blue",
+		"rgb": "125 249 255",
+		"cmyk": "51 2 0 0"
+	},
+	{
+		"color": "#7e5e60",
+		"name": "Deep Taupe",
+		"rgb": "126 94 96",
+		"cmyk": "0 25 24 51"
+	},
+	{
+		"color": "#7f00ff",
+		"name": "Violet (color Wheel)",
+		"rgb": "127 0 255",
+		"cmyk": "50 100 0 0"
+	},
+	{
+		"color": "#7f1734",
+		"name": "Claret",
+		"rgb": "127 23 52",
+		"cmyk": "0 82 59 50"
+	},
+	{
+		"color": "#7fff00",
+		"name": "Chartreuse (web)",
+		"rgb": "127 255 0",
+		"cmyk": "50 0 100 0"
+	},
+	{
+		"color": "#7fffd4",
+		"name": "Aquamarine",
+		"rgb": "127 255 212",
+		"cmyk": "50 0 17 0"
+	},
+	{
+		"color": "#800000",
+		"name": "Maroon, Maroon (HTML/CSS)",
+		"rgb": "128 0 0",
+		"cmyk": "0 100 100 50"
+	},
+	{
+		"color": "#800020",
+		"name": "Burgundy",
+		"rgb": "128 0 32",
+		"cmyk": "0 100 75 50"
+	},
+	{
+		"color": "#800080",
+		"name": "Patriarch, Purple, Purple (HTML)",
+		"rgb": "128 0 128",
+		"cmyk": "0 100 0 50"
+	},
+	{
+		"color": "#801818",
+		"name": "Falu Red",
+		"rgb": "128 24 24",
+		"cmyk": "0 81 81 50"
+	},
+	{
+		"color": "#80461b",
+		"name": "Russet",
+		"rgb": "128 70 27",
+		"cmyk": "0 45 79 50"
+	},
+	{
+		"color": "#807532",
+		"name": "Spanish Bistre",
+		"rgb": "128 117 50",
+		"cmyk": "0 9 61 50"
+	},
+	{
+		"color": "#808000",
+		"name": "Heart Gold, Olive",
+		"rgb": "128 128 0",
+		"cmyk": "0 0 100 50"
+	},
+	{
+		"color": "#808080",
+		"name": "Gray, Grey, Gray (HTML/CSS Gray), Trolley Grey",
+		"rgb": "128 128 128",
+		"cmyk": "0 0 0 50"
+	},
+	{
+		"color": "#80daeb",
+		"name": "Medium Sky Blue",
+		"rgb": "128 218 235",
+		"cmyk": "46 7 0 8"
+	},
+	{
+		"color": "#826644",
+		"name": "Raw Umber",
+		"rgb": "130 102 68",
+		"cmyk": "0 22 48 49"
+	},
+	{
+		"color": "#836953",
+		"name": "Pastel Brown",
+		"rgb": "131 105 83",
+		"cmyk": "0 20 37 49"
+	},
+	{
+		"color": "#838996",
+		"name": "Roman Silver",
+		"rgb": "131 137 150",
+		"cmyk": "13 9 0 41"
+	},
+	{
+		"color": "#841b2d",
+		"name": "Antique Ruby",
+		"rgb": "132 27 45",
+		"cmyk": "0 80 66 48"
+	},
+	{
+		"color": "#843f5b",
+		"name": "Deep Ruby",
+		"rgb": "132 63 91",
+		"cmyk": "0 52 31 48"
+	},
+	{
+		"color": "#848482",
+		"name": "Battleship Grey, Old Silver",
+		"rgb": "132 132 130",
+		"cmyk": "0 0 2 48"
+	},
+	{
+		"color": "#856088",
+		"name": "Chinese Violet",
+		"rgb": "133 96 136",
+		"cmyk": "2 29 0 47"
+	},
+	{
+		"color": "#856d4d",
+		"name": "French Bistre",
+		"rgb": "133 109 77",
+		"cmyk": "0 18 42 48"
+	},
+	{
+		"color": "#85754e",
+		"name": "Gold Fusion",
+		"rgb": "133 117 78",
+		"cmyk": "0 12 41 48"
+	},
+	{
+		"color": "#85bb65",
+		"name": "Dollar Bill",
+		"rgb": "133 187 101",
+		"cmyk": "29 0 46 27"
+	},
+	{
+		"color": "#860111",
+		"name": "Red Devil",
+		"rgb": "134 1 17",
+		"cmyk": "0 99 87 48"
+	},
+	{
+		"color": "#8601af",
+		"name": "Violet (RYB)",
+		"rgb": "134 1 175",
+		"cmyk": "23 99 0 31"
+	},
+	{
+		"color": "#86608e",
+		"name": "French Lilac, Pomp And Power",
+		"rgb": "134 96 142",
+		"cmyk": "6 32 0 44"
+	},
+	{
+		"color": "#867e36",
+		"name": "Old Moss Green",
+		"rgb": "134 126 54",
+		"cmyk": "0 6 60 48"
+	},
+	{
+		"color": "#872657",
+		"name": "Dark Raspberry",
+		"rgb": "135 38 87",
+		"cmyk": "0 72 36 47"
+	},
+	{
+		"color": "#873260",
+		"name": "Boysenberry",
+		"rgb": "135 50 96",
+		"cmyk": "0 63 29 47"
+	},
+	{
+		"color": "#87a96b",
+		"name": "Asparagus",
+		"rgb": "135 169 107",
+		"cmyk": "20 0 37 34"
+	},
+	{
+		"color": "#87ceeb",
+		"name": "Sky Blue",
+		"rgb": "135 206 235",
+		"cmyk": "43 12 0 8"
+	},
+	{
+		"color": "#87cefa",
+		"name": "Light Sky Blue",
+		"rgb": "135 206 250",
+		"cmyk": "46 18 0 2"
+	},
+	{
+		"color": "#880085",
+		"name": "Mardi Gras",
+		"rgb": "136 0 133",
+		"cmyk": "0 100 2 47"
+	},
+	{
+		"color": "#8806ce",
+		"name": "French Violet",
+		"rgb": "136 6 206",
+		"cmyk": "34 97 0 19"
+	},
+	{
+		"color": "#882d17",
+		"name": "Kobe, Sienna",
+		"rgb": "136 45 23",
+		"cmyk": "0 67 83 47"
+	},
+	{
+		"color": "#8878c3",
+		"name": "Ube",
+		"rgb": "136 120 195",
+		"cmyk": "30 39 0 24"
+	},
+	{
+		"color": "#88d8c0",
+		"name": "Pearl Aqua",
+		"rgb": "136 216 192",
+		"cmyk": "37 0 11 15"
+	},
+	{
+		"color": "#893843",
+		"name": "Solid Pink",
+		"rgb": "137 56 67",
+		"cmyk": "0 59 51 46"
+	},
+	{
+		"color": "#893f45",
+		"name": "Cordovan",
+		"rgb": "137 63 69",
+		"cmyk": "0 54 50 46"
+	},
+	{
+		"color": "#89cff0",
+		"name": "Baby Blue",
+		"rgb": "137 207 240",
+		"cmyk": "43 14 0 6"
+	},
+	{
+		"color": "#8a2be2",
+		"name": "Blue-violet",
+		"rgb": "138 43 226",
+		"cmyk": "39 81 0 11"
+	},
+	{
+		"color": "#8a3324",
+		"name": "Burnt Umber",
+		"rgb": "138 51 36",
+		"cmyk": "0 63 74 46"
+	},
+	{
+		"color": "#8a496b",
+		"name": "Twilight Lavender",
+		"rgb": "138 73 107",
+		"cmyk": "0 47 23 46"
+	},
+	{
+		"color": "#8a795d",
+		"name": "Shadow",
+		"rgb": "138 121 93",
+		"cmyk": "0 12 33 46"
+	},
+	{
+		"color": "#8a7f80",
+		"name": "Rocket Metallic",
+		"rgb": "138 127 128",
+		"cmyk": "0 8 7 46"
+	},
+	{
+		"color": "#8ab9f1",
+		"name": "Jordy Blue",
+		"rgb": "138 185 241",
+		"cmyk": "43 23 0 6"
+	},
+	{
+		"color": "#8b0000",
+		"name": "Dark Red",
+		"rgb": "139 0 0",
+		"cmyk": "0 100 100 46"
+	},
+	{
+		"color": "#8b008b",
+		"name": "Dark Magenta",
+		"rgb": "139 0 139",
+		"cmyk": "0 100 0 46"
+	},
+	{
+		"color": "#8b4513",
+		"name": "Saddle Brown",
+		"rgb": "139 69 19",
+		"cmyk": "0 50 86 46"
+	},
+	{
+		"color": "#8b8589",
+		"name": "Taupe Gray",
+		"rgb": "139 133 137",
+		"cmyk": "0 4 1 46"
+	},
+	{
+		"color": "#8c92ac",
+		"name": "Cool Grey, Gray-Blue",
+		"rgb": "140 146 172",
+		"cmyk": "19 15 0 33"
+	},
+	{
+		"color": "#8cbed6",
+		"name": "Dark Sky Blue",
+		"rgb": "140 190 214",
+		"cmyk": "35 11 0 16"
+	},
+	{
+		"color": "#8d4e85",
+		"name": "Razzmic Berry",
+		"rgb": "141 78 133",
+		"cmyk": "0 45 6 45"
+	},
+	{
+		"color": "#8db600",
+		"name": "Apple Green",
+		"rgb": "141 182 0",
+		"cmyk": "23 0 100 29"
+	},
+	{
+		"color": "#8e3a59",
+		"name": "Quinacridone Magenta",
+		"rgb": "142 58 89",
+		"cmyk": "0 59 37 44"
+	},
+	{
+		"color": "#8e4585",
+		"name": "Plum",
+		"rgb": "142 69 133",
+		"cmyk": "0 51 6 44"
+	},
+	{
+		"color": "#8f00ff",
+		"name": "Electric Violet, Violet",
+		"rgb": "143 0 255",
+		"cmyk": "44 100 0 0"
+	},
+	{
+		"color": "#8f9779",
+		"name": "Artichoke",
+		"rgb": "143 151 121",
+		"cmyk": "5 0 20 41"
+	},
+	{
+		"color": "#8fbc8f",
+		"name": "Dark Sea Green",
+		"rgb": "143 188 143",
+		"cmyk": "24 0 24 26"
+	},
+	{
+		"color": "#8fd400",
+		"name": "Sheen Green",
+		"rgb": "143 212 0",
+		"cmyk": "33 0 100 17"
+	},
+	{
+		"color": "#905d5d",
+		"name": "Rose Taupe",
+		"rgb": "144 93 93",
+		"cmyk": "0 35 35 44"
+	},
+	{
+		"color": "#90ee90",
+		"name": "Light Green",
+		"rgb": "144 238 144",
+		"cmyk": "40 0 40 7"
+	},
+	{
+		"color": "#915c83",
+		"name": "Antique Fuchsia",
+		"rgb": "145 92 131",
+		"cmyk": "0 37 10 43"
+	},
+	{
+		"color": "#915f6d",
+		"name": "Mauve Taupe, Raspberry Glace",
+		"rgb": "145 95 109",
+		"cmyk": "0 35 25 43"
+	},
+	{
+		"color": "#918151",
+		"name": "Dark Tan",
+		"rgb": "145 129 81",
+		"cmyk": "0 11 44 43"
+	},
+	{
+		"color": "#91a3b0",
+		"name": "Cadet Grey",
+		"rgb": "145 163 176",
+		"cmyk": "18 7 0 31"
+	},
+	{
+		"color": "#92000a",
+		"name": "Sangria",
+		"rgb": "146 0 10",
+		"cmyk": "0 100 93 43"
+	},
+	{
+		"color": "#922724",
+		"name": "Vivid Auburn",
+		"rgb": "146 39 36",
+		"cmyk": "0 73 75 43"
+	},
+	{
+		"color": "#92a1cf",
+		"name": "Ceil",
+		"rgb": "146 161 207",
+		"cmyk": "30 22 0 19"
+	},
+	{
+		"color": "#933d41",
+		"name": "Smokey Topaz",
+		"rgb": "147 61 65",
+		"cmyk": "0 59 56 42"
+	},
+	{
+		"color": "#9370db",
+		"name": "Medium Purple",
+		"rgb": "147 112 219",
+		"cmyk": "33 49 0 14"
+	},
+	{
+		"color": "#93c572",
+		"name": "Pistachio",
+		"rgb": "147 197 114",
+		"cmyk": "25 0 42 23"
+	},
+	{
+		"color": "#93ccea",
+		"name": "Light Cornflower Blue",
+		"rgb": "147 204 234",
+		"cmyk": "37 13 0 8"
+	},
+	{
+		"color": "#9400d3",
+		"name": "Dark Violet",
+		"rgb": "148 0 211",
+		"cmyk": "30 100 0 17"
+	},
+	{
+		"color": "#9457eb",
+		"name": "Lavender Indigo, Navy Purple",
+		"rgb": "148 87 235",
+		"cmyk": "37 63 0 8"
+	},
+	{
+		"color": "#960018",
+		"name": "Carmine",
+		"rgb": "150 0 24",
+		"cmyk": "0 100 84 41"
+	},
+	{
+		"color": "#964b00",
+		"name": "Brown",
+		"rgb": "150 75 0",
+		"cmyk": "0 50 100 41"
+	},
+	{
+		"color": "#965a3e",
+		"name": "Coconut",
+		"rgb": "150 90 62",
+		"cmyk": "0 40 59 41"
+	},
+	{
+		"color": "#966fd6",
+		"name": "Dark Pastel Purple",
+		"rgb": "150 111 214",
+		"cmyk": "30 48 0 16"
+	},
+	{
+		"color": "#967117",
+		"name": "Bistre Brown, Drab, Mode Beige, Sand Dune, Sandy Taupe",
+		"rgb": "150 113 23",
+		"cmyk": "0 25 85 41"
+	},
+	{
+		"color": "#9678b6",
+		"name": "Purple Mountain Majesty",
+		"rgb": "150 120 182",
+		"cmyk": "18 34 0 29"
+	},
+	{
+		"color": "#967bb6",
+		"name": "Lavender Purple",
+		"rgb": "150 123 182",
+		"cmyk": "18 32 0 29"
+	},
+	{
+		"color": "#96c8a2",
+		"name": "Eton Blue",
+		"rgb": "150 200 162",
+		"cmyk": "25 0 19 22"
+	},
+	{
+		"color": "#96ded1",
+		"name": "Pale Robin Egg Blue",
+		"rgb": "150 222 209",
+		"cmyk": "32 0 6 13"
+	},
+	{
+		"color": "#979aaa",
+		"name": "Manatee",
+		"rgb": "151 154 170",
+		"cmyk": "11 9 0 33"
+	},
+	{
+		"color": "#986960",
+		"name": "Dark Chestnut",
+		"rgb": "152 105 96",
+		"cmyk": "0 31 37 40"
+	},
+	{
+		"color": "#987456",
+		"name": "Liver Chestnut",
+		"rgb": "152 116 86",
+		"cmyk": "0 24 43 40"
+	},
+	{
+		"color": "#987654",
+		"name": "Pale Brown",
+		"rgb": "152 118 84",
+		"cmyk": "0 22 45 40"
+	},
+	{
+		"color": "#98777b",
+		"name": "Bazaar",
+		"rgb": "152 119 123",
+		"cmyk": "0 22 19 40"
+	},
+	{
+		"color": "#98817b",
+		"name": "Cinereous",
+		"rgb": "152 129 123",
+		"cmyk": "0 15 19 40"
+	},
+	{
+		"color": "#989898",
+		"name": "Spanish Gray",
+		"rgb": "152 152 152",
+		"cmyk": "0 0 0 40"
+	},
+	{
+		"color": "#98fb98",
+		"name": "Pale Green",
+		"rgb": "152 251 152",
+		"cmyk": "39 0 39 2"
+	},
+	{
+		"color": "#98ff98",
+		"name": "Mint Green",
+		"rgb": "152 255 152",
+		"cmyk": "40 0 40 0"
+	},
+	{
+		"color": "#990000",
+		"name": "OU Crimson Red, Stizza, USC Cardinal",
+		"rgb": "153 0 0",
+		"cmyk": "0 100 100 40"
+	},
+	{
+		"color": "#9932cc",
+		"name": "Dark Orchid",
+		"rgb": "153 50 204",
+		"cmyk": "25 76 0 20"
+	},
+	{
+		"color": "#9955bb",
+		"name": "Deep Lilac",
+		"rgb": "153 85 187",
+		"cmyk": "18 55 0 27"
+	},
+	{
+		"color": "#996515",
+		"name": "Golden Brown",
+		"rgb": "153 101 21",
+		"cmyk": "0 34 86 40"
+	},
+	{
+		"color": "#996666",
+		"name": "Copper Rose",
+		"rgb": "153 102 102",
+		"cmyk": "0 33 33 40"
+	},
+	{
+		"color": "#9966cc",
+		"name": "Amethyst",
+		"rgb": "153 102 204",
+		"cmyk": "25 50 0 20"
+	},
+	{
+		"color": "#997a8d",
+		"name": "Mountbatten Pink",
+		"rgb": "153 122 141",
+		"cmyk": "0 20 8 40"
+	},
+	{
+		"color": "#99badd",
+		"name": "Carolina Blue",
+		"rgb": "153 186 221",
+		"cmyk": "31 16 0 13"
+	},
+	{
+		"color": "#99e6b3",
+		"name": "Teal Deer",
+		"rgb": "153 230 179",
+		"cmyk": "34 0 22 10"
+	},
+	{
+		"color": "#9a4eae",
+		"name": "Purpureus",
+		"rgb": "154 78 174",
+		"cmyk": "12 55 0 32"
+	},
+	{
+		"color": "#9ab973",
+		"name": "Olivine",
+		"rgb": "154 185 115",
+		"cmyk": "17 0 38 28"
+	},
+	{
+		"color": "#9acd32",
+		"name": "Yellow-green",
+		"rgb": "154 205 50",
+		"cmyk": "25 0 76 20"
+	},
+	{
+		"color": "#9b111e",
+		"name": "Ruby Red",
+		"rgb": "155 17 30",
+		"cmyk": "0 89 81 39"
+	},
+	{
+		"color": "#9b7653",
+		"name": "Dirt",
+		"rgb": "155 118 83",
+		"cmyk": "0 24 47 39"
+	},
+	{
+		"color": "#9b870c",
+		"name": "Dark Yellow",
+		"rgb": "155 135 12",
+		"cmyk": "0 13 92 39"
+	},
+	{
+		"color": "#9bc4e2",
+		"name": "Pale Cerulean",
+		"rgb": "155 196 226",
+		"cmyk": "31 13 0 11"
+	},
+	{
+		"color": "#9bddff",
+		"name": "Columbia Blue",
+		"rgb": "155 221 255",
+		"cmyk": "39 13 0 0"
+	},
+	{
+		"color": "#9c2542",
+		"name": "Big Dip Oruby",
+		"rgb": "156 37 66",
+		"cmyk": "0 76 58 39"
+	},
+	{
+		"color": "#9c7c38",
+		"name": "Metallic Sunburst",
+		"rgb": "156 124 56",
+		"cmyk": "0 21 64 39"
+	},
+	{
+		"color": "#9d2933",
+		"name": "Japanese Carmine",
+		"rgb": "157 41 51",
+		"cmyk": "0 74 68 38"
+	},
+	{
+		"color": "#9dc209",
+		"name": "Limerick",
+		"rgb": "157 194 9",
+		"cmyk": "19 0 95 24"
+	},
+	{
+		"color": "#9e1316",
+		"name": "Spartan Crimson",
+		"rgb": "158 19 22",
+		"cmyk": "0 88 86 38"
+	},
+	{
+		"color": "#9f00c5",
+		"name": "Purple (Munsell)",
+		"rgb": "159 0 197",
+		"cmyk": "19 100 0 23"
+	},
+	{
+		"color": "#9f00ff",
+		"name": "Vivid Violet",
+		"rgb": "159 0 255",
+		"cmyk": "38 100 0 0"
+	},
+	{
+		"color": "#9f1d35",
+		"name": "Vivid Burgundy",
+		"rgb": "159 29 53",
+		"cmyk": "0 82 67 38"
+	},
+	{
+		"color": "#9f2b68",
+		"name": "Amaranth",
+		"rgb": "159 43 104",
+		"cmyk": "0 73 35 38"
+	},
+	{
+		"color": "#9f4576",
+		"name": "Magenta Haze",
+		"rgb": "159 69 118",
+		"cmyk": "0 57 26 38"
+	},
+	{
+		"color": "#9f8170",
+		"name": "Beaver",
+		"rgb": "159 129 112",
+		"cmyk": "0 19 30 38"
+	},
+	{
+		"color": "#9fa91f",
+		"name": "Citron",
+		"rgb": "159 169 31",
+		"cmyk": "6 0 82 34"
+	},
+	{
+		"color": "#a020f0",
+		"name": "Purple (X11), Veronica",
+		"rgb": "160 32 240",
+		"cmyk": "33 87 0 6"
+	},
+	{
+		"color": "#a0785a",
+		"name": "Chamoisee",
+		"rgb": "160 120 90",
+		"cmyk": "0 25 44 37"
+	},
+	{
+		"color": "#a0d6b4",
+		"name": "Turquoise Green",
+		"rgb": "160 214 180",
+		"cmyk": "25 0 16 16"
+	},
+	{
+		"color": "#a1caf1",
+		"name": "Baby Blue Eyes",
+		"rgb": "161 202 241",
+		"cmyk": "33 16 0 6"
+	},
+	{
+		"color": "#a2006d",
+		"name": "Flirt",
+		"rgb": "162 0 109",
+		"cmyk": "0 100 33 37"
+	},
+	{
+		"color": "#a2a2d0",
+		"name": "Blue Bell",
+		"rgb": "162 162 208",
+		"cmyk": "22 22 0 18"
+	},
+	{
+		"color": "#a2add0",
+		"name": "Wild Blue Yonder",
+		"rgb": "162 173 208",
+		"cmyk": "22 17 0 18"
+	},
+	{
+		"color": "#a32638",
+		"name": "Alabama Crimson",
+		"rgb": "163 38 56",
+		"cmyk": "0 77 66 36"
+	},
+	{
+		"color": "#a3c1ad",
+		"name": "Cambridge Blue",
+		"rgb": "163 193 173",
+		"cmyk": "16 0 10 24"
+	},
+	{
+		"color": "#a40000",
+		"name": "Dark Candy Apple Red",
+		"rgb": "164 0 0",
+		"cmyk": "0 100 100 36"
+	},
+	{
+		"color": "#a4c639",
+		"name": "Android Green",
+		"rgb": "164 198 57",
+		"cmyk": "17 0 71 22"
+	},
+	{
+		"color": "#a4dded",
+		"name": "Non-photo Blue",
+		"rgb": "164 221 237",
+		"cmyk": "31 7 0 7"
+	},
+	{
+		"color": "#a4f4f9",
+		"name": "Waterspout",
+		"rgb": "164 244 249",
+		"cmyk": "34 2 0 2"
+	},
+	{
+		"color": "#a50b5e",
+		"name": "Jazzberry Jam",
+		"rgb": "165 11 94",
+		"cmyk": "0 93 43 35"
+	},
+	{
+		"color": "#a52a2a",
+		"name": "Auburn, Brown (web), Red-brown",
+		"rgb": "165 42 42",
+		"cmyk": "0 75 75 35"
+	},
+	{
+		"color": "#a57164",
+		"name": "Blast-off Bronze",
+		"rgb": "165 113 100",
+		"cmyk": "0 32 39 35"
+	},
+	{
+		"color": "#a67b5b",
+		"name": "Cafè´± Au Lait, French Beige, Tuscan Tan",
+		"rgb": "166 123 91",
+		"cmyk": "0 26 45 35"
+	},
+	{
+		"color": "#a6e7ff",
+		"name": "Fresh Air",
+		"rgb": "166 231 255",
+		"cmyk": "35 9 0 0"
+	},
+	{
+		"color": "#a76bcf",
+		"name": "Rich Lavender",
+		"rgb": "167 107 207",
+		"cmyk": "19 48 0 19"
+	},
+	{
+		"color": "#a7fc00",
+		"name": "Spring Bud",
+		"rgb": "167 252 0",
+		"cmyk": "34 0 100 1"
+	},
+	{
+		"color": "#a81c07",
+		"name": "Rufous",
+		"rgb": "168 28 7",
+		"cmyk": "0 83 96 34"
+	},
+	{
+		"color": "#a8516e",
+		"name": "China Rose",
+		"rgb": "168 81 110",
+		"cmyk": "0 52 35 34"
+	},
+	{
+		"color": "#a8bb19",
+		"name": "Acid Green",
+		"rgb": "168 187 25",
+		"cmyk": "10 0 87 27"
+	},
+	{
+		"color": "#a8e4a0",
+		"name": "Granny Smith Apple",
+		"rgb": "168 228 160",
+		"cmyk": "26 0 30 11"
+	},
+	{
+		"color": "#a9203e",
+		"name": "Deep Carmine",
+		"rgb": "169 32 62",
+		"cmyk": "0 81 63 34"
+	},
+	{
+		"color": "#a95c68",
+		"name": "Deep Puce",
+		"rgb": "169 92 104",
+		"cmyk": "0 46 39 34"
+	},
+	{
+		"color": "#a99a86",
+		"name": "Grullo",
+		"rgb": "169 154 134",
+		"cmyk": "0 9 21 34"
+	},
+	{
+		"color": "#a9a9a9",
+		"name": "Dark Gray",
+		"rgb": "169 169 169",
+		"cmyk": "0 0 0 34"
+	},
+	{
+		"color": "#a9ba9d",
+		"name": "Laurel Green",
+		"rgb": "169 186 157",
+		"cmyk": "9 0 16 27"
+	},
+	{
+		"color": "#aa381e",
+		"name": "Chinese Red",
+		"rgb": "170 56 30",
+		"cmyk": "0 67 82 33"
+	},
+	{
+		"color": "#aa4069",
+		"name": "Medium Ruby",
+		"rgb": "170 64 105",
+		"cmyk": "0 62 38 33"
+	},
+	{
+		"color": "#aa98a9",
+		"name": "Heliotrope Gray, Rose Quartz",
+		"rgb": "170 152 169",
+		"cmyk": "0 11 1 33"
+	},
+	{
+		"color": "#aaf0d1",
+		"name": "Magic Mint",
+		"rgb": "170 240 209",
+		"cmyk": "29 0 13 6"
+	},
+	{
+		"color": "#ab274f",
+		"name": "Amaranth Purple",
+		"rgb": "171 39 79",
+		"cmyk": "0 77 54 33"
+	},
+	{
+		"color": "#ab4b52",
+		"name": "English Red",
+		"rgb": "171 75 82",
+		"cmyk": "0 56 52 33"
+	},
+	{
+		"color": "#ab4e52",
+		"name": "Redwood, Rose Vale",
+		"rgb": "171 78 82",
+		"cmyk": "0 54 52 33"
+	},
+	{
+		"color": "#abcdef",
+		"name": "Pale Cornflower Blue",
+		"rgb": "171 205 239",
+		"cmyk": "29 14 0 6"
+	},
+	{
+		"color": "#ac1e44",
+		"name": "French Wine",
+		"rgb": "172 30 68",
+		"cmyk": "0 83 61 33"
+	},
+	{
+		"color": "#acacac",
+		"name": "Silver Chalice",
+		"rgb": "172 172 172",
+		"cmyk": "0 0 0 33"
+	},
+	{
+		"color": "#ace1af",
+		"name": "Celadon",
+		"rgb": "172 225 175",
+		"cmyk": "24 0 22 12"
+	},
+	{
+		"color": "#ace5ee",
+		"name": "Blizzard Blue",
+		"rgb": "172 229 238",
+		"cmyk": "28 4 0 7"
+	},
+	{
+		"color": "#ad6f69",
+		"name": "Copper Penny",
+		"rgb": "173 111 105",
+		"cmyk": "0 36 39 32"
+	},
+	{
+		"color": "#add8e6",
+		"name": "Light Blue",
+		"rgb": "173 216 230",
+		"cmyk": "25 6 0 10"
+	},
+	{
+		"color": "#addfad",
+		"name": "Light Moss Green, Moss Green",
+		"rgb": "173 223 173",
+		"cmyk": "22 0 22 13"
+	},
+	{
+		"color": "#adff2f",
+		"name": "Green-yellow",
+		"rgb": "173 255 47",
+		"cmyk": "32 0 82 0"
+	},
+	{
+		"color": "#ae0c00",
+		"name": "Mordant Red 19",
+		"rgb": "174 12 0",
+		"cmyk": "0 93 100 32"
+	},
+	{
+		"color": "#ae2029",
+		"name": "Upsdell Red",
+		"rgb": "174 32 41",
+		"cmyk": "0 82 76 32"
+	},
+	{
+		"color": "#ae6838",
+		"name": "Windsor Tan",
+		"rgb": "174 104 56",
+		"cmyk": "0 40 68 32"
+	},
+	{
+		"color": "#aec6cf",
+		"name": "Pastel Blue",
+		"rgb": "174 198 207",
+		"cmyk": "16 4 0 19"
+	},
+	{
+		"color": "#af4035",
+		"name": "Medium Carmine, Pale Carmine",
+		"rgb": "175 64 53",
+		"cmyk": "0 63 70 31"
+	},
+	{
+		"color": "#afeeee",
+		"name": "Pale Blue, Pale Turquoise",
+		"rgb": "175 238 238",
+		"cmyk": "27 0 0 7"
+	},
+	{
+		"color": "#b03060",
+		"name": "Maroon (X11), Rich Maroon",
+		"rgb": "176 48 96",
+		"cmyk": "0 73 46 31"
+	},
+	{
+		"color": "#b06500",
+		"name": "Ginger",
+		"rgb": "176 101 0",
+		"cmyk": "0 43 100 31"
+	},
+	{
+		"color": "#b0c4de",
+		"name": "Light Steel Blue",
+		"rgb": "176 196 222",
+		"cmyk": "21 12 0 13"
+	},
+	{
+		"color": "#b0e0e6",
+		"name": "Powder Blue, Powder Blue (web)",
+		"rgb": "176 224 230",
+		"cmyk": "24 3 0 10"
+	},
+	{
+		"color": "#b19cd9",
+		"name": "Light Pastel Purple",
+		"rgb": "177 156 217",
+		"cmyk": "18 28 0 15"
+	},
+	{
+		"color": "#b22222",
+		"name": "Firebrick",
+		"rgb": "178 34 34",
+		"cmyk": "0 81 81 30"
+	},
+	{
+		"color": "#b284be",
+		"name": "African Purple",
+		"rgb": "178 132 190",
+		"cmyk": "6 31 0 26"
+	},
+	{
+		"color": "#b2beb5",
+		"name": "Ash Grey",
+		"rgb": "178 190 181",
+		"cmyk": "6 0 5 26"
+	},
+	{
+		"color": "#b2ec5d",
+		"name": "Inchworm",
+		"rgb": "178 236 93",
+		"cmyk": "25 0 61 8"
+	},
+	{
+		"color": "#b2ffff",
+		"name": "Celeste, Italian Sky Blue",
+		"rgb": "178 255 255",
+		"cmyk": "30 0 0 0"
+	},
+	{
+		"color": "#b31b1b",
+		"name": "Carnelian, Cornell Red",
+		"rgb": "179 27 27",
+		"cmyk": "0 85 85 30"
+	},
+	{
+		"color": "#b3446c",
+		"name": "Irresistible, Raspberry Rose",
+		"rgb": "179 68 108",
+		"cmyk": "0 62 40 30"
+	},
+	{
+		"color": "#b38b6d",
+		"name": "Light Taupe",
+		"rgb": "179 139 109",
+		"cmyk": "0 22 39 30"
+	},
+	{
+		"color": "#b39eb5",
+		"name": "Pastel Purple",
+		"rgb": "179 158 181",
+		"cmyk": "1 13 0 29"
+	},
+	{
+		"color": "#b48395",
+		"name": "English Lavender",
+		"rgb": "180 131 149",
+		"cmyk": "0 27 17 29"
+	},
+	{
+		"color": "#b53389",
+		"name": "Fandango",
+		"rgb": "181 51 137",
+		"cmyk": "0 72 24 29"
+	},
+	{
+		"color": "#b5651d",
+		"name": "Light Brown",
+		"rgb": "181 101 29",
+		"cmyk": "0 44 84 29"
+	},
+	{
+		"color": "#b57281",
+		"name": "Turkish Rose",
+		"rgb": "181 114 129",
+		"cmyk": "0 37 29 29"
+	},
+	{
+		"color": "#b57edc",
+		"name": "Lavender (floral)",
+		"rgb": "181 126 220",
+		"cmyk": "18 43 0 14"
+	},
+	{
+		"color": "#b5a642",
+		"name": "Brass",
+		"rgb": "181 166 66",
+		"cmyk": "0 8 64 29"
+	},
+	{
+		"color": "#b666d2",
+		"name": "Rich Lilac",
+		"rgb": "182 102 210",
+		"cmyk": "13 51 0 18"
+	},
+	{
+		"color": "#b7410e",
+		"name": "Rust",
+		"rgb": "183 65 14",
+		"cmyk": "0 65 92 28"
+	},
+	{
+		"color": "#b768a2",
+		"name": "Pearly Purple",
+		"rgb": "183 104 162",
+		"cmyk": "0 43 12 28"
+	},
+	{
+		"color": "#b76e79",
+		"name": "Rose Gold",
+		"rgb": "183 110 121",
+		"cmyk": "0 40 34 28"
+	},
+	{
+		"color": "#b784a7",
+		"name": "Opera Mauve",
+		"rgb": "183 132 167",
+		"cmyk": "0 28 9 28"
+	},
+	{
+		"color": "#b78727",
+		"name": "University Of California Gold",
+		"rgb": "183 135 39",
+		"cmyk": "0 26 79 28"
+	},
+	{
+		"color": "#b86d29",
+		"name": "Liver (Dogs)",
+		"rgb": "184 109 41",
+		"cmyk": "0 41 78 28"
+	},
+	{
+		"color": "#b87333",
+		"name": "Copper",
+		"rgb": "184 115 51",
+		"cmyk": "0 38 72 28"
+	},
+	{
+		"color": "#b8860b",
+		"name": "Dark Goldenrod",
+		"rgb": "184 134 11",
+		"cmyk": "0 27 94 28"
+	},
+	{
+		"color": "#b94e48",
+		"name": "Deep Chestnut",
+		"rgb": "185 78 72",
+		"cmyk": "0 58 61 28"
+	},
+	{
+		"color": "#b9f2ff",
+		"name": "Diamond",
+		"rgb": "185 242 255",
+		"cmyk": "28 5 0 0"
+	},
+	{
+		"color": "#ba160c",
+		"name": "International Orange",
+		"rgb": "186 22 12",
+		"cmyk": "0 88 94 27"
+	},
+	{
+		"color": "#ba55d3",
+		"name": "Medium Orchid",
+		"rgb": "186 85 211",
+		"cmyk": "12 60 0 17"
+	},
+	{
+		"color": "#ba8759",
+		"name": "Deer",
+		"rgb": "186 135 89",
+		"cmyk": "0 27 52 27"
+	},
+	{
+		"color": "#bb3385",
+		"name": "Medium Red-violet",
+		"rgb": "187 51 133",
+		"cmyk": "0 73 29 27"
+	},
+	{
+		"color": "#bb6528",
+		"name": "Ruddy Brown",
+		"rgb": "187 101 40",
+		"cmyk": "0 46 79 27"
+	},
+	{
+		"color": "#bc8f8f",
+		"name": "Rosy Brown",
+		"rgb": "188 143 143",
+		"cmyk": "0 24 24 26"
+	},
+	{
+		"color": "#bc987e",
+		"name": "Pale Taupe",
+		"rgb": "188 152 126",
+		"cmyk": "0 19 33 26"
+	},
+	{
+		"color": "#bcb88a",
+		"name": "Sage",
+		"rgb": "188 184 138",
+		"cmyk": "0 2 27 26"
+	},
+	{
+		"color": "#bcd4e6",
+		"name": "Beau Blue, Pale Aqua",
+		"rgb": "188 212 230",
+		"cmyk": "18 8 0 10"
+	},
+	{
+		"color": "#bd33a4",
+		"name": "Byzantine",
+		"rgb": "189 51 164",
+		"cmyk": "0 73 13 26"
+	},
+	{
+		"color": "#bdb76b",
+		"name": "Dark Khaki",
+		"rgb": "189 183 107",
+		"cmyk": "0 3 43 26"
+	},
+	{
+		"color": "#bdda57",
+		"name": "June Bud",
+		"rgb": "189 218 87",
+		"cmyk": "13 0 60 15"
+	},
+	{
+		"color": "#be0032",
+		"name": "Crimson Glory",
+		"rgb": "190 0 50",
+		"cmyk": "0 100 74 26"
+	},
+	{
+		"color": "#be4f62",
+		"name": "Popstar",
+		"rgb": "190 79 98",
+		"cmyk": "0 58 48 26"
+	},
+	{
+		"color": "#bebebe",
+		"name": "Gray (X11 Gray)",
+		"rgb": "190 190 190",
+		"cmyk": "0 0 0 26"
+	},
+	{
+		"color": "#bf00ff",
+		"name": "Electric Purple",
+		"rgb": "191 0 255",
+		"cmyk": "25 100 0 0"
+	},
+	{
+		"color": "#bf4f51",
+		"name": "Bittersweet Shimmer",
+		"rgb": "191 79 81",
+		"cmyk": "0 59 58 25"
+	},
+	{
+		"color": "#bf94e4",
+		"name": "Bright Lavender",
+		"rgb": "191 148 228",
+		"cmyk": "16 35 0 11"
+	},
+	{
+		"color": "#bfc1c2",
+		"name": "Silver Sand",
+		"rgb": "191 193 194",
+		"cmyk": "2 1 0 24"
+	},
+	{
+		"color": "#bfff00",
+		"name": "Lime",
+		"rgb": "191 255 0",
+		"cmyk": "25 0 100 0"
+	},
+	{
+		"color": "#c0362c",
+		"name": "International Orange (Golden Gate Bridge)",
+		"rgb": "192 54 44",
+		"cmyk": "0 72 77 25"
+	},
+	{
+		"color": "#c04000",
+		"name": "Mahogany",
+		"rgb": "192 64 0",
+		"cmyk": "0 67 100 25"
+	},
+	{
+		"color": "#c08081",
+		"name": "Old Rose",
+		"rgb": "192 128 129",
+		"cmyk": "0 33 33 25"
+	},
+	{
+		"color": "#c09999",
+		"name": "Tuscany",
+		"rgb": "192 153 153",
+		"cmyk": "0 20 20 25"
+	},
+	{
+		"color": "#c0c0c0",
+		"name": "Silver",
+		"rgb": "192 192 192",
+		"cmyk": "0 0 0 25"
+	},
+	{
+		"color": "#c154c1",
+		"name": "Deep Fuchsia, Fuchsia (Crayola)",
+		"rgb": "193 84 193",
+		"cmyk": "0 57 0 24"
+	},
+	{
+		"color": "#c19a6b",
+		"name": "Camel, Desert, Fallow, Lion, Wood Brown",
+		"rgb": "193 154 107",
+		"cmyk": "0 20 45 24"
+	},
+	{
+		"color": "#c21e56",
+		"name": "Rose Red",
+		"rgb": "194 30 86",
+		"cmyk": "0 85 56 24"
+	},
+	{
+		"color": "#c23b22",
+		"name": "Dark Pastel Red",
+		"rgb": "194 59 34",
+		"cmyk": "0 70 83 24"
+	},
+	{
+		"color": "#c2b280",
+		"name": "Ecru, Sand",
+		"rgb": "194 178 128",
+		"cmyk": "0 8 34 24"
+	},
+	{
+		"color": "#c30b4e",
+		"name": "Pictorial Carmine",
+		"rgb": "195 11 78",
+		"cmyk": "0 94 60 24"
+	},
+	{
+		"color": "#c32148",
+		"name": "Bright Maroon, Maroon (Crayola)",
+		"rgb": "195 33 72",
+		"cmyk": "0 83 63 24"
+	},
+	{
+		"color": "#c3b091",
+		"name": "Khaki",
+		"rgb": "195 176 145",
+		"cmyk": "0 10 26 24"
+	},
+	{
+		"color": "#c40233",
+		"name": "Red (NCS)",
+		"rgb": "196 2 51",
+		"cmyk": "0 99 74 23"
+	},
+	{
+		"color": "#c41e3a",
+		"name": "Cardinal",
+		"rgb": "196 30 58",
+		"cmyk": "0 85 70 23"
+	},
+	{
+		"color": "#c46210",
+		"name": "Alloy Orange",
+		"rgb": "196 98 16",
+		"cmyk": "0 50 92 23"
+	},
+	{
+		"color": "#c4aead",
+		"name": "Silver Pink",
+		"rgb": "196 174 173",
+		"cmyk": "0 11 12 23"
+	},
+	{
+		"color": "#c4c3d0",
+		"name": "Lavender Gray",
+		"rgb": "196 195 208",
+		"cmyk": "6 6 0 18"
+	},
+	{
+		"color": "#c54b8c",
+		"name": "Mulberry",
+		"rgb": "197 75 140",
+		"cmyk": "0 62 29 23"
+	},
+	{
+		"color": "#c5b358",
+		"name": "Vegas Gold",
+		"rgb": "197 179 88",
+		"cmyk": "0 9 55 23"
+	},
+	{
+		"color": "#c71585",
+		"name": "Medium Violet-red, Red-violet",
+		"rgb": "199 21 133",
+		"cmyk": "0 89 33 22"
+	},
+	{
+		"color": "#c72c48",
+		"name": "French Raspberry",
+		"rgb": "199 44 72",
+		"cmyk": "0 78 64 22"
+	},
+	{
+		"color": "#c74375",
+		"name": "Fuchsia Rose",
+		"rgb": "199 67 117",
+		"cmyk": "0 66 41 22"
+	},
+	{
+		"color": "#c80815",
+		"name": "Venetian Red",
+		"rgb": "200 8 21",
+		"cmyk": "0 96 90 22"
+	},
+	{
+		"color": "#c84186",
+		"name": "Smitten",
+		"rgb": "200 65 134",
+		"cmyk": "0 68 33 22"
+	},
+	{
+		"color": "#c8a2c8",
+		"name": "Lilac",
+		"rgb": "200 162 200",
+		"cmyk": "0 19 0 22"
+	},
+	{
+		"color": "#c8ad7f",
+		"name": "Light French Beige",
+		"rgb": "200 173 127",
+		"cmyk": "0 14 37 22"
+	},
+	{
+		"color": "#c90016",
+		"name": "Harvard Crimson",
+		"rgb": "201 0 22",
+		"cmyk": "0 100 89 21"
+	},
+	{
+		"color": "#c95a49",
+		"name": "Cedar Chest",
+		"rgb": "201 90 73",
+		"cmyk": "0 55 64 21"
+	},
+	{
+		"color": "#c9a0dc",
+		"name": "Wisteria",
+		"rgb": "201 160 220",
+		"cmyk": "9 27 0 14"
+	},
+	{
+		"color": "#c9c0bb",
+		"name": "Pale Silver",
+		"rgb": "201 192 187",
+		"cmyk": "0 5 7 21"
+	},
+	{
+		"color": "#c9dc87",
+		"name": "Medium Spring Bud",
+		"rgb": "201 220 135",
+		"cmyk": "9 0 39 14"
+	},
+	{
+		"color": "#c9ffe5",
+		"name": "Aero Blue",
+		"rgb": "201 255 229",
+		"cmyk": "21 0 10 0"
+	},
+	{
+		"color": "#ca1f7b",
+		"name": "Magenta (dye)",
+		"rgb": "202 31 123",
+		"cmyk": "0 85 39 21"
+	},
+	{
+		"color": "#ca2c92",
+		"name": "Royal Fuchsia",
+		"rgb": "202 44 146",
+		"cmyk": "0 78 28 21"
+	},
+	{
+		"color": "#cae00d",
+		"name": "Bitter Lemon",
+		"rgb": "202 224 13",
+		"cmyk": "10 0 94 12"
+	},
+	{
+		"color": "#cb410b",
+		"name": "Sinopia",
+		"rgb": "203 65 11",
+		"cmyk": "0 68 95 20"
+	},
+	{
+		"color": "#cb4154",
+		"name": "Brick Red",
+		"rgb": "203 65 84",
+		"cmyk": "0 68 59 20"
+	},
+	{
+		"color": "#cb6d51",
+		"name": "Copper Red",
+		"rgb": "203 109 81",
+		"cmyk": "0 46 60 20"
+	},
+	{
+		"color": "#cb99c9",
+		"name": "Pastel Violet",
+		"rgb": "203 153 201",
+		"cmyk": "0 25 1 20"
+	},
+	{
+		"color": "#cba135",
+		"name": "Satin Sheen Gold",
+		"rgb": "203 161 53",
+		"cmyk": "0 21 74 20"
+	},
+	{
+		"color": "#cc0000",
+		"name": "Boston University Red",
+		"rgb": "204 0 0",
+		"cmyk": "0 100 100 20"
+	},
+	{
+		"color": "#cc00cc",
+		"name": "Deep Magenta",
+		"rgb": "204 0 204",
+		"cmyk": "0 100 0 20"
+	},
+	{
+		"color": "#cc00ff",
+		"name": "Vivid Orchid",
+		"rgb": "204 0 255",
+		"cmyk": "20 100 0 0"
+	},
+	{
+		"color": "#cc3333",
+		"name": "Persian Red",
+		"rgb": "204 51 51",
+		"cmyk": "0 75 75 20"
+	},
+	{
+		"color": "#cc33cc",
+		"name": "Steel Pink",
+		"rgb": "204 51 204",
+		"cmyk": "0 75 0 20"
+	},
+	{
+		"color": "#cc397b",
+		"name": "Fuchsia Purple",
+		"rgb": "204 57 123",
+		"cmyk": "0 72 40 20"
+	},
+	{
+		"color": "#cc4e5c",
+		"name": "Dark Terra Cotta",
+		"rgb": "204 78 92",
+		"cmyk": "0 62 55 20"
+	},
+	{
+		"color": "#cc5500",
+		"name": "Burnt Orange",
+		"rgb": "204 85 0",
+		"cmyk": "0 58 100 20"
+	},
+	{
+		"color": "#cc6666",
+		"name": "Fuzzy Wuzzy",
+		"rgb": "204 102 102",
+		"cmyk": "0 50 50 20"
+	},
+	{
+		"color": "#cc7722",
+		"name": "Ochre",
+		"rgb": "204 119 34",
+		"cmyk": "0 42 83 20"
+	},
+	{
+		"color": "#cc8899",
+		"name": "Puce",
+		"rgb": "204 136 153",
+		"cmyk": "0 33 25 20"
+	},
+	{
+		"color": "#cca01d",
+		"name": "Lemon Curry",
+		"rgb": "204 160 29",
+		"cmyk": "0 22 86 20"
+	},
+	{
+		"color": "#ccccff",
+		"name": "Lavender Blue, Periwinkle",
+		"rgb": "204 204 255",
+		"cmyk": "20 20 0 0"
+	},
+	{
+		"color": "#ccff00",
+		"name": "Electric Lime, Fluorescent Yellow, French Lime",
+		"rgb": "204 255 0",
+		"cmyk": "20 0 100 0"
+	},
+	{
+		"color": "#cd5700",
+		"name": "Tawny, Tenn",
+		"rgb": "205 87 0",
+		"cmyk": "0 58 100 20"
+	},
+	{
+		"color": "#cd5b45",
+		"name": "Dark Coral",
+		"rgb": "205 91 69",
+		"cmyk": "0 56 66 20"
+	},
+	{
+		"color": "#cd5c5c",
+		"name": "Chestnut, Indian Red",
+		"rgb": "205 92 92",
+		"cmyk": "0 55 55 20"
+	},
+	{
+		"color": "#cd7f32",
+		"name": "Bronze",
+		"rgb": "205 127 50",
+		"cmyk": "0 38 76 20"
+	},
+	{
+		"color": "#cd853f",
+		"name": "Peru",
+		"rgb": "205 133 63",
+		"cmyk": "0 35 69 20"
+	},
+	{
+		"color": "#cd9575",
+		"name": "Antique Brass",
+		"rgb": "205 149 117",
+		"cmyk": "0 27 43 20"
+	},
+	{
+		"color": "#ce2029",
+		"name": "Fire Engine Red",
+		"rgb": "206 32 41",
+		"cmyk": "0 85 80 19"
+	},
+	{
+		"color": "#ce4676",
+		"name": "Ruber",
+		"rgb": "206 70 118",
+		"cmyk": "0 66 43 19"
+	},
+	{
+		"color": "#cec8ef",
+		"name": "Soap",
+		"rgb": "206 200 239",
+		"cmyk": "14 16 0 6"
+	},
+	{
+		"color": "#cf1020",
+		"name": "Lava",
+		"rgb": "207 16 32",
+		"cmyk": "0 92 85 19"
+	},
+	{
+		"color": "#cf3476",
+		"name": "Telemagenta",
+		"rgb": "207 52 118",
+		"cmyk": "0 75 43 19"
+	},
+	{
+		"color": "#cf6ba9",
+		"name": "Super Pink",
+		"rgb": "207 107 169",
+		"cmyk": "0 48 18 19"
+	},
+	{
+		"color": "#cf71af",
+		"name": "Sky Magenta",
+		"rgb": "207 113 175",
+		"cmyk": "0 45 16 19"
+	},
+	{
+		"color": "#cfb53b",
+		"name": "Old Gold",
+		"rgb": "207 181 59",
+		"cmyk": "0 13 72 19"
+	},
+	{
+		"color": "#cfcfc4",
+		"name": "Pastel Gray",
+		"rgb": "207 207 196",
+		"cmyk": "0 0 5 19"
+	},
+	{
+		"color": "#d0417e",
+		"name": "Magenta (Pantone)",
+		"rgb": "208 65 126",
+		"cmyk": "0 69 39 18"
+	},
+	{
+		"color": "#d0f0c0",
+		"name": "Tea Green",
+		"rgb": "208 240 192",
+		"cmyk": "13 0 20 6"
+	},
+	{
+		"color": "#d10047",
+		"name": "Spanish Carmine",
+		"rgb": "209 0 71",
+		"cmyk": "0 100 66 18"
+	},
+	{
+		"color": "#d10056",
+		"name": "Rubine Red",
+		"rgb": "209 0 86",
+		"cmyk": "0 100 59 18"
+	},
+	{
+		"color": "#d19fe8",
+		"name": "Bright Ube",
+		"rgb": "209 159 232",
+		"cmyk": "10 32 0 9"
+	},
+	{
+		"color": "#d1bea8",
+		"name": "Dark Vanilla",
+		"rgb": "209 190 168",
+		"cmyk": "0 9 20 18"
+	},
+	{
+		"color": "#d1e231",
+		"name": "Pear",
+		"rgb": "209 226 49",
+		"cmyk": "8 0 78 11"
+	},
+	{
+		"color": "#d2691e",
+		"name": "Chocolate (web), Cinnamon, Cocoa Brown",
+		"rgb": "210 105 30",
+		"cmyk": "0 50 86 18"
+	},
+	{
+		"color": "#d2b48c",
+		"name": "Tan",
+		"rgb": "210 180 140",
+		"cmyk": "0 14 33 18"
+	},
+	{
+		"color": "#d3003f",
+		"name": "Utah Crimson",
+		"rgb": "211 0 63",
+		"cmyk": "0 100 70 17"
+	},
+	{
+		"color": "#d39bcb",
+		"name": "Light Medium Orchid",
+		"rgb": "211 155 203",
+		"cmyk": "0 27 4 17"
+	},
+	{
+		"color": "#d3d3d3",
+		"name": "Light Gray",
+		"rgb": "211 211 211",
+		"cmyk": "0 0 0 17"
+	},
+	{
+		"color": "#d40000",
+		"name": "Rosso Corsa",
+		"rgb": "212 0 0",
+		"cmyk": "0 100 100 17"
+	},
+	{
+		"color": "#d470a2",
+		"name": "Wild Orchid",
+		"rgb": "212 112 162",
+		"cmyk": "0 47 24 17"
+	},
+	{
+		"color": "#d473d4",
+		"name": "Deep Mauve, French Mauve",
+		"rgb": "212 115 212",
+		"cmyk": "0 46 0 17"
+	},
+	{
+		"color": "#d4af37",
+		"name": "Gold",
+		"rgb": "212 175 55",
+		"cmyk": "0 18 74 17"
+	},
+	{
+		"color": "#d50f25",
+		"name": "Google red",
+		"rgb": "213 15 37",
+		"cmyk": "0 93 83 17"
+	},
+	{
+		"color": "#d6cadd",
+		"name": "Languid Lavender",
+		"rgb": "214 202 221",
+		"cmyk": "3 9 0 13"
+	},
+	{
+		"color": "#d70040",
+		"name": "Carmine (M&P), Rich Carmine",
+		"rgb": "215 0 64",
+		"cmyk": "0 100 70 16"
+	},
+	{
+		"color": "#d70a53",
+		"name": "Debian Red",
+		"rgb": "215 10 83",
+		"cmyk": "0 95 61 16"
+	},
+	{
+		"color": "#d71868",
+		"name": "Dogwood Rose",
+		"rgb": "215 24 104",
+		"cmyk": "0 89 52 16"
+	},
+	{
+		"color": "#d73b3e",
+		"name": "Jasper",
+		"rgb": "215 59 62",
+		"cmyk": "0 73 71 16"
+	},
+	{
+		"color": "#d74894",
+		"name": "Pink (Pantone)",
+		"rgb": "215 72 148",
+		"cmyk": "0 67 31 16"
+	},
+	{
+		"color": "#d7837f",
+		"name": "New York Pink",
+		"rgb": "215 131 127",
+		"cmyk": "0 39 41 16"
+	},
+	{
+		"color": "#d891ef",
+		"name": "Bright Lilac",
+		"rgb": "216 145 239",
+		"cmyk": "10 39 0 6"
+	},
+	{
+		"color": "#d8b2d1",
+		"name": "Pink Lavender",
+		"rgb": "216 178 209",
+		"cmyk": "0 18 3 15"
+	},
+	{
+		"color": "#d8bfd8",
+		"name": "Thistle",
+		"rgb": "216 191 216",
+		"cmyk": "0 12 0 15"
+	},
+	{
+		"color": "#d9004c",
+		"name": "UA Red",
+		"rgb": "217 0 76",
+		"cmyk": "0 100 65 15"
+	},
+	{
+		"color": "#d9603b",
+		"name": "Medium Vermilion, Vermilion (Plochere)",
+		"rgb": "217 96 59",
+		"cmyk": "0 56 73 15"
+	},
+	{
+		"color": "#d98695",
+		"name": "Shimmering Blush",
+		"rgb": "217 134 149",
+		"cmyk": "0 38 31 15"
+	},
+	{
+		"color": "#d99058",
+		"name": "Persian Orange",
+		"rgb": "217 144 88",
+		"cmyk": "0 34 59 15"
+	},
+	{
+		"color": "#da1d81",
+		"name": "Vivid Cerise",
+		"rgb": "218 29 129",
+		"cmyk": "0 87 41 15"
+	},
+	{
+		"color": "#da2c43",
+		"name": "Rusty Red",
+		"rgb": "218 44 67",
+		"cmyk": "0 80 69 15"
+	},
+	{
+		"color": "#da3287",
+		"name": "Deep Cerise",
+		"rgb": "218 50 135",
+		"cmyk": "0 77 38 15"
+	},
+	{
+		"color": "#da614e",
+		"name": "Jelly Bean",
+		"rgb": "218 97 78",
+		"cmyk": "0 56 64 15"
+	},
+	{
+		"color": "#da70d6",
+		"name": "Orchid",
+		"rgb": "218 112 214",
+		"cmyk": "0 49 2 15"
+	},
+	{
+		"color": "#da8a67",
+		"name": "Copper (Crayola), Pale Copper",
+		"rgb": "218 138 103",
+		"cmyk": "0 37 53 15"
+	},
+	{
+		"color": "#da9100",
+		"name": "Harvest Gold",
+		"rgb": "218 145 0",
+		"cmyk": "0 34 100 15"
+	},
+	{
+		"color": "#daa520",
+		"name": "Goldenrod",
+		"rgb": "218 165 32",
+		"cmyk": "0 24 85 15"
+	},
+	{
+		"color": "#db7093",
+		"name": "Pale Red-violet, Pale Violet-red",
+		"rgb": "219 112 147",
+		"cmyk": "0 49 33 14"
+	},
+	{
+		"color": "#dbd7d2",
+		"name": "Timberwolf",
+		"rgb": "219 215 210",
+		"cmyk": "0 2 4 14"
+	},
+	{
+		"color": "#dc143c",
+		"name": "Crimson",
+		"rgb": "220 20 60",
+		"cmyk": "0 91 73 14"
+	},
+	{
+		"color": "#dcd0ff",
+		"name": "Pale Lavender",
+		"rgb": "220 208 255",
+		"cmyk": "14 18 0 0"
+	},
+	{
+		"color": "#dcdcdc",
+		"name": "Gainsboro",
+		"rgb": "220 220 220",
+		"cmyk": "0 0 0 14"
+	},
+	{
+		"color": "#dda0dd",
+		"name": "Medium Lavender Magenta, Pale Plum, Plum (web)",
+		"rgb": "221 160 221",
+		"cmyk": "0 28 0 13"
+	},
+	{
+		"color": "#ddadaf",
+		"name": "Pale Chestnut",
+		"rgb": "221 173 175",
+		"cmyk": "0 22 21 13"
+	},
+	{
+		"color": "#de3163",
+		"name": "Cerise, Cherry",
+		"rgb": "222 49 99",
+		"cmyk": "0 78 55 13"
+	},
+	{
+		"color": "#de5285",
+		"name": "Fandango Pink",
+		"rgb": "222 82 133",
+		"cmyk": "0 63 40 13"
+	},
+	{
+		"color": "#de5d83",
+		"name": "Blush",
+		"rgb": "222 93 131",
+		"cmyk": "0 58 41 13"
+	},
+	{
+		"color": "#de6fa1",
+		"name": "China Pink, Liseran Purple, Thulian Pink",
+		"rgb": "222 111 161",
+		"cmyk": "0 50 28 13"
+	},
+	{
+		"color": "#dea5a4",
+		"name": "Pastel Pink",
+		"rgb": "222 165 164",
+		"cmyk": "0 26 26 13"
+	},
+	{
+		"color": "#deaa88",
+		"name": "Tumbleweed",
+		"rgb": "222 170 136",
+		"cmyk": "0 23 39 13"
+	},
+	{
+		"color": "#deb887",
+		"name": "Burlywood",
+		"rgb": "222 184 135",
+		"cmyk": "0 17 39 13"
+	},
+	{
+		"color": "#df00ff",
+		"name": "Phlox, Psychedelic Purple",
+		"rgb": "223 0 255",
+		"cmyk": "13 100 0 0"
+	},
+	{
+		"color": "#df73ff",
+		"name": "Heliotrope",
+		"rgb": "223 115 255",
+		"cmyk": "13 55 0 0"
+	},
+	{
+		"color": "#dfff00",
+		"name": "Chartreuse",
+		"rgb": "223 255 0",
+		"cmyk": "13 0 100 0"
+	},
+	{
+		"color": "#e0115f",
+		"name": "Ruby",
+		"rgb": "224 17 95",
+		"cmyk": "0 92 58 12"
+	},
+	{
+		"color": "#e0218a",
+		"name": "Barbie Pink",
+		"rgb": "224 33 138",
+		"cmyk": "0 85 38 12"
+	},
+	{
+		"color": "#e03c31",
+		"name": "CG Red",
+		"rgb": "224 60 49",
+		"cmyk": "0 73 78 12"
+	},
+	{
+		"color": "#e08d3c",
+		"name": "Tigers Eye",
+		"rgb": "224 141 60",
+		"cmyk": "0 37 73 12"
+	},
+	{
+		"color": "#e0b0ff",
+		"name": "Mauve",
+		"rgb": "224 176 255",
+		"cmyk": "12 31 0 0"
+	},
+	{
+		"color": "#e0ffff",
+		"name": "Light Cyan",
+		"rgb": "224 255 255",
+		"cmyk": "12 0 0 0"
+	},
+	{
+		"color": "#e18e96",
+		"name": "Ruddy Pink",
+		"rgb": "225 142 150",
+		"cmyk": "0 37 33 12"
+	},
+	{
+		"color": "#e1a95f",
+		"name": "Earth Yellow",
+		"rgb": "225 169 95",
+		"cmyk": "0 25 58 12"
+	},
+	{
+		"color": "#e1ad21",
+		"name": "Urobilin",
+		"rgb": "225 173 33",
+		"cmyk": "0 23 85 12"
+	},
+	{
+		"color": "#e2062c",
+		"name": "Medium Candy Apple Red",
+		"rgb": "226 6 44",
+		"cmyk": "0 97 81 11"
+	},
+	{
+		"color": "#e25098",
+		"name": "Raspberry Pink",
+		"rgb": "226 80 152",
+		"cmyk": "0 65 33 11"
+	},
+	{
+		"color": "#e25822",
+		"name": "Flame",
+		"rgb": "226 88 34",
+		"cmyk": "0 61 85 11"
+	},
+	{
+		"color": "#e2725b",
+		"name": "Terra Cotta",
+		"rgb": "226 114 91",
+		"cmyk": "0 50 60 11"
+	},
+	{
+		"color": "#e30022",
+		"name": "Cadmium Red",
+		"rgb": "227 0 34",
+		"cmyk": "0 100 85 11"
+	},
+	{
+		"color": "#e30b5d",
+		"name": "Raspberry",
+		"rgb": "227 11 93",
+		"cmyk": "0 95 59 11"
+	},
+	{
+		"color": "#e3256b",
+		"name": "Razzmatazz",
+		"rgb": "227 37 107",
+		"cmyk": "0 84 53 11"
+	},
+	{
+		"color": "#e32636",
+		"name": "Alizarin Crimson, Rose Madder",
+		"rgb": "227 38 54",
+		"cmyk": "0 83 76 11"
+	},
+	{
+		"color": "#e34234",
+		"name": "Cinnabar, Vermilion",
+		"rgb": "227 66 52",
+		"cmyk": "0 71 77 11"
+	},
+	{
+		"color": "#e3a857",
+		"name": "Indian Yellow",
+		"rgb": "227 168 87",
+		"cmyk": "0 26 62 11"
+	},
+	{
+		"color": "#e3ab57",
+		"name": "Sunray",
+		"rgb": "227 171 87",
+		"cmyk": "0 25 62 11"
+	},
+	{
+		"color": "#e3dac9",
+		"name": "Bone",
+		"rgb": "227 218 201",
+		"cmyk": "0 4 12 11"
+	},
+	{
+		"color": "#e3f988",
+		"name": "Midori, Mindaro",
+		"rgb": "227 249 136",
+		"cmyk": "9 0 45 2"
+	},
+	{
+		"color": "#e3ff00",
+		"name": "Lemon Lime",
+		"rgb": "227 255 0",
+		"cmyk": "11 0 100 0"
+	},
+	{
+		"color": "#e40078",
+		"name": "Red-Purple",
+		"rgb": "228 0 120",
+		"cmyk": "0 100 47 11"
+	},
+	{
+		"color": "#e4007c",
+		"name": "Mexican Pink",
+		"rgb": "228 0 124",
+		"cmyk": "0 100 46 11"
+	},
+	{
+		"color": "#e4717a",
+		"name": "Candy Pink, Tango Pink",
+		"rgb": "228 113 122",
+		"cmyk": "0 50 47 11"
+	},
+	{
+		"color": "#e48400",
+		"name": "Fulvous",
+		"rgb": "228 132 0",
+		"cmyk": "0 42 100 11"
+	},
+	{
+		"color": "#e49b0f",
+		"name": "Gamboge",
+		"rgb": "228 155 15",
+		"cmyk": "0 32 93 11"
+	},
+	{
+		"color": "#e4d00a",
+		"name": "Citrine",
+		"rgb": "228 208 10",
+		"cmyk": "0 9 96 11"
+	},
+	{
+		"color": "#e4d96f",
+		"name": "Straw",
+		"rgb": "228 217 111",
+		"cmyk": "0 5 51 11"
+	},
+	{
+		"color": "#e51a4c",
+		"name": "Spanish Crimson",
+		"rgb": "229 26 76",
+		"cmyk": "0 89 67 10"
+	},
+	{
+		"color": "#e5aa70",
+		"name": "Fawn",
+		"rgb": "229 170 112",
+		"cmyk": "0 26 51 10"
+	},
+	{
+		"color": "#e5b73b",
+		"name": "Meat Brown",
+		"rgb": "229 183 59",
+		"cmyk": "0 20 74 10"
+	},
+	{
+		"color": "#e5ccc9",
+		"name": "Dust Storm",
+		"rgb": "229 204 201",
+		"cmyk": "0 11 12 10"
+	},
+	{
+		"color": "#e5e4e2",
+		"name": "Platinum",
+		"rgb": "229 228 226",
+		"cmyk": "0 0 1 10"
+	},
+	{
+		"color": "#e60026",
+		"name": "Spanish Red",
+		"rgb": "230 0 38",
+		"cmyk": "0 100 84 10"
+	},
+	{
+		"color": "#e62020",
+		"name": "Lust",
+		"rgb": "230 32 32",
+		"cmyk": "0 86 86 10"
+	},
+	{
+		"color": "#e63e62",
+		"name": "Paradise Pink",
+		"rgb": "230 62 98",
+		"cmyk": "0 73 57 10"
+	},
+	{
+		"color": "#e66771",
+		"name": "Light Carmine Pink",
+		"rgb": "230 103 113",
+		"cmyk": "0 55 51 10"
+	},
+	{
+		"color": "#e68fac",
+		"name": "Charm Pink, Light Thulian Pink",
+		"rgb": "230 143 172",
+		"cmyk": "0 38 25 10"
+	},
+	{
+		"color": "#e6a8d7",
+		"name": "Light Orchid",
+		"rgb": "230 168 215",
+		"cmyk": "0 27 7 10"
+	},
+	{
+		"color": "#e6be8a",
+		"name": "Pale Gold",
+		"rgb": "230 190 138",
+		"cmyk": "0 17 40 10"
+	},
+	{
+		"color": "#e6e200",
+		"name": "Peridot",
+		"rgb": "230 226 0",
+		"cmyk": "0 2 100 10"
+	},
+	{
+		"color": "#e6e6fa",
+		"name": "Lavender, Lavender Mist",
+		"rgb": "230 230 250",
+		"cmyk": "8 8 0 2"
+	},
+	{
+		"color": "#e6e8fa",
+		"name": "Glitter",
+		"rgb": "230 232 250",
+		"cmyk": "8 7 0 2"
+	},
+	{
+		"color": "#e75480",
+		"name": "Dark Pink",
+		"rgb": "231 84 128",
+		"cmyk": "0 64 45 9"
+	},
+	{
+		"color": "#e79fc4",
+		"name": "Kobi",
+		"rgb": "231 159 196",
+		"cmyk": "0 31 15 9"
+	},
+	{
+		"color": "#e7accf",
+		"name": "Pink Pearl",
+		"rgb": "231 172 207",
+		"cmyk": "0 26 10 9"
+	},
+	{
+		"color": "#e7feff",
+		"name": "Bubbles",
+		"rgb": "231 254 255",
+		"cmyk": "9 0 0 0"
+	},
+	{
+		"color": "#e8000d",
+		"name": "KU Crimson",
+		"rgb": "232 0 13",
+		"cmyk": "0 100 94 9"
+	},
+	{
+		"color": "#e86100",
+		"name": "Spanish Orange",
+		"rgb": "232 97 0",
+		"cmyk": "0 58 100 9"
+	},
+	{
+		"color": "#e8cc07",
+		"name": "Queen Pink",
+		"rgb": "232 204 7",
+		"cmyk": "0 12 97 9"
+	},
+	{
+		"color": "#e9692c",
+		"name": "Deep Carrot Orange",
+		"rgb": "233 105 44",
+		"cmyk": "0 55 81 9"
+	},
+	{
+		"color": "#e97451",
+		"name": "Burnt Sienna, Light Red Ochre",
+		"rgb": "233 116 81",
+		"cmyk": "0 50 65 9"
+	},
+	{
+		"color": "#e9967a",
+		"name": "Dark Salmon",
+		"rgb": "233 150 122",
+		"cmyk": "0 36 48 9"
+	},
+	{
+		"color": "#e9d66b",
+		"name": "Arylide Yellow, Hansa Yellow",
+		"rgb": "233 214 107",
+		"cmyk": "0 8 54 9"
+	},
+	{
+		"color": "#e9ffdb",
+		"name": "Nyanza",
+		"rgb": "233 255 219",
+		"cmyk": "9 0 14 0"
+	},
+	{
+		"color": "#ea3c53",
+		"name": "Desire",
+		"rgb": "234 60 83",
+		"cmyk": "0 74 65 8"
+	},
+	{
+		"color": "#eae0c8",
+		"name": "Pearl",
+		"rgb": "234 224 200",
+		"cmyk": "0 4 15 8"
+	},
+	{
+		"color": "#eb4c42",
+		"name": "Carmine Pink",
+		"rgb": "235 76 66",
+		"cmyk": "0 68 72 8"
+	},
+	{
+		"color": "#ec3b83",
+		"name": "Cerise Pink",
+		"rgb": "236 59 131",
+		"cmyk": "0 75 45 8"
+	},
+	{
+		"color": "#ec5800",
+		"name": "Persimmon",
+		"rgb": "236 88 0",
+		"cmyk": "0 63 100 8"
+	},
+	{
+		"color": "#ecd540",
+		"name": "Sandstorm",
+		"rgb": "236 213 64",
+		"cmyk": "0 10 73 8"
+	},
+	{
+		"color": "#ecebbd",
+		"name": "Pale Spring Bud",
+		"rgb": "236 235 189",
+		"cmyk": "0 0 20 8"
+	},
+	{
+		"color": "#ed1c24",
+		"name": "Red (pigment)",
+		"rgb": "237 28 36",
+		"cmyk": "0 88 85 7"
+	},
+	{
+		"color": "#ed2939",
+		"name": "Imperial Red, Red (Pantone)",
+		"rgb": "237 41 57",
+		"cmyk": "0 83 76 7"
+	},
+	{
+		"color": "#ed872d",
+		"name": "Cadmium Orange",
+		"rgb": "237 135 45",
+		"cmyk": "0 43 81 7"
+	},
+	{
+		"color": "#ed9121",
+		"name": "Carrot Orange",
+		"rgb": "237 145 33",
+		"cmyk": "0 39 86 7"
+	},
+	{
+		"color": "#edc9af",
+		"name": "Desert Sand",
+		"rgb": "237 201 175",
+		"cmyk": "0 15 26 7"
+	},
+	{
+		"color": "#ee204d",
+		"name": "Red (Crayola)",
+		"rgb": "238 32 77",
+		"cmyk": "0 87 68 7"
+	},
+	{
+		"color": "#ee82ee",
+		"name": "Lavender Magenta, Violet (web)",
+		"rgb": "238 130 238",
+		"cmyk": "0 45 0 7"
+	},
+	{
+		"color": "#eeb211",
+		"name": "Google yellow",
+		"rgb": "238 178 17",
+		"cmyk": "0 25 93 7"
+	},
+	{
+		"color": "#eed202",
+		"name": "Safety Yellow",
+		"rgb": "238 210 2",
+		"cmyk": "0 12 99 7"
+	},
+	{
+		"color": "#eedc82",
+		"name": "Flax",
+		"rgb": "238 220 130",
+		"cmyk": "0 8 45 7"
+	},
+	{
+		"color": "#eee600",
+		"name": "Titanium Yellow",
+		"rgb": "238 230 0",
+		"cmyk": "0 3 100 7"
+	},
+	{
+		"color": "#eee8aa",
+		"name": "Pale Goldenrod",
+		"rgb": "238 232 170",
+		"cmyk": "0 3 29 7"
+	},
+	{
+		"color": "#ef3038",
+		"name": "Deep Carmine Pink",
+		"rgb": "239 48 56",
+		"cmyk": "0 80 77 6"
+	},
+	{
+		"color": "#ef98aa",
+		"name": "Mauvelous",
+		"rgb": "239 152 170",
+		"cmyk": "0 36 29 6"
+	},
+	{
+		"color": "#efbbcc",
+		"name": "Cameo Pink",
+		"rgb": "239 187 204",
+		"cmyk": "0 22 15 6"
+	},
+	{
+		"color": "#efcc00",
+		"name": "Yellow (Munsell)",
+		"rgb": "239 204 0",
+		"cmyk": "0 15 100 6"
+	},
+	{
+		"color": "#efdecd",
+		"name": "Almond",
+		"rgb": "239 222 205",
+		"cmyk": "0 7 14 6"
+	},
+	{
+		"color": "#efdfbb",
+		"name": "Dutch White",
+		"rgb": "239 223 187",
+		"cmyk": "0 7 22 6"
+	},
+	{
+		"color": "#f08080",
+		"name": "Light Coral",
+		"rgb": "240 128 128",
+		"cmyk": "0 47 47 6"
+	},
+	{
+		"color": "#f0dc82",
+		"name": "Buff",
+		"rgb": "240 220 130",
+		"cmyk": "0 8 46 6"
+	},
+	{
+		"color": "#f0e130",
+		"name": "Dandelion",
+		"rgb": "240 225 48",
+		"cmyk": "0 6 80 6"
+	},
+	{
+		"color": "#f0e68c",
+		"name": "Khaki (X11) (Light Khaki), Light Khaki",
+		"rgb": "240 230 140",
+		"cmyk": "0 4 42 6"
+	},
+	{
+		"color": "#f0ead6",
+		"name": "Eggshell",
+		"rgb": "240 234 214",
+		"cmyk": "0 3 11 6"
+	},
+	{
+		"color": "#f0f8ff",
+		"name": "Alice Blue",
+		"rgb": "240 248 255",
+		"cmyk": "6 3 0 0"
+	},
+	{
+		"color": "#f0fff0",
+		"name": "Honeydew",
+		"rgb": "240 255 240",
+		"cmyk": "6 0 6 0"
+	},
+	{
+		"color": "#f0ffff",
+		"name": "Azure Mist/web",
+		"rgb": "240 255 255",
+		"cmyk": "6 0 0 0"
+	},
+	{
+		"color": "#f19cbb",
+		"name": "Amaranth Pink",
+		"rgb": "241 156 187",
+		"cmyk": "0 35 22 6"
+	},
+	{
+		"color": "#f1a7fe",
+		"name": "Rich Brilliant Lavender",
+		"rgb": "241 167 254",
+		"cmyk": "5 34 0 0"
+	},
+	{
+		"color": "#f2003c",
+		"name": "Red (Munsell)",
+		"rgb": "242 0 60",
+		"cmyk": "0 100 75 5"
+	},
+	{
+		"color": "#f28500",
+		"name": "Tangerine",
+		"rgb": "242 133 0",
+		"cmyk": "0 45 100 5"
+	},
+	{
+		"color": "#f2bdcd",
+		"name": "Orchid Pink",
+		"rgb": "242 189 205",
+		"cmyk": "0 22 15 5"
+	},
+	{
+		"color": "#f2f3f4",
+		"name": "Anti-flash White",
+		"rgb": "242 243 244",
+		"cmyk": "1 0 0 4"
+	},
+	{
+		"color": "#f38fa9",
+		"name": "Vanilla Ice",
+		"rgb": "243 143 169",
+		"cmyk": "0 41 31 5"
+	},
+	{
+		"color": "#f3e5ab",
+		"name": "Medium Champagne, Vanilla",
+		"rgb": "243 229 171",
+		"cmyk": "0 6 30 5"
+	},
+	{
+		"color": "#f400a1",
+		"name": "Fashion Fuchsia, Hollywood Cerise",
+		"rgb": "244 0 161",
+		"cmyk": "0 100 34 4"
+	},
+	{
+		"color": "#f49ac2",
+		"name": "Pastel Magenta",
+		"rgb": "244 154 194",
+		"cmyk": "0 37 21 4"
+	},
+	{
+		"color": "#f4a460",
+		"name": "Sandy Brown",
+		"rgb": "244 164 96",
+		"cmyk": "0 33 61 4"
+	},
+	{
+		"color": "#f4bbff",
+		"name": "Brilliant Lavender, Electric Lavender",
+		"rgb": "244 187 255",
+		"cmyk": "4 27 0 0"
+	},
+	{
+		"color": "#f4c2c2",
+		"name": "Baby Pink, Tea Rose",
+		"rgb": "244 194 194",
+		"cmyk": "0 21 21 4"
+	},
+	{
+		"color": "#f4c430",
+		"name": "Saffron",
+		"rgb": "244 196 48",
+		"cmyk": "0 20 80 4"
+	},
+	{
+		"color": "#f4f0ec",
+		"name": "Isabelline",
+		"rgb": "244 240 236",
+		"cmyk": "0 2 3 4"
+	},
+	{
+		"color": "#f56991",
+		"name": "Light Crimson",
+		"rgb": "245 105 145",
+		"cmyk": "0 57 41 4"
+	},
+	{
+		"color": "#f5c71a",
+		"name": "Deep Lemon",
+		"rgb": "245 199 26",
+		"cmyk": "0 19 89 4"
+	},
+	{
+		"color": "#f5deb3",
+		"name": "Wheat",
+		"rgb": "245 222 179",
+		"cmyk": "0 9 27 4"
+	},
+	{
+		"color": "#f5f5dc",
+		"name": "Beige",
+		"rgb": "245 245 220",
+		"cmyk": "0 0 10 4"
+	},
+	{
+		"color": "#f5f5f5",
+		"name": "White Smoke",
+		"rgb": "245 245 245",
+		"cmyk": "0 0 0 4"
+	},
+	{
+		"color": "#f5fffa",
+		"name": "Mint Cream",
+		"rgb": "245 255 250",
+		"cmyk": "4 0 2 0"
+	},
+	{
+		"color": "#f64a8a",
+		"name": "French Rose",
+		"rgb": "246 74 138",
+		"cmyk": "0 70 44 4"
+	},
+	{
+		"color": "#f6adc6",
+		"name": "Nadeshiko Pink",
+		"rgb": "246 173 198",
+		"cmyk": "0 30 20 4"
+	},
+	{
+		"color": "#f6eabe",
+		"name": "Lemon Meringue",
+		"rgb": "246 234 190",
+		"cmyk": "0 5 23 4"
+	},
+	{
+		"color": "#f75394",
+		"name": "Violet-red",
+		"rgb": "247 83 148",
+		"cmyk": "0 66 40 3"
+	},
+	{
+		"color": "#f77f00",
+		"name": "University Of Tennessee Orange",
+		"rgb": "247 127 0",
+		"cmyk": "0 49 100 3"
+	},
+	{
+		"color": "#f77fbe",
+		"name": "Persian Pink",
+		"rgb": "247 127 190",
+		"cmyk": "0 49 23 3"
+	},
+	{
+		"color": "#f78fa7",
+		"name": "Pink Sherbet",
+		"rgb": "247 143 167",
+		"cmyk": "0 42 32 3"
+	},
+	{
+		"color": "#f7bfbe",
+		"name": "Spanish Pink",
+		"rgb": "247 191 190",
+		"cmyk": "0 23 23 3"
+	},
+	{
+		"color": "#f7e7ce",
+		"name": "Champagne",
+		"rgb": "247 231 206",
+		"cmyk": "0 7 17 3"
+	},
+	{
+		"color": "#f7e98e",
+		"name": "Flavescent",
+		"rgb": "247 233 142",
+		"cmyk": "0 6 43 3"
+	},
+	{
+		"color": "#f88379",
+		"name": "Congo Pink, Coral Pink, Tea Rose (orange)",
+		"rgb": "248 131 121",
+		"cmyk": "0 47 51 3"
+	},
+	{
+		"color": "#f8b878",
+		"name": "Mellow Apricot",
+		"rgb": "248 184 120",
+		"cmyk": "0 26 52 3"
+	},
+	{
+		"color": "#f8de7e",
+		"name": "Jasmine, Mellow Yellow",
+		"rgb": "248 222 126",
+		"cmyk": "0 11 49 3"
+	},
+	{
+		"color": "#f8f4ff",
+		"name": "Magnolia",
+		"rgb": "248 244 255",
+		"cmyk": "3 4 0 0"
+	},
+	{
+		"color": "#f8f8ff",
+		"name": "Ghost White",
+		"rgb": "248 248 255",
+		"cmyk": "3 3 0 0"
+	},
+	{
+		"color": "#f9429e",
+		"name": "Rose Bonbon",
+		"rgb": "249 66 158",
+		"cmyk": "0 74 37 2"
+	},
+	{
+		"color": "#f94d00",
+		"name": "Tangelo",
+		"rgb": "249 77 0",
+		"cmyk": "0 69 100 2"
+	},
+	{
+		"color": "#f984e5",
+		"name": "Pale Magenta",
+		"rgb": "249 132 229",
+		"cmyk": "0 47 8 2"
+	},
+	{
+		"color": "#f984ef",
+		"name": "Light Fuchsia Pink",
+		"rgb": "249 132 239",
+		"cmyk": "0 47 4 2"
+	},
+	{
+		"color": "#fad6a5",
+		"name": "Deep Champagne, Sunset, Tuscan",
+		"rgb": "250 214 165",
+		"cmyk": "0 14 34 2"
+	},
+	{
+		"color": "#fada5e",
+		"name": "Jonquil, Naples Yellow, Royal Yellow, Stil De Grain Yellow",
+		"rgb": "250 218 94",
+		"cmyk": "0 13 62 2"
+	},
+	{
+		"color": "#fadadd",
+		"name": "Pale Pink",
+		"rgb": "250 218 221",
+		"cmyk": "0 13 12 2"
+	},
+	{
+		"color": "#fadfad",
+		"name": "Peach-yellow",
+		"rgb": "250 223 173",
+		"cmyk": "0 11 31 2"
+	},
+	{
+		"color": "#fae7b5",
+		"name": "Banana Mania",
+		"rgb": "250 231 181",
+		"cmyk": "0 8 28 2"
+	},
+	{
+		"color": "#faebd7",
+		"name": "Antique White, Moccasin",
+		"rgb": "250 235 215",
+		"cmyk": "0 6 14 2"
+	},
+	{
+		"color": "#faf0be",
+		"name": "Blond",
+		"rgb": "250 240 190",
+		"cmyk": "0 4 24 2"
+	},
+	{
+		"color": "#faf0e6",
+		"name": "Linen",
+		"rgb": "250 240 230",
+		"cmyk": "0 4 8 2"
+	},
+	{
+		"color": "#fafad2",
+		"name": "Light Goldenrod Yellow",
+		"rgb": "250 250 210",
+		"cmyk": "0 0 16 2"
+	},
+	{
+		"color": "#fb4f14",
+		"name": "Orioles Orange",
+		"rgb": "251 79 20",
+		"cmyk": "0 69 92 2"
+	},
+	{
+		"color": "#fb607f",
+		"name": "Brink Pink",
+		"rgb": "251 96 127",
+		"cmyk": "0 62 49 2"
+	},
+	{
+		"color": "#fb9902",
+		"name": "Orange (RYB)",
+		"rgb": "251 153 2",
+		"cmyk": "0 39 99 2"
+	},
+	{
+		"color": "#fba0e3",
+		"name": "Lavender Rose",
+		"rgb": "251 160 227",
+		"cmyk": "0 36 10 2"
+	},
+	{
+		"color": "#fbab60",
+		"name": "Rajah",
+		"rgb": "251 171 96",
+		"cmyk": "0 32 62 2"
+	},
+	{
+		"color": "#fbaed2",
+		"name": "Lavender Pink",
+		"rgb": "251 174 210",
+		"cmyk": "0 31 16 2"
+	},
+	{
+		"color": "#fbcce7",
+		"name": "Classic Rose",
+		"rgb": "251 204 231",
+		"cmyk": "0 19 8 2"
+	},
+	{
+		"color": "#fbceb1",
+		"name": "Apricot",
+		"rgb": "251 206 177",
+		"cmyk": "0 18 30 2"
+	},
+	{
+		"color": "#fbec5d",
+		"name": "Corn, Maize",
+		"rgb": "251 236 93",
+		"cmyk": "0 6 63 2"
+	},
+	{
+		"color": "#fc0fc0",
+		"name": "Shocking Pink",
+		"rgb": "252 15 192",
+		"cmyk": "0 94 24 1"
+	},
+	{
+		"color": "#fc5a8d",
+		"name": "Strawberry",
+		"rgb": "252 90 141",
+		"cmyk": "0 64 44 1"
+	},
+	{
+		"color": "#fc6c85",
+		"name": "Ultra Red, Wild Watermelon",
+		"rgb": "252 108 133",
+		"cmyk": "0 57 47 1"
+	},
+	{
+		"color": "#fc89ac",
+		"name": "Tickle Me Pink",
+		"rgb": "252 137 172",
+		"cmyk": "0 46 32 1"
+	},
+	{
+		"color": "#fc8eac",
+		"name": "Flamingo Pink",
+		"rgb": "252 142 172",
+		"cmyk": "0 44 32 1"
+	},
+	{
+		"color": "#fcc200",
+		"name": "Golden Poppy",
+		"rgb": "252 194 0",
+		"cmyk": "0 23 100 1"
+	},
+	{
+		"color": "#fce883",
+		"name": "Yellow (Crayola)",
+		"rgb": "252 232 131",
+		"cmyk": "0 8 48 1"
+	},
+	{
+		"color": "#fcf75e",
+		"name": "Icterine",
+		"rgb": "252 247 94",
+		"cmyk": "0 2 63 1"
+	},
+	{
+		"color": "#fd0e35",
+		"name": "Scarlet (Crayola), Tractor Red",
+		"rgb": "253 14 53",
+		"cmyk": "0 95 79 1"
+	},
+	{
+		"color": "#fd3f92",
+		"name": "French Fuchsia",
+		"rgb": "253 63 146",
+		"cmyk": "0 75 42 1"
+	},
+	{
+		"color": "#fd5800",
+		"name": "Willpower Orange",
+		"rgb": "253 88 0",
+		"cmyk": "0 65 100 1"
+	},
+	{
+		"color": "#fd5e53",
+		"name": "Sunset Orange",
+		"rgb": "253 94 83",
+		"cmyk": "0 63 67 1"
+	},
+	{
+		"color": "#fd6c9e",
+		"name": "French Pink",
+		"rgb": "253 108 158",
+		"cmyk": "0 57 38 1"
+	},
+	{
+		"color": "#fdbcb4",
+		"name": "Melon",
+		"rgb": "253 188 180",
+		"cmyk": "0 26 29 1"
+	},
+	{
+		"color": "#fdd5b1",
+		"name": "Feldspar, Light Apricot",
+		"rgb": "253 213 177",
+		"cmyk": "0 16 30 1"
+	},
+	{
+		"color": "#fddde6",
+		"name": "Piggy Pink",
+		"rgb": "253 221 230",
+		"cmyk": "0 13 9 1"
+	},
+	{
+		"color": "#fdee00",
+		"name": "Aureolin",
+		"rgb": "253 238 0",
+		"cmyk": "0 6 100 1"
+	},
+	{
+		"color": "#fdf5e6",
+		"name": "Old Lace",
+		"rgb": "253 245 230",
+		"cmyk": "0 3 9 1"
+	},
+	{
+		"color": "#fdfd96",
+		"name": "Pastel Yellow",
+		"rgb": "253 253 150",
+		"cmyk": "0 0 41 1"
+	},
+	{
+		"color": "#fdff00",
+		"name": "Lemon Glacier",
+		"rgb": "253 255 0",
+		"cmyk": "1 0 100 0"
+	},
+	{
+		"color": "#fe001a",
+		"name": "Coca-cola Red",
+		"rgb": "254 0 26",
+		"cmyk": "0 100 90 0"
+	},
+	{
+		"color": "#fe2712",
+		"name": "Red (RYB)",
+		"rgb": "254 39 18",
+		"cmyk": "0 85 93 0"
+	},
+	{
+		"color": "#fe28a2",
+		"name": "Persian Rose",
+		"rgb": "254 40 162",
+		"cmyk": "0 84 36 0"
+	},
+	{
+		"color": "#fe4164",
+		"name": "Neon Fuchsia",
+		"rgb": "254 65 100",
+		"cmyk": "0 74 61 0"
+	},
+	{
+		"color": "#fe4eda",
+		"name": "Purple Pizzazz",
+		"rgb": "254 78 218",
+		"cmyk": "0 69 14 0"
+	},
+	{
+		"color": "#fe5a1d",
+		"name": "Giants Orange",
+		"rgb": "254 90 29",
+		"cmyk": "0 65 89 0"
+	},
+	{
+		"color": "#fe6f5e",
+		"name": "Bittersweet",
+		"rgb": "254 111 94",
+		"cmyk": "0 56 63 0"
+	},
+	{
+		"color": "#fedf00",
+		"name": "Yellow (Pantone)",
+		"rgb": "254 223 0",
+		"cmyk": "0 12 100 0"
+	},
+	{
+		"color": "#fefe22",
+		"name": "Laser Lemon",
+		"rgb": "254 254 34",
+		"cmyk": "0 0 87 0"
+	},
+	{
+		"color": "#fefe33",
+		"name": "Yellow (RYB)",
+		"rgb": "254 254 51",
+		"cmyk": "0 0 80 0"
+	},
+	{
+		"color": "#fefefa",
+		"name": "Baby Powder",
+		"rgb": "254 254 250",
+		"cmyk": "0 0 2 0"
+	},
+	{
+		"color": "#ff0000",
+		"name": "Red",
+		"rgb": "255 0 0",
+		"cmyk": "0 100 100 0"
+	},
+	{
+		"color": "#ff0028",
+		"name": "Ruddy",
+		"rgb": "255 0 40",
+		"cmyk": "0 100 84 0"
+	},
+	{
+		"color": "#ff0038",
+		"name": "Carmine Red",
+		"rgb": "255 0 56",
+		"cmyk": "0 100 78 0"
+	},
+	{
+		"color": "#ff003f",
+		"name": "Electric Crimson",
+		"rgb": "255 0 63",
+		"cmyk": "0 100 75 0"
+	},
+	{
+		"color": "#ff004f",
+		"name": "Folly",
+		"rgb": "255 0 79",
+		"cmyk": "0 100 69 0"
+	},
+	{
+		"color": "#ff007f",
+		"name": "Bright Pink, Rose",
+		"rgb": "255 0 127",
+		"cmyk": "0 100 50 0"
+	},
+	{
+		"color": "#ff0090",
+		"name": "Magenta (process)",
+		"rgb": "255 0 144",
+		"cmyk": "0 100 44 0"
+	},
+	{
+		"color": "#ff00ff",
+		"name": "Fuchsia, Magenta",
+		"rgb": "255 0 255",
+		"cmyk": "0 100 0 0"
+	},
+	{
+		"color": "#ff033e",
+		"name": "American Rose",
+		"rgb": "255 3 62",
+		"cmyk": "0 99 76 0"
+	},
+	{
+		"color": "#ff0800",
+		"name": "Candy Apple Red",
+		"rgb": "255 8 0",
+		"cmyk": "0 97 100 0"
+	},
+	{
+		"color": "#ff1493",
+		"name": "Deep Pink, Fluorescent Pink",
+		"rgb": "255 20 147",
+		"cmyk": "0 92 42 0"
+	},
+	{
+		"color": "#ff1dce",
+		"name": "Hot Magenta",
+		"rgb": "255 29 206",
+		"cmyk": "0 89 19 0"
+	},
+	{
+		"color": "#ff2400",
+		"name": "Scarlet",
+		"rgb": "255 36 0",
+		"cmyk": "0 86 100 0"
+	},
+	{
+		"color": "#ff2800",
+		"name": "Ferrari Red",
+		"rgb": "255 40 0",
+		"cmyk": "0 84 100 0"
+	},
+	{
+		"color": "#ff33cc",
+		"name": "Razzle Dazzle Rose",
+		"rgb": "255 51 204",
+		"cmyk": "0 80 20 0"
+	},
+	{
+		"color": "#ff355e",
+		"name": "Radical Red",
+		"rgb": "255 53 94",
+		"cmyk": "0 79 63 0"
+	},
+	{
+		"color": "#ff3800",
+		"name": "Coquelicot",
+		"rgb": "255 56 0",
+		"cmyk": "0 78 100 0"
+	},
+	{
+		"color": "#ff4040",
+		"name": "Coral Red",
+		"rgb": "255 64 64",
+		"cmyk": "0 75 75 0"
+	},
+	{
+		"color": "#ff43a4",
+		"name": "Wild Strawberry",
+		"rgb": "255 67 164",
+		"cmyk": "0 74 36 0"
+	},
+	{
+		"color": "#ff4500",
+		"name": "Orange-red",
+		"rgb": "255 69 0",
+		"cmyk": "0 73 100 0"
+	},
+	{
+		"color": "#ff4f00",
+		"name": "International Orange (aerospace)",
+		"rgb": "255 79 0",
+		"cmyk": "0 69 100 0"
+	},
+	{
+		"color": "#ff5349",
+		"name": "Red-orange",
+		"rgb": "255 83 73",
+		"cmyk": "0 68 71 0"
+	},
+	{
+		"color": "#ff55a3",
+		"name": "Brilliant Rose, Magenta (Crayola)",
+		"rgb": "255 85 163",
+		"cmyk": "0 67 36 0"
+	},
+	{
+		"color": "#ff5800",
+		"name": "Orange (Pantone)",
+		"rgb": "255 88 0",
+		"cmyk": "0 66 100 0"
+	},
+	{
+		"color": "#ff5a36",
+		"name": "Portland Orange",
+		"rgb": "255 90 54",
+		"cmyk": "0 65 79 0"
+	},
+	{
+		"color": "#ff5ccd",
+		"name": "Light Deep Pink",
+		"rgb": "255 92 205",
+		"cmyk": "0 64 20 0"
+	},
+	{
+		"color": "#ff6347",
+		"name": "Tomato",
+		"rgb": "255 99 71",
+		"cmyk": "0 61 72 0"
+	},
+	{
+		"color": "#ff66cc",
+		"name": "Rose Pink",
+		"rgb": "255 102 204",
+		"cmyk": "0 60 20 0"
+	},
+	{
+		"color": "#ff6700",
+		"name": "Safety Orange (blaze Orange)",
+		"rgb": "255 103 0",
+		"cmyk": "0 60 100 0"
+	},
+	{
+		"color": "#ff6961",
+		"name": "Pastel Red",
+		"rgb": "255 105 97",
+		"cmyk": "0 59 62 0"
+	},
+	{
+		"color": "#ff69b4",
+		"name": "Hot Pink",
+		"rgb": "255 105 180",
+		"cmyk": "0 59 29 0"
+	},
+	{
+		"color": "#ff6e4a",
+		"name": "Outrageous Orange",
+		"rgb": "255 110 74",
+		"cmyk": "0 57 71 0"
+	},
+	{
+		"color": "#ff6fff",
+		"name": "Shocking Pink (Crayola), Ultra Pink",
+		"rgb": "255 111 255",
+		"cmyk": "0 57 0 0"
+	},
+	{
+		"color": "#ff7518",
+		"name": "Pumpkin",
+		"rgb": "255 117 24",
+		"cmyk": "0 54 91 0"
+	},
+	{
+		"color": "#ff7538",
+		"name": "Orange (Crayola)",
+		"rgb": "255 117 56",
+		"cmyk": "0 54 78 0"
+	},
+	{
+		"color": "#ff77ff",
+		"name": "Fuchsia Pink",
+		"rgb": "255 119 255",
+		"cmyk": "0 53 0 0"
+	},
+	{
+		"color": "#ff7e00",
+		"name": "Amber (SAE/ECE), SAE/ECE Amber (Color)",
+		"rgb": "255 126 0",
+		"cmyk": "0 51 100 0"
+	},
+	{
+		"color": "#ff7f00",
+		"name": "Orange",
+		"rgb": "255 127 0",
+		"cmyk": "0 50 100 0"
+	},
+	{
+		"color": "#ff7f50",
+		"name": "Coral",
+		"rgb": "255 127 80",
+		"cmyk": "0 50 69 0"
+	},
+	{
+		"color": "#ff8243",
+		"name": "Mango Tango",
+		"rgb": "255 130 67",
+		"cmyk": "0 49 74 0"
+	},
+	{
+		"color": "#ff878d",
+		"name": "Tulip",
+		"rgb": "255 135 141",
+		"cmyk": "0 47 45 0"
+	},
+	{
+		"color": "#ff8c00",
+		"name": "Dark Orange",
+		"rgb": "255 140 0",
+		"cmyk": "0 45 100 0"
+	},
+	{
+		"color": "#ff8c69",
+		"name": "Salmon",
+		"rgb": "255 140 105",
+		"cmyk": "0 45 59 0"
+	},
+	{
+		"color": "#ff8f00",
+		"name": "Princeton Orange",
+		"rgb": "255 143 0",
+		"cmyk": "0 44 100 0"
+	},
+	{
+		"color": "#ff91a4",
+		"name": "Salmon Pink",
+		"rgb": "255 145 164",
+		"cmyk": "0 43 36 0"
+	},
+	{
+		"color": "#ff91af",
+		"name": "Baker-Miller Pink, Schauss Pink",
+		"rgb": "255 145 175",
+		"cmyk": "0 43 31 0"
+	},
+	{
+		"color": "#ff9933",
+		"name": "Deep Saffron",
+		"rgb": "255 153 51",
+		"cmyk": "0 40 80 0"
+	},
+	{
+		"color": "#ff9966",
+		"name": "Atomic Tangerine, Pink-orange",
+		"rgb": "255 153 102",
+		"cmyk": "0 40 60 0"
+	},
+	{
+		"color": "#ff9999",
+		"name": "Light Salmon Pink",
+		"rgb": "255 153 153",
+		"cmyk": "0 40 40 0"
+	},
+	{
+		"color": "#ff9f00",
+		"name": "Orange Peel",
+		"rgb": "255 159 0",
+		"cmyk": "0 38 100 0"
+	},
+	{
+		"color": "#ffa07a",
+		"name": "Light Salmon",
+		"rgb": "255 160 122",
+		"cmyk": "0 37 52 0"
+	},
+	{
+		"color": "#ffa089",
+		"name": "Vivid Tangerine",
+		"rgb": "255 160 137",
+		"cmyk": "0 37 46 0"
+	},
+	{
+		"color": "#ffa343",
+		"name": "Neon Carrot",
+		"rgb": "255 163 67",
+		"cmyk": "0 36 74 0"
+	},
+	{
+		"color": "#ffa500",
+		"name": "Orange (Web)",
+		"rgb": "255 165 0",
+		"cmyk": "0 35 100 0"
+	},
+	{
+		"color": "#ffa6c9",
+		"name": "Carnation Pink",
+		"rgb": "255 166 201",
+		"cmyk": "0 35 21 0"
+	},
+	{
+		"color": "#ffa700",
+		"name": "Chrome Yellow",
+		"rgb": "255 167 0",
+		"cmyk": "0 35 100 0"
+	},
+	{
+		"color": "#ffa812",
+		"name": "Dark Tangerine",
+		"rgb": "255 168 18",
+		"cmyk": "0 34 93 0"
+	},
+	{
+		"color": "#ffae42",
+		"name": "Yellow Orange",
+		"rgb": "255 174 66",
+		"cmyk": "0 32 74 0"
+	},
+	{
+		"color": "#ffb300",
+		"name": "UCLA Gold",
+		"rgb": "255 179 0",
+		"cmyk": "0 30 100 0"
+	},
+	{
+		"color": "#ffb347",
+		"name": "Pastel Orange",
+		"rgb": "255 179 71",
+		"cmyk": "0 30 72 0"
+	},
+	{
+		"color": "#ffb3de",
+		"name": "Light Hot Pink",
+		"rgb": "255 179 222",
+		"cmyk": "0 30 13 0"
+	},
+	{
+		"color": "#ffb6c1",
+		"name": "Light Pink",
+		"rgb": "255 182 193",
+		"cmyk": "0 29 24 0"
+	},
+	{
+		"color": "#ffb7c5",
+		"name": "Cherry Blossom Pink",
+		"rgb": "255 183 197",
+		"cmyk": "0 28 23 0"
+	},
+	{
+		"color": "#ffba00",
+		"name": "Selective Yellow",
+		"rgb": "255 186 0",
+		"cmyk": "0 27 100 0"
+	},
+	{
+		"color": "#ffbcd9",
+		"name": "Cotton Candy",
+		"rgb": "255 188 217",
+		"cmyk": "0 26 15 0"
+	},
+	{
+		"color": "#ffbf00",
+		"name": "Amber, Fluorescent Orange",
+		"rgb": "255 191 0",
+		"cmyk": "0 25 100 0"
+	},
+	{
+		"color": "#ffc0cb",
+		"name": "Pink",
+		"rgb": "255 192 203",
+		"cmyk": "0 25 20 0"
+	},
+	{
+		"color": "#ffc1cc",
+		"name": "Bubble Gum",
+		"rgb": "255 193 204",
+		"cmyk": "0 24 20 0"
+	},
+	{
+		"color": "#ffc40c",
+		"name": "Mikado Yellow",
+		"rgb": "255 196 12",
+		"cmyk": "0 23 95 0"
+	},
+	{
+		"color": "#ffc87c",
+		"name": "Topaz",
+		"rgb": "255 200 124",
+		"cmyk": "0 22 51 0"
+	},
+	{
+		"color": "#ffcba4",
+		"name": "Deep Peach, Peach (Crayola)",
+		"rgb": "255 203 164",
+		"cmyk": "0 20 36 0"
+	},
+	{
+		"color": "#ffcc00",
+		"name": "Tangerine Yellow, USC Gold",
+		"rgb": "255 204 0",
+		"cmyk": "0 20 100 0"
+	},
+	{
+		"color": "#ffcc33",
+		"name": "Sunglow",
+		"rgb": "255 204 51",
+		"cmyk": "0 20 80 0"
+	},
+	{
+		"color": "#ffcc99",
+		"name": "Peach-orange",
+		"rgb": "255 204 153",
+		"cmyk": "0 20 40 0"
+	},
+	{
+		"color": "#ffcff1",
+		"name": "Shampoo",
+		"rgb": "255 207 241",
+		"cmyk": "0 19 6 0"
+	},
+	{
+		"color": "#ffd300",
+		"name": "Cyber Yellow, Yellow (NCS)",
+		"rgb": "255 211 0",
+		"cmyk": "0 17 100 0"
+	},
+	{
+		"color": "#ffd700",
+		"name": "Gold (web) (Golden)",
+		"rgb": "255 215 0",
+		"cmyk": "0 16 100 0"
+	},
+	{
+		"color": "#ffd800",
+		"name": "School Bus Yellow",
+		"rgb": "255 216 0",
+		"cmyk": "0 15 100 0"
+	},
+	{
+		"color": "#ffdab9",
+		"name": "Peach Puff",
+		"rgb": "255 218 185",
+		"cmyk": "0 15 28 0"
+	},
+	{
+		"color": "#ffdb58",
+		"name": "Mustard",
+		"rgb": "255 219 88",
+		"cmyk": "0 14 66 0"
+	},
+	{
+		"color": "#ffddca",
+		"name": "Unbleached Silk",
+		"rgb": "255 221 202",
+		"cmyk": "0 13 21 0"
+	},
+	{
+		"color": "#ffddf4",
+		"name": "Pink Lace",
+		"rgb": "255 221 244",
+		"cmyk": "0 13 4 0"
+	},
+	{
+		"color": "#ffdead",
+		"name": "Navajo White",
+		"rgb": "255 222 173",
+		"cmyk": "0 13 32 0"
+	},
+	{
+		"color": "#ffdf00",
+		"name": "Golden Yellow",
+		"rgb": "255 223 0",
+		"cmyk": "0 13 100 0"
+	},
+	{
+		"color": "#ffe135",
+		"name": "Banana Yellow",
+		"rgb": "255 225 53",
+		"cmyk": "0 12 79 0"
+	},
+	{
+		"color": "#ffe4c4",
+		"name": "Bisque",
+		"rgb": "255 228 196",
+		"cmyk": "0 11 23 0"
+	},
+	{
+		"color": "#ffe4cd",
+		"name": "Lumber",
+		"rgb": "255 228 205",
+		"cmyk": "0 11 20 0"
+	},
+	{
+		"color": "#ffe4e1",
+		"name": "Misty Rose",
+		"rgb": "255 228 225",
+		"cmyk": "0 11 12 0"
+	},
+	{
+		"color": "#ffe5b4",
+		"name": "Peach",
+		"rgb": "255 229 180",
+		"cmyk": "0 10 29 0"
+	},
+	{
+		"color": "#ffebcd",
+		"name": "Blanched Almond",
+		"rgb": "255 235 205",
+		"cmyk": "0 8 20 0"
+	},
+	{
+		"color": "#ffef00",
+		"name": "Canary Yellow, Yellow (process)",
+		"rgb": "255 239 0",
+		"cmyk": "0 6 100 0"
+	},
+	{
+		"color": "#ffefd5",
+		"name": "Papaya Whip",
+		"rgb": "255 239 213",
+		"cmyk": "0 6 17 0"
+	},
+	{
+		"color": "#fff000",
+		"name": "Yellow Rose",
+		"rgb": "255 240 0",
+		"cmyk": "0 6 100 0"
+	},
+	{
+		"color": "#fff0f5",
+		"name": "Lavender Blush",
+		"rgb": "255 240 245",
+		"cmyk": "0 6 4 0"
+	},
+	{
+		"color": "#fff44f",
+		"name": "Lemon Yellow",
+		"rgb": "255 244 79",
+		"cmyk": "0 4 69 0"
+	},
+	{
+		"color": "#fff5ee",
+		"name": "Seashell",
+		"rgb": "255 245 238",
+		"cmyk": "0 4 7 0"
+	},
+	{
+		"color": "#fff600",
+		"name": "Cadmium Yellow",
+		"rgb": "255 246 0",
+		"cmyk": "0 4 100 0"
+	},
+	{
+		"color": "#fff700",
+		"name": "Lemon",
+		"rgb": "255 247 0",
+		"cmyk": "0 3 100 0"
+	},
+	{
+		"color": "#fff8dc",
+		"name": "Cornsilk",
+		"rgb": "255 248 220",
+		"cmyk": "0 3 14 0"
+	},
+	{
+		"color": "#fff8e7",
+		"name": "Cosmic Latte",
+		"rgb": "255 248 231",
+		"cmyk": "0 3 9 0"
+	},
+	{
+		"color": "#fffacd",
+		"name": "Lemon Chiffon",
+		"rgb": "255 250 205",
+		"cmyk": "0 2 20 0"
+	},
+	{
+		"color": "#fffaf0",
+		"name": "Floral White",
+		"rgb": "255 250 240",
+		"cmyk": "0 2 6 0"
+	},
+	{
+		"color": "#fffafa",
+		"name": "Snow",
+		"rgb": "255 250 250",
+		"cmyk": "0 2 2 0"
+	},
+	{
+		"color": "#fffdd0",
+		"name": "Cream",
+		"rgb": "255 253 208",
+		"cmyk": "0 1 18 0"
+	},
+	{
+		"color": "#ffff00",
+		"name": "Electric Yellow, Yellow",
+		"rgb": "255 255 0",
+		"cmyk": "0 0 100 0"
+	},
+	{
+		"color": "#ffff31",
+		"name": "Daffodil",
+		"rgb": "255 255 49",
+		"cmyk": "0 0 81 0"
+	},
+	{
+		"color": "#ffff66",
+		"name": "Unmellow Yellow",
+		"rgb": "255 255 102",
+		"cmyk": "0 0 60 0"
+	},
+	{
+		"color": "#ffffe0",
+		"name": "Light Yellow",
+		"rgb": "255 255 224",
+		"cmyk": "0 0 12 0"
+	},
+	{
+		"color": "#fffff0",
+		"name": "Ivory",
+		"rgb": "255 255 240",
+		"cmyk": "0 0 6 0"
+	},
+	{
+		"color": "#ffffff",
+		"name": "White",
+		"rgb": "255 255 255",
+		"cmyk": "0 0 0 0"
+	}
+ ]
+}
