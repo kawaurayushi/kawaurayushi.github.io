@@ -12,7 +12,7 @@ var NUM8CHECK   ='^[0-7 ]+$';
 var NUM10CHECK  ='^[0-9 ]+$';
 var NUM16CHECK  ='^[0-9a-fA-F ]+$';
 
-var StringCHECK  ='^[0-9a-zA-z]+$';
+var StringCHECK  ='^[0-9a-zA-Z]+$';
 
 var numbercheckold1 ='^'+checknum+'([a-hjkm-z]{3})'+checknum+'([0-9a-z]*?)'+'([a-hjkm-z])'+checknum+'([a-hjkm-z])'+checknum+'([a-hjkm-z])$';
 var numbercheckold2 ='^'+checknum+'(...)'+checknum+'([0-9a-z]*?)'+'(.)'+checknum+'(.)'+checknum+'(.)$';
